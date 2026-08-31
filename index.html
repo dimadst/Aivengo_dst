@@ -1,0 +1,650 @@
+<!DOCTYPE html><html lang="uk"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="modulepreload" fetchPriority="low" href="/_next/static/chunks/index-9JYwN_a3.js"/><script src="/_next/static/chunks/rolldown-runtime-QTnfLwEv.js" type="module" async=""></script><script src="/_next/static/chunks/framework-C_hmB57O.js" type="module" async=""></script><link rel="preload" href="/styles.css" as="style"/><link rel="modulepreload" href="/_next/static/chunks/layout-segment-context-C210b0fy.js" crossorigin=""/><title>DimFin — домашній бюджет без зайвої складності</title><meta name="description" content="DimFin — домашній бюджет без доступу до банківських рахунків. Доходи й витрати, місячні бюджети, кредити та розстрочки, календар, аналітика, локальні нагадування й щомісячні підсумки. Усі фінансові дані зберігаються лише на телефоні користувача."/><meta name="theme-color" content="#050b10"/><link rel="stylesheet" href="/styles.css"/><script src="/script.js" defer=""></script><script>Object.assign(((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}),{params:{},nav:{"pathname":"/","searchParams":[]}})</script><link rel="modulepreload" href="/_next/static/chunks/index-9JYwN_a3.js" />
+</head><body><div class="site-root">
+    <a class="skip-link" href="#main-content">Перейти до вмісту</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="DimFin — на початок сторінки">
+          <span class="brand-mark brand-mark-official" aria-hidden="true">
+            <img class="brand-logo-image" src="assets/dimfin-logo-source.png" alt="" />
+          </span>
+          <span>DimFin</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Головна навігація">
+          <a href="#features">Можливості</a>
+          <a
+            href="assets/dimfin-guide-for-beginners-ua.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Відкрити PDF-гайд «Як користуватися DimFin» у новій вкладці"
+          >Як користуватися</a>
+          <a href="#screens">Екрани</a>
+          <a href="#faq">FAQ</a>
+          <a href="#roadmap">Плани</a>
+        </nav>
+
+        <a class="button button-small button-dark" href="#install">Встановити</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top">
+        <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span></span> Розумний домашній бюджет</div>
+            <h1>Гроші під контролем. <em>Життя — без таблиць.</em></h1>
+            <p class="hero-lead">
+              DimFin об’єднує доходи, витрати, місячні бюджети, кредити та розстрочки,
+              показує фінансову картину в календарі й підказує, як спокійно завершити місяць.
+              Нагадує про платежі та щомісяця підбиває фінансові підсумки.
+              Фінанси без доступу до банківських рахунків. Усі дані зберігаються лише
+              на телефоні користувача.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#install">
+                Встановити DimFin
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg>
+              </a>
+              <a class="text-link" href="#features">Подивитися можливості <span>↓</span></a>
+            </div>
+            <div class="hero-proof" aria-label="Переваги DimFin">
+              <span><i aria-hidden="true">✓</i> Українською</span>
+              <span><i aria-hidden="true">✓</i> Без складного налаштування</span>
+              <span><i aria-hidden="true">✓</i> Дані лише на телефоні</span>
+            </div>
+          </div>
+
+          <div class="product-visual" aria-label="Приклад головного екрана DimFin">
+            <div class="visual-note visual-note-top" aria-hidden="true">
+              <span class="note-icon">↗</span>
+              <div><small>Прогноз</small><strong>+23 414 ₴</strong></div>
+            </div>
+
+            <div class="phone-shell phone-shell-real">
+              <div class="phone-speaker"></div>
+              <div class="app-screen app-screen-real">
+                <img
+                  src="assets/overview.png"
+                  alt="Реальний головний екран DimFin зі швидкими витратами, оглядом бюджету, рекомендованим лімітом і фінансовим радаром"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </div>
+            </div>
+
+            <div class="visual-note visual-note-bottom" aria-hidden="true">
+              <span class="note-icon note-icon-dark">✓</span>
+              <div><small>Рекомендований ліміт</small><strong>2 122 ₴/день</strong></div>
+            </div>
+
+            <div class="visual-note visual-note-side" aria-hidden="true">
+              <span class="note-icon">◫</span>
+              <div><small>Витрати</small><strong>33 948 ₴</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section" id="features">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow eyebrow-light"><span></span> Можливості</div>
+              <h2>Не просто цифри.<br />Зрозумілі наступні дії.</h2>
+            </div>
+            <p>
+              DimFin перетворює щоденні записи на просту картину бюджету —
+              без фінансового жаргону та перевантажених звітів.
+            </p>
+          </div>
+
+          <div class="feature-bento">
+            <article class="feature-card feature-card-wide">
+              <div class="feature-copy">
+                <span class="feature-number">01</span>
+                <h3>Фінансовий радар</h3>
+                <p>
+                  Оцінює темп витрат, залишок і майбутні платежі. Показує головний
+                  ризик та одну конкретну дію замість десятків показників.
+                </p>
+                <div class="tag-row"><span>Статус</span><span>Прогноз</span><span>Рекомендація</span></div>
+              </div>
+              <div class="radar-demo" aria-hidden="true">
+                <div class="radar-rings">
+                  <span class="ring ring-one"></span>
+                  <span class="ring ring-two"></span>
+                  <span class="ring ring-three"></span>
+                  <span class="radar-sweep"></span>
+                  <i class="radar-point point-one"></i>
+                  <i class="radar-point point-two"></i>
+                  <i class="radar-point point-three"></i>
+                </div>
+                <div class="radar-caption"><span></span> Спокійний темп</div>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card-quick">
+              <span class="feature-number">02</span>
+              <h3>Швидке внесення та шаблони</h3>
+              <p>Напишіть «120 кава» або додайте звичну витрату одним натисканням із власного шаблону.</p>
+              <div class="quick-input" aria-hidden="true">
+                <span>120 кава</span><i>→</i>
+              </div>
+              <div class="quick-result" aria-hidden="true">
+                <span>☕</span><div><small>Їжа та напої</small><strong>−120 ₴</strong></div>
+              </div>
+              <div class="template-row" aria-hidden="true">
+                <span><i>☕</i><b>Кава</b></span>
+                <span><i>🚌</i><b>Проїзд</b></span>
+                <span><i>🛒</i><b>Продукти</b></span>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card-plan">
+              <span class="feature-number">03</span>
+              <h3>План, що підлаштовується</h3>
+              <p>Легкий, нормальний або жорсткий режим — залежно від вашої ситуації.</p>
+              <div class="plan-options" aria-hidden="true">
+                <span>Легкий</span><span class="selected">Нормальний <i>✓</i></span><span>Жорсткий</span>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card-categories">
+              <div>
+                <span class="feature-number">04</span>
+                <h3>Бюджети та зобов’язання</h3>
+                <p>Контролюйте виконання бюджетів за категоріями, кредити, розстрочки й обов’язкові платежі.</p>
+              </div>
+              <div class="category-stack" aria-hidden="true">
+                <div><span class="category-icon cat-one">⌂</span><b>Комунальні</b><small>3 240 ₴</small></div>
+                <div><span class="category-icon cat-two">◫</span><b>Кредити</b><small>2 100 ₴</small></div>
+                <div><span class="category-icon cat-three">◆</span><b>Розстрочки</b><small>5 000 ₴</small></div>
+              </div>
+            </article>
+
+            <article class="feature-card feature-card-calendar">
+              <div class="feature-copy">
+                <span class="feature-number">05</span>
+                <h3>Календар витрат</h3>
+                <p>
+                  Переглядайте витрати за кожен день місяця, помічайте дні з
+                  перевищенням ліміту за кольором і відкривайте список операцій одним натисканням.
+                </p>
+                <div class="tag-row"><span>Суми за днями</span><span>Кольорова шкала</span><span>Операції дня</span></div>
+              </div>
+              <div class="calendar-showcase" aria-hidden="true">
+                <img src="assets/calendar.png" alt="" loading="lazy" decoding="async" />
+              </div>
+            </article>
+
+            <article class="feature-card feature-card-notifications">
+              <div class="feature-copy">
+                <span class="feature-number">06</span>
+                <h3>Локальні нагадування та підсумки</h3>
+                <p>
+                  DimFin нагадає про платіж за кредитом або розстрочкою за 3 дні,
+                  у день сплати та після прострочення. На початку нового місяця застосунок
+                  покаже підсумок попереднього: доходи, витрати й баланс.
+                </p>
+                <div class="tag-row"><span>Без інтернету</span><span>Близько 09:00</span><span>Можна вимкнути</span></div>
+              </div>
+              <div class="notification-showcase" aria-hidden="true">
+                <div class="notification-item notification-item-credit">
+                  <span>◉</span>
+                  <div><small>DimFin · Кредити та розстрочки</small><strong>Наближається платіж</strong><p>Через 3 дні потрібно сплатити 2 100 ₴</p></div>
+                </div>
+                <div class="notification-item notification-item-summary">
+                  <span>↗</span>
+                  <div><small>DimFin · Місячний підсумок</small><strong>Підсумок за червень</strong><p>Доходи 52 000 ₴ · Витрати 33 948 ₴</p></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section" id="guide">
+        <div class="container">
+          <div class="guide-heading">
+            <div>
+              <div class="eyebrow"><span></span> Покрокова інструкція</div>
+              <h2>Почніть користуватися<br />DimFin за <em>8 кроків.</em></h2>
+            </div>
+            <p>
+              Натискайте на кроки — поруч з’являтиметься відповідний екран
+              застосунку. Усі приклади показані на реальній версії DimFin.
+            </p>
+          </div>
+
+          <div class="guide-layout">
+            <div class="guide-steps" role="tablist" aria-label="Кроки користування DimFin">
+              <button
+                class="guide-step is-active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                data-guide-step="1"
+                data-guide-image="assets/settings.png"
+                data-guide-title="Налаштуйте DimFin під себе"
+              >
+                <span class="guide-step-number">01</span>
+                <span class="guide-step-copy">
+                  <strong>Налаштуйте застосунок</strong>
+                  <small>Відкрийте ⚙️ «Налаштування», оберіть гривню, долар або євро. Увімкніть фінансового асистента та задайте місячні бюджети для потрібних категорій.</small>
+                </span>
+                <span class="guide-step-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <button
+                class="guide-step"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-guide-step="2"
+                data-guide-image="assets/transactions.png"
+                data-guide-title="Додавайте витрати зручним способом"
+              >
+                <span class="guide-step-number">02</span>
+                <span class="guide-step-copy">
+                  <strong>Внесіть першу операцію</strong>
+                  <small>Натисніть синю кнопку «+» і вкажіть дані операції. Для регулярних витрат створіть власні шаблони з назвою, сумою, категорією та значком — надалі потрібний запис додається одним натисканням.</small>
+                </span>
+                <span class="guide-step-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <button
+                class="guide-step"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-guide-step="3"
+                data-guide-image="assets/overview.png"
+                data-guide-title="Перевіряйте огляд місяця"
+              >
+                <span class="guide-step-number">03</span>
+                <span class="guide-step-copy">
+                  <strong>Контролюйте загальну картину</strong>
+                  <small>На головному екрані видно доходи, витрати, кредити, баланс і рекомендований денний ліміт. Стрілками перемикайте місяці.</small>
+                </span>
+                <span class="guide-step-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <button
+                class="guide-step"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-guide-step="4"
+                data-guide-image="assets/radar.png"
+                data-guide-title="Читайте фінансовий радар"
+              >
+                <span class="guide-step-number">04</span>
+                <span class="guide-step-copy">
+                  <strong>Оцініть ризики та прогноз</strong>
+                  <small>Прокрутіть головний екран до «Фінансового радара». Він показує статус бюджету, прогноз до кінця місяця та рекомендований сценарій.</small>
+                </span>
+                <span class="guide-step-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <button
+                class="guide-step"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-guide-step="5"
+                data-guide-image="assets/smart-action.png"
+                data-guide-title="Застосуйте рекомендовану дію"
+              >
+                <span class="guide-step-number">05</span>
+                <span class="guide-step-copy">
+                  <strong>Скоригуйте денний ліміт</strong>
+                  <small>Відкрийте рекомендований сценарій, порівняйте поточний і новий прогноз. Якщо результат підходить, натисніть «Застосувати ліміт».</small>
+                </span>
+                <span class="guide-step-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <button
+                class="guide-step"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-guide-step="6"
+                data-guide-image="assets/analytics.png"
+                data-guide-title="Аналізуйте структуру витрат"
+              >
+                <span class="guide-step-number">06</span>
+                <span class="guide-step-copy">
+                  <strong>Аналізуйте витрати й бюджети</strong>
+                  <small>Натисніть значок діаграми. Переглядайте тренди та категорії, а в блоці «Виконання бюджетів» — скільки вже витрачено, скільки залишилось і де ліміт перевищено.</small>
+                </span>
+                <span class="guide-step-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <button
+                class="guide-step"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-guide-step="7"
+                data-guide-image="assets/calendar.png"
+                data-guide-title="Переглядайте витрати в календарі"
+              >
+                <span class="guide-step-number">07</span>
+                <span class="guide-step-copy">
+                  <strong>Знайдіть витрати за потрібний день</strong>
+                  <small>Натисніть значок календаря на головному екрані. Перемикайте місяці, стежте за кольоровою інтенсивністю витрат і виберіть день, щоб побачити всі його операції.</small>
+                </span>
+                <span class="guide-step-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <button
+                class="guide-step"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-guide-step="8"
+                data-guide-image="assets/credits.png"
+                data-guide-title="Контролюйте кредити та розстрочки"
+              >
+                <span class="guide-step-number">08</span>
+                <span class="guide-step-copy">
+                  <strong>Не пропускайте обов’язкові платежі</strong>
+                  <small>Відкрийте розділ через значок банку, оберіть «Кредит» або «Розстрочка», перевіряйте суму й дату платежу та позначайте його як сплачений. Для розстрочки DimFin покаже прогрес і кількість платежів.</small>
+                </span>
+                <span class="guide-step-arrow" aria-hidden="true">→</span>
+              </button>
+            </div>
+
+            <div class="guide-preview" aria-live="polite">
+              <div class="guide-preview-top">
+                <span data-guide-count>Крок 1 із 8</span>
+                <i><span></span> Реальний екран</i>
+              </div>
+              <div class="guide-phone">
+                <span class="guide-phone-speaker" aria-hidden="true"></span>
+                <img
+                  data-guide-preview-image
+                  src="assets/settings.png"
+                  alt="Налаштування DimFin"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <strong class="guide-preview-title" data-guide-preview-title>Налаштуйте DimFin під себе</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screens-section" id="screens">
+        <div class="container">
+          <div class="screens-heading">
+            <div>
+              <div class="eyebrow"><span></span> Реальні екрани застосунку</div>
+              <h2>Справжній DimFin.<br /><em>Без макетів.</em></h2>
+            </div>
+            <div class="screens-intro">
+              <p>
+                Від огляду місяця й календаря витрат до бюджетів, кредитів та розстрочок — подивіться,
+                як DimFin допомагає керувати бюджетом щодня.
+              </p>
+              <span><i>9</i> екранів</span>
+            </div>
+          </div>
+
+          <div class="screen-rail" tabindex="0" aria-label="Галерея екранів DimFin">
+            <button class="screen-shot-card" type="button" data-screenshot="assets/overview.png" data-caption="Огляд місяця">
+              <span class="screen-device"><img src="assets/overview.png" alt="Огляд місяця в DimFin" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>01</i><span><strong>Огляд місяця</strong><small>Баланс і денний ліміт</small></span></span>
+            </button>
+
+            <button class="screen-shot-card" type="button" data-screenshot="assets/calendar.png" data-caption="Календар витрат">
+              <span class="screen-device screen-device-framed"><img src="assets/calendar.png" alt="Календар витрат DimFin із сумами за днями та кольоровою шкалою" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>02</i><span><strong>Календар витрат</strong><small>Суми за днями й операції</small></span></span>
+            </button>
+
+            <button class="screen-shot-card" type="button" data-screenshot="assets/radar.png" data-caption="Фінансовий радар">
+              <span class="screen-device"><img src="assets/radar.png" alt="Фінансовий радар DimFin" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>03</i><span><strong>Фінансовий радар</strong><small>Статус і прогноз</small></span></span>
+            </button>
+
+            <button class="screen-shot-card" type="button" data-screenshot="assets/smart-action.png" data-caption="Рекомендована дія">
+              <span class="screen-device"><img src="assets/smart-action.png" alt="Рекомендована дія та новий денний ліміт" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>04</i><span><strong>Розумна дія</strong><small>Ліміт із прогнозом ефекту</small></span></span>
+            </button>
+
+            <button class="screen-shot-card" type="button" data-screenshot="assets/analytics-overview.png" data-caption="Аналітика витрат">
+              <span class="screen-device"><img src="assets/analytics-overview.png" alt="Аналітика витрат, розумний аналіз і категорії у DimFin" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>05</i><span><strong>Аналітика витрат</strong><small>Порівняння й категорії</small></span></span>
+            </button>
+
+            <button class="screen-shot-card" type="button" data-screenshot="assets/analytics.png" data-caption="Виконання місячних бюджетів">
+              <span class="screen-device"><img src="assets/analytics.png" alt="Виконання місячних бюджетів за категоріями в DimFin" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>06</i><span><strong>Місячні бюджети</strong><small>Прогрес за категоріями</small></span></span>
+            </button>
+
+            <button class="screen-shot-card" type="button" data-screenshot="assets/transactions.png" data-caption="Історія транзакцій">
+              <span class="screen-device"><img src="assets/transactions.png" alt="Список транзакцій у DimFin" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>07</i><span><strong>Транзакції</strong><small>Пошук, фільтри й категорії</small></span></span>
+            </button>
+
+            <button class="screen-shot-card" type="button" data-screenshot="assets/credits.png" data-caption="Кредити та розстрочки">
+              <span class="screen-device"><img src="assets/credits.png" alt="Облік кредитів, розстрочок і щомісячних платежів у DimFin" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>08</i><span><strong>Кредити й розстрочки</strong><small>Платежі та реальний прогрес</small></span></span>
+            </button>
+
+            <button class="screen-shot-card" type="button" data-screenshot="assets/settings.png" data-caption="Налаштування">
+              <span class="screen-device"><img src="assets/settings.png" alt="Налаштування валюти, асистента й бюджетів" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>09</i><span><strong>Налаштування</strong><small>Валюта, асистент і бюджети</small></span></span>
+            </button>
+          </div>
+
+          <p class="screens-hint"><span aria-hidden="true">←</span> Гортайте та натискайте, щоб збільшити <span aria-hidden="true">→</span></p>
+        </div>
+      </section>
+
+      <section class="answers-section" id="faq">
+        <div class="container answers-grid">
+          <div class="faq-block">
+            <div class="eyebrow"><span></span> Поширені запитання</div>
+            <h2>Коротко про DimFin</h2>
+
+            <div class="faq-list">
+              <details open>
+                <summary>Що таке DimFin?<span aria-hidden="true">＋</span></summary>
+                <p>
+                  Це застосунок для домашнього бюджету, який допомагає записувати
+                  доходи й витрати, контролювати місячні бюджети, кредити та розстрочки,
+                  аналізувати фінансові звички й планувати залишок до кінця місяця.
+                </p>
+              </details>
+              <details>
+                <summary>Що можна вести в застосунку?<span aria-hidden="true">＋</span></summary>
+                <p>
+                  Транзакції, власні шаблони швидких витрат, місячні бюджети, кредити,
+                  розстрочки й платежі за ними. Календар показує суми та інтенсивність витрат за днями,
+                  а аналітика — баланс, тренди й найбільші категорії.
+                </p>
+              </details>
+              <details>
+                <summary>Як працюють місячні бюджети?<span aria-hidden="true">＋</span></summary>
+                <p>
+                  У налаштуваннях задайте ліміт для потрібних категорій. Після цього
+                  в аналітиці з’явиться виконання бюджетів: витрачена сума, відсоток,
+                  доступний залишок або розмір перевищення для кожної категорії.
+                </p>
+              </details>
+              <details>
+                <summary>Чим розстрочка відрізняється від кредиту?<span aria-hidden="true">＋</span></summary>
+                <p>
+                  Для кредиту DimFin контролює щомісячний платіж, дату та актуальний залишок.
+                  Для розстрочки додатково враховується загальна кількість платежів і показується
+                  реальний прогрес: скільки платежів уже сплачено та скільки залишилося.
+                </p>
+              </details>
+              <details>
+                <summary>Як працює календар витрат?<span aria-hidden="true">＋</span></summary>
+                <p>
+                  У кожному дні видно суму витрат, а колір показує її рівень відносно
+                  денного ліміту: від доброго темпу до перевищення. Натисніть день,
+                  щоб переглянути його доходи й витрати та відкрити потрібну операцію.
+                </p>
+              </details>
+              <details>
+                <summary>Як працює фінансовий асистент?<span aria-hidden="true">＋</span></summary>
+                <p>
+                  Він аналізує внесені дані, оцінює темп витрат і формує зрозумілі
+                  підказки: денний ліміт, пріоритетну дію або сценарій економії.
+                </p>
+              </details>
+              <details>
+                <summary>Які сповіщення надсилає DimFin?<span aria-hidden="true">＋</span></summary>
+                <p>
+                  Для активних кредитів і розстрочок DimFin локально перевіряє дати платежів
+                  та нагадує за 3 дні, у день сплати й після прострочення. Також на початку
+                  кожного місяця надходить фінансовий підсумок за попередній місяць із доходами,
+                  витратами та балансом. Сповіщення працюють без передавання фінансових даних
+                  на сервер і керуються в налаштуваннях застосунку.
+                </p>
+              </details>
+              <details>
+                <summary>Де завантажити DimFin?<span aria-hidden="true">＋</span></summary>
+                <p>
+                  Сторінка DimFin у Google Play уже доступна за прямим посиланням нижче.
+                  Можливість встановлення може залежати від поточного етапу тестування.
+                </p>
+              </details>
+            </div>
+          </div>
+
+          <div class="roadmap-block" id="roadmap">
+            <div class="eyebrow"><span></span> Плани на майбутнє</div>
+            <h2>DimFin розвивається разом із вами</h2>
+            <p class="roadmap-intro">
+              Відгуки користувачів уже формують наступні версії застосунку.
+            </p>
+
+            <div class="roadmap-list">
+              <article class="roadmap-item">
+                <span class="roadmap-icon" aria-hidden="true">01</span>
+                <div>
+                  <strong>Персоналізація</strong>
+                  <p>Знайомство під час першого запуску та особисте привітання.</p>
+                </div>
+              </article>
+              <article class="roadmap-item">
+                <span class="roadmap-icon" aria-hidden="true">02</span>
+                <div>
+                  <strong>Легкий старт</strong>
+                  <p>Короткий помічник, початковий баланс і зручне налаштування рахунків.</p>
+                </div>
+              </article>
+              <article class="roadmap-item">
+                <span class="roadmap-icon" aria-hidden="true">03</span>
+                <div>
+                  <strong>Ще зручніший облік</strong>
+                  <p>Покращення введення сум, кредитів і щоденної роботи з бюджетом.</p>
+                </div>
+              </article>
+              <article class="roadmap-item roadmap-item-later">
+                <span class="roadmap-icon" aria-hidden="true">04</span>
+                <div>
+                  <strong>Спільний бюджет</strong>
+                  <p>Можливість вести один бюджет разом із членами сім’ї та бачити спільну фінансову картину.</p>
+                </div>
+              </article>
+            </div>
+
+            <p class="roadmap-note">Порядок і склад функцій можуть змінюватися за результатами тестування.</p>
+          </div>
+
+          <div class="install-card" id="install">
+            <div class="install-glow" aria-hidden="true"></div>
+            <div class="install-content">
+              <span class="install-badge">Сторінка в Google Play</span>
+              <h2>Почніть бачити бюджет ясніше.</h2>
+              <p>DimFin допоможе перетворити щоденні витрати на спокійний і реалістичний план.</p>
+
+              <div class="store-links" aria-label="Посилання на DimFin у Google Play">
+                <a class="store-button" href="https://play.google.com/store/apps/details?id=com.dimfin" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M5.2 4.4 19 16 5.3 27.6a3.3 3.3 0 0 1-.9-2.3V6.7c0-.9.3-1.6.8-2.3Z" />
+                    <path d="m20.8 14.4 3.9-2.2c1.3-.7 2.4-.3 2.9.5.6 1 .3 2.1-.8 2.8l-4.1 2.3-1.9-3.4ZM6.8 3.5 21.1 14l-2.7 2.3L6.8 3.5Zm0 25L18.5 16l2.8 2.4L6.8 28.5Z" />
+                  </svg>
+                  <span><small>Завантажити з</small><strong>Google Play</strong></span>
+                  <i>Встановити</i>
+                </a>
+              </div>
+              <small class="install-note">DimFin доступний для Android. Можливість встановлення може залежати від поточного етапу тестування.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="developer-section" id="contact">
+        <div class="container">
+          <div class="developer-card">
+            <div class="developer-photo-wrap">
+              <img
+                src="assets/developer-dmytro.jpg"
+                alt="Дмитро Стукалов — розробник DimFin"
+                loading="lazy"
+                decoding="async"
+              />
+              <span><i></i> На зв’язку</span>
+            </div>
+
+            <div class="developer-content">
+              <div class="eyebrow eyebrow-light"><span></span> Зворотний зв’язок</div>
+              <h2>Допоможіть зробити<br />DimFin <em>кращим.</em></h2>
+              <p>
+                Помітили помилку, маєте ідею або хочете запропонувати нову можливість?
+                Напишіть безпосередньо розробнику.
+              </p>
+
+              <div class="developer-person">
+                <strong>Дмитро Стукалов</strong>
+                <span>Розробник DimFin</span>
+              </div>
+
+              <div class="contact-actions">
+                <a class="contact-link" href="mailto:aivengo.dst@gmail.com">
+                  <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M3.5 6.5h17v11h-17z" /><path d="m4.5 7.5 7.5 6 7.5-6" /></svg>
+                  </span>
+                  <span><small>Написати на пошту</small><strong>aivengo.dst@gmail.com</strong></span>
+                  <i aria-hidden="true">↗</i>
+                </a>
+              </div>
+
+              <small class="developer-note">Кожен відгук допомагає визначити, що покращувати в наступних версіях.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="screenshot-dialog" data-screenshot-dialog aria-label="Збільшений скріншот DimFin">
+      <div class="dialog-toolbar">
+        <strong data-dialog-caption>DimFin</strong>
+        <button type="button" data-dialog-close aria-label="Закрити скріншот">×</button>
+      </div>
+      <div class="dialog-image-wrap"><img data-dialog-image src="" alt="" /></div>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand brand-footer" href="#top">
+          <span class="brand-mark brand-mark-official" aria-hidden="true">
+            <img class="brand-logo-image" src="assets/dimfin-logo-source.png" alt="" />
+          </span>
+          <span>DimFin</span>
+        </a>
+        <p>Домашній бюджет без зайвої складності.</p>
+        <p>© <span data-year></span> DimFin</p>
+      </div>
+    </footer>
+  </div><script type="module" src="/_next/static/chunks/index-9JYwN_a3.js" id="_R_" async=""></script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("2:I[\"8c0f216c4604\",[],\"Children\",1]\n3:I[\"593f344dc510\",[],\"GlobalErrorBoundary\",1]\n4:I[\"0b874ad30386\",[],\"default\",1]\n5:I[\"593f344dc510\",[],\"ErrorBoundary\",1]\n6:I[\"15c18cfaeeff\",[],\"LayoutSegmentProvider\",1]\n7:I[\"8c0f216c4604\",[],\"Slot\",1]\n8:I[\"9276801271d6\",[],\"AppRouterScrollTarget\",1]\n9:I[\"593f344dc510\",[],\"RedirectBoundary\",1]\n:HL[\"/styles.css\",\"style\"]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("0:{\"__route\":\"route:/\",\"__interceptionContext\":null,\"__layoutIds\":[\"layout:/\"],\"__rootLayout\":\"/\",\"__sourcePage\":\"/page\",\"page:/\":\"$L1\",\"layout:/\":[[\"$\",\"html\",null,{\"lang\":\"uk\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"meta\",null,{\"name\":\"theme-color\",\"content\":\"#050b10\"}],[\"$\",\"link\",null,{\"rel\":\"stylesheet\",\"href\":\"/styles.css\"}],[\"$\",\"script\",null,{\"src\":\"/script.js\",\"defer\":true}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{}]}]]}],null],\"route:/\":[[[\"$\",\"meta\",null,{\"charSet\":\"utf-8\"}],[[\"$\",\"title\",\"0\",{\"children\":\"DimFin — домашній бюджет без зайвої складності\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"DimFin — домашній бюджет без доступу до банківських рахунків. Доходи й витрати, місячні бюджети, кредити та розстрочки, календар, аналітика, локальні нагадування й щомісячні підсумки. Усі фінансові дані зберігаються лише на телефоні користувача.\"}]],[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]],[\"$\",\"$L3\",null,{\"fallback\":\"$4\",\"children\":[\"$\",\"$L5\",null,{\"fallback\":\"$4\",\"children\":[\"$\",\"$L6\",null,{\"providerId\":\"layout:/\",\"segmentMap\":{\"children\":[]},\"children\":[\"$\",\"$L7\",null,{\"id\":\"layout:/\",\"parallelSlots\":\"$undefined\",\"children\":[\"$\",\"$L8\",null,{\"children\":[\"$\",\"$L9\",null,{\"children\":[\"$\",\"$L6\",null,{\"providerId\":\"page:/\",\"segmentMap\":{\"children\":[\"__PAGE__\"]},\"children\":[\"$\",\"$L7\",null,{\"id\":\"page:/\"}]}]}]}]}]}]}]}],null],\"__layoutFlags\":{\"layout:/\":\"s\"},\"__artifactCompatibility\":{\"schemaVersion\":1,\"graphVersion\":\"app-route-graph:1177fd80f83fa7b0\",\"deploymentVersion\":\"2ee2a13a-79e4-42f0-8da8-0c9386929bdd\",\"appElementsSchemaVersion\":1,\"rscPayloadSchemaVersion\":1,\"rootBoundaryId\":\"/\",\"renderEpoch\":null},\"__renderObservation\":{\"schemaVersion\":1,\"output\":{\"kind\":\"app-rsc\",\"mountedSlotsFingerprint\":null,\"renderEpoch\":null,\"rootBoundaryId\":\"/\",\"routeId\":\"route:/\"},\"completeness\":\"partial\",\"boundaryOutcome\":{\"kind\":\"unknown\"},\"requestApis\":[{\"kind\":\"connection\",\"status\":\"unknown\"},{\"kind\":\"cookies\",\"status\":\"unknown\"},{\"kind\":\"draftMode\",\"status\":\"unknown\"},{\"kind\":\"headers\",\"status\":\"unknown\"},{\"kind\":\"params\",\"status\":\"unknown\"},{\"kind\":\"searchParams\",\"status\":\"unknown\"}],\"dynamicFetches\":[],\"cacheTags\":[\"/\",\"_N_T_/\",\"_N_T_/index\",\"_N_T_/layout\",\"_N_T_/page\"],\"pathTags\":[\"/\"],\"cacheability\":\"unknown\",\"downgrade\":{\"target\":\"freshRender\",\"reasons\":[{\"code\":\"CP_DOWNGRADE_CACHEABILITY_UNKNOWN\",\"target\":\"freshRender\"},{\"code\":\"CP_DOWNGRADE_INCOMPLETE_OBSERVATION\",\"completeness\":\"partial\",\"target\":\"freshRender\"},{\"code\":\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"requestApi\":\"connection\",\"target\":\"freshRender\"},{\"code\":\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"requestApi\":\"cookies\",\"target\":\"freshRender\"},{\"code\":\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"requestApi\":\"draftMode\",\"target\":\"freshRender\"},{\"code\":\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"requestApi\":\"headers\",\"target\":\"freshRender\"},{\"code\":\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"requestApi\":\"params\",\"target\":\"freshRender\"},{\"code\":\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"requestApi\":\"searchParams\",\"target\":\"freshRender\"}],\"fallback\":{\"kind\":\"breakerFallback\",\"code\":\"CP_PRIVATE_DYNAMIC_DOWNGRADE\",\"mode\":\"renderFresh\",\"scope\":\"affectedOutput\",\"fields\":{\"reasonCodes\":[\"CP_DOWNGRADE_CACHEABILITY_UNKNOWN\",\"CP_DOWNGRADE_INCOMPLETE_OBSERVATION\",\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\",\"CP_DOWNGRADE_UNKNOWN_REQUEST_API\"],\"target\":\"freshRender\"}},\"isPublicCacheCandidate\":false}}}\na:T9a74,\n    \u003ca class=\"skip-link\" href=\"#main-content\"\u003eПерейти до вмісту\u003c/a\u003e\n\n    \u003cheader class=\"site-header\" data-header\u003e\n      \u003cdiv class=\"container header-inner\"\u003e\n        \u003ca class=\"brand\" href=\"#top\" aria-label=\"DimFin — на початок сторінки\"\u003e\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("          \u003cspan class=\"brand-mark brand-mark-official\" aria-hidden=\"true\"\u003e\n            \u003cimg class=\"brand-logo-image\" src=\"assets/dimfin-logo-source.png\" alt=\"\" /\u003e\n          \u003c/span\u003e\n          \u003cspan\u003eDimFin\u003c/span\u003e\n        \u003c/a\u003e\n\n        \u003cnav class=\"desktop-nav\" aria-label=\"Головна навігація\"\u003e\n          \u003ca href=\"#features\"\u003eМожливості\u003c/a\u003e\n          \u003ca\n            href=\"assets/dimfin-guide-for-beginners-ua.pdf\"\n            target=\"_blank\"\n            rel=\"noopener noreferrer\"\n            aria-label=\"Відкрити PDF-гайд «Як користуватися DimFin» у новій вкладці\"\n          \u003eЯк користуватися\u003c/a\u003e\n          \u003ca href=\"#screens\"\u003eЕкрани\u003c/a\u003e\n          \u003ca href=\"#faq\"\u003eFAQ\u003c/a\u003e\n          \u003ca href=\"#roadmap\"\u003eПлани\u003c/a\u003e\n        \u003c/nav\u003e\n\n        \u003ca class=\"button button-small button-dark\" href=\"#install\"\u003eВстановити\u003c/a\u003e\n      \u003c/div\u003e\n    \u003c/header\u003e\n\n    \u003cmain id=\"main-content\"\u003e\n      \u003csection class=\"hero\" id=\"top\"\u003e\n        \u003cdiv class=\"hero-orb hero-orb-one\" aria-hidden=\"true\"\u003e\u003c/div\u003e\n        \u003cdiv class=\"hero-orb hero-orb-two\" aria-hidden=\"true\"\u003e\u003c/div\u003e\n        \u003cdiv class=\"container hero-grid\"\u003e\n          \u003cdiv class=\"hero-copy\"\u003e\n            \u003cdiv class=\"eyebrow\"\u003e\u003cspan\u003e\u003c/span\u003e Розумний домашній бюджет\u003c/div\u003e\n            \u003ch1\u003eГроші під контролем. \u003cem\u003eЖиття — без таблиць.\u003c/em\u003e\u003c/h1\u003e\n            \u003cp class=\"hero-lead\"\u003e\n              DimFin об’єднує доходи, витрати, місячні бюджети, кредити та розстрочки,\n              показує фінансову картину в календарі й підказує, як спокійно завершити місяць.\n              Нагадує про платежі та щомісяця підбиває фінансові підсумки.\n              Фінанси без доступу до банківських рахунків. Усі дані зберігаються лише\n              на телефоні користувача.\n            \u003c/p\u003e\n            \u003cdiv class=\"hero-actions\"\u003e\n              \u003ca class=\"button button-primary\" href=\"#install\"\u003e\n                Встановити DimFin\n                \u003csvg viewBox=\"0 0 20 20\" aria-hidden=\"true\"\u003e\u003cpath d=\"m7 4 6 6-6 6\" /\u003e\u003c/svg\u003e\n              \u003c/a\u003e\n              \u003ca class=\"text-link\" href=\"#features\"\u003eПодивитися можливості \u003cspan\u003e↓\u003c/span\u003e\u003c/a\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\"hero-proof\" aria-label=\"Переваги DimFin\"\u003e\n              \u003cspan\u003e\u003ci aria-hidden=\"true\"\u003e✓\u003c/i\u003e Українською\u003c/span\u003e\n              \u003cspan\u003e\u003ci aria-hidden=\"true\"\u003e✓\u003c/i\u003e Без складного налаштування\u003c/span\u003e\n              \u003cspan\u003e\u003ci aria-hidden=\"true\"\u003e✓\u003c/i\u003e Дані лише на телефоні\u003c/span\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"product-visual\" aria-label=\"Приклад головного екрана DimFin\"\u003e\n            \u003cdiv class=\"visual-note visual-note-top\" aria-hidden=\"true\"\u003e\n              \u003cspan class=\"note-icon\"\u003e↗\u003c/span\u003e\n              \u003cdiv\u003e\u003csmall\u003eПрогноз\u003c/small\u003e\u003cstrong\u003e+23 414 ₴\u003c/strong\u003e\u003c/div\u003e\n            \u003c/div\u003e\n\n            \u003cdiv class=\"phone-shell phone-shell-real\"\u003e\n              \u003cdiv class=\"phone-speaker\"\u003e\u003c/div\u003e\n              \u003cdiv class=\"app-screen app-screen-real\"\u003e\n                \u003cimg\n                  src=\"assets/overview.png\"\n                  alt=\"Реальний головний екран DimFin зі швидкими витратами, оглядом бюджету, рекомендованим лімітом і фінансовим радаром\"\n                  fetchpriority=\"high\"\n                  decoding=\"async\"\n                /\u003e\n              \u003c/div\u003e\n            \u003c/div\u003e\n\n            \u003cdiv class=\"visual-note visual-note-bottom\" aria-hidden=\"true\"\u003e\n              \u003cspan class=\"note-icon note-icon-dark\"\u003e✓\u003c/span\u003e\n              \u003cdiv\u003e\u003csmall\u003eРекомендований ліміт\u003c/small\u003e\u003cstrong\u003e2 122 ₴/день\u003c/strong\u003e\u003c/div\u003e\n            \u003c/div\u003e\n\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("            \u003cdiv class=\"visual-note visual-note-side\" aria-hidden=\"true\"\u003e\n              \u003cspan class=\"note-icon\"\u003e◫\u003c/span\u003e\n              \u003cdiv\u003e\u003csmall\u003eВитрати\u003c/small\u003e\u003cstrong\u003e33 948 ₴\u003c/strong\u003e\u003c/div\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n      \u003c/section\u003e\n\n      \u003csection class=\"features-section\" id=\"features\"\u003e\n        \u003cdiv class=\"container\"\u003e\n          \u003cdiv class=\"section-heading\"\u003e\n            \u003cdiv\u003e\n              \u003cdiv class=\"eyebrow eyebrow-light\"\u003e\u003cspan\u003e\u003c/span\u003e Можливості\u003c/div\u003e\n              \u003ch2\u003eНе просто цифри.\u003cbr /\u003eЗрозумілі наступні дії.\u003c/h2\u003e\n            \u003c/div\u003e\n            \u003cp\u003e\n              DimFin перетворює щоденні записи на просту картину бюджету —\n              без фінансового жаргону та перевантажених звітів.\n            \u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"feature-bento\"\u003e\n            \u003carticle class=\"feature-card feature-card-wide\"\u003e\n              \u003cdiv class=\"feature-copy\"\u003e\n                \u003cspan class=\"feature-number\"\u003e01\u003c/span\u003e\n                \u003ch3\u003eФінансовий радар\u003c/h3\u003e\n                \u003cp\u003e\n                  Оцінює темп витрат, залишок і майбутні платежі. Показує головний\n                  ризик та одну конкретну дію замість десятків показників.\n                \u003c/p\u003e\n                \u003cdiv class=\"tag-row\"\u003e\u003cspan\u003eСтатус\u003c/span\u003e\u003cspan\u003eПрогноз\u003c/span\u003e\u003cspan\u003eРекомендація\u003c/span\u003e\u003c/div\u003e\n              \u003c/div\u003e\n              \u003cdiv class=\"radar-demo\" aria-hidden=\"true\"\u003e\n                \u003cdiv class=\"radar-rings\"\u003e\n                  \u003cspan class=\"ring ring-one\"\u003e\u003c/span\u003e\n                  \u003cspan class=\"ring ring-two\"\u003e\u003c/span\u003e\n                  \u003cspan class=\"ring ring-three\"\u003e\u003c/span\u003e\n                  \u003cspan class=\"radar-sweep\"\u003e\u003c/span\u003e\n                  \u003ci class=\"radar-point point-one\"\u003e\u003c/i\u003e\n                  \u003ci class=\"radar-point point-two\"\u003e\u003c/i\u003e\n                  \u003ci class=\"radar-point point-three\"\u003e\u003c/i\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\"radar-caption\"\u003e\u003cspan\u003e\u003c/span\u003e Спокійний темп\u003c/div\u003e\n              \u003c/div\u003e\n            \u003c/article\u003e\n\n            \u003carticle class=\"feature-card feature-card-quick\"\u003e\n              \u003cspan class=\"feature-number\"\u003e02\u003c/span\u003e\n              \u003ch3\u003eШвидке внесення та шаблони\u003c/h3\u003e\n              \u003cp\u003eНапишіть «120 кава» або додайте звичну витрату одним натисканням із власного шаблону.\u003c/p\u003e\n              \u003cdiv class=\"quick-input\" aria-hidden=\"true\"\u003e\n                \u003cspan\u003e120 кава\u003c/span\u003e\u003ci\u003e→\u003c/i\u003e\n              \u003c/div\u003e\n              \u003cdiv class=\"quick-result\" aria-hidden=\"true\"\u003e\n                \u003cspan\u003e☕\u003c/span\u003e\u003cdiv\u003e\u003csmall\u003eЇжа та напої\u003c/small\u003e\u003cstrong\u003e−120 ₴\u003c/strong\u003e\u003c/div\u003e\n              \u003c/div\u003e\n              \u003cdiv class=\"template-row\" aria-hidden=\"true\"\u003e\n                \u003cspan\u003e\u003ci\u003e☕\u003c/i\u003e\u003cb\u003eКава\u003c/b\u003e\u003c/span\u003e\n                \u003cspan\u003e\u003ci\u003e🚌\u003c/i\u003e\u003cb\u003eПроїзд\u003c/b\u003e\u003c/span\u003e\n                \u003cspan\u003e\u003ci\u003e🛒\u003c/i\u003e\u003cb\u003eПродукти\u003c/b\u003e\u003c/span\u003e\n              \u003c/div\u003e\n            \u003c/article\u003e\n\n            \u003carticle class=\"feature-card feature-card-plan\"\u003e\n              \u003cspan class=\"feature-number\"\u003e03\u003c/span\u003e\n              \u003ch3\u003eПлан, що підлаштовується\u003c/h3\u003e\n              \u003cp\u003eЛегкий, нормальний або жорсткий режим — залежно від вашої ситуації.\u003c/p\u003e\n              \u003cdiv class=\"plan-options\" aria-hidden=\"true\"\u003e\n                \u003cspan\u003eЛегкий\u003c/span\u003e\u003cspan class=\"selected\"\u003eНормальний \u003ci\u003e✓\u003c/i\u003e\u003c/span\u003e\u003cspan\u003eЖорсткий\u003c/span\u003e\n              \u003c/div\u003e\n            \u003c/article\u003e\n\n            \u003carticle class=\"feature-card feature-card-categories\"\u003e\n              \u003cdiv\u003e\n                \u003cspan class=\"feature-number\"\u003e04\u003c/span\u003e\n                \u003ch3\u003eБюджети та зобов’язання\u003c/h3\u003e\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("                \u003cp\u003eКонтролюйте виконання бюджетів за категоріями, кредити, розстрочки й обов’язкові платежі.\u003c/p\u003e\n              \u003c/div\u003e\n              \u003cdiv class=\"category-stack\" aria-hidden=\"true\"\u003e\n                \u003cdiv\u003e\u003cspan class=\"category-icon cat-one\"\u003e⌂\u003c/span\u003e\u003cb\u003eКомунальні\u003c/b\u003e\u003csmall\u003e3 240 ₴\u003c/small\u003e\u003c/div\u003e\n                \u003cdiv\u003e\u003cspan class=\"category-icon cat-two\"\u003e◫\u003c/span\u003e\u003cb\u003eКредити\u003c/b\u003e\u003csmall\u003e2 100 ₴\u003c/small\u003e\u003c/div\u003e\n                \u003cdiv\u003e\u003cspan class=\"category-icon cat-three\"\u003e◆\u003c/span\u003e\u003cb\u003eРозстрочки\u003c/b\u003e\u003csmall\u003e5 000 ₴\u003c/small\u003e\u003c/div\u003e\n              \u003c/div\u003e\n            \u003c/article\u003e\n\n            \u003carticle class=\"feature-card feature-card-calendar\"\u003e\n              \u003cdiv class=\"feature-copy\"\u003e\n                \u003cspan class=\"feature-number\"\u003e05\u003c/span\u003e\n                \u003ch3\u003eКалендар витрат\u003c/h3\u003e\n                \u003cp\u003e\n                  Переглядайте витрати за кожен день місяця, помічайте дні з\n                  перевищенням ліміту за кольором і відкривайте список операцій одним натисканням.\n                \u003c/p\u003e\n                \u003cdiv class=\"tag-row\"\u003e\u003cspan\u003eСуми за днями\u003c/span\u003e\u003cspan\u003eКольорова шкала\u003c/span\u003e\u003cspan\u003eОперації дня\u003c/span\u003e\u003c/div\u003e\n              \u003c/div\u003e\n              \u003cdiv class=\"calendar-showcase\" aria-hidden=\"true\"\u003e\n                \u003cimg src=\"assets/calendar.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" /\u003e\n              \u003c/div\u003e\n            \u003c/article\u003e\n\n            \u003carticle class=\"feature-card feature-card-notifications\"\u003e\n              \u003cdiv class=\"feature-copy\"\u003e\n                \u003cspan class=\"feature-number\"\u003e06\u003c/span\u003e\n                \u003ch3\u003eЛокальні нагадування та підсумки\u003c/h3\u003e\n                \u003cp\u003e\n                  DimFin нагадає про платіж за кредитом або розстрочкою за 3 дні,\n                  у день сплати та після прострочення. На початку нового місяця застосунок\n                  покаже підсумок попереднього: доходи, витрати й баланс.\n                \u003c/p\u003e\n                \u003cdiv class=\"tag-row\"\u003e\u003cspan\u003eБез інтернету\u003c/span\u003e\u003cspan\u003eБлизько 09:00\u003c/span\u003e\u003cspan\u003eМожна вимкнути\u003c/span\u003e\u003c/div\u003e\n              \u003c/div\u003e\n              \u003cdiv class=\"notification-showcase\" aria-hidden=\"true\"\u003e\n                \u003cdiv class=\"notification-item notification-item-credit\"\u003e\n                  \u003cspan\u003e◉\u003c/span\u003e\n                  \u003cdiv\u003e\u003csmall\u003eDimFin · Кредити та розстрочки\u003c/small\u003e\u003cstrong\u003eНаближається платіж\u003c/strong\u003e\u003cp\u003eЧерез 3 дні потрібно сплатити 2 100 ₴\u003c/p\u003e\u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\"notification-item notification-item-summary\"\u003e\n                  \u003cspan\u003e↗\u003c/span\u003e\n                  \u003cdiv\u003e\u003csmall\u003eDimFin · Місячний підсумок\u003c/small\u003e\u003cstrong\u003eПідсумок за червень\u003c/strong\u003e\u003cp\u003eДоходи 52 000 ₴ · Витрати 33 948 ₴\u003c/p\u003e\u003c/div\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n            \u003c/article\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n      \u003c/section\u003e\n\n      \u003csection class=\"guide-section\" id=\"guide\"\u003e\n        \u003cdiv class=\"container\"\u003e\n          \u003cdiv class=\"guide-heading\"\u003e\n            \u003cdiv\u003e\n              \u003cdiv class=\"eyebrow\"\u003e\u003cspan\u003e\u003c/span\u003e Покрокова інструкція\u003c/div\u003e\n              \u003ch2\u003eПочніть користуватися\u003cbr /\u003eDimFin за \u003cem\u003e8 кроків.\u003c/em\u003e\u003c/h2\u003e\n            \u003c/div\u003e\n            \u003cp\u003e\n              Натискайте на кроки — поруч з’являтиметься відповідний екран\n              застосунку. Усі приклади показані на реальній версії DimFin.\n            \u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"guide-layout\"\u003e\n            \u003cdiv class=\"guide-steps\" role=\"tablist\" aria-label=\"Кроки користування DimFin\"\u003e\n              \u003cbutton\n                class=\"guide-step is-active\"\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("                type=\"button\"\n                role=\"tab\"\n                aria-selected=\"true\"\n                data-guide-step=\"1\"\n                data-guide-image=\"assets/settings.png\"\n                data-guide-title=\"Налаштуйте DimFin під себе\"\n              \u003e\n                \u003cspan class=\"guide-step-number\"\u003e01\u003c/span\u003e\n                \u003cspan class=\"guide-step-copy\"\u003e\n                  \u003cstrong\u003eНалаштуйте застосунок\u003c/strong\u003e\n                  \u003csmall\u003eВідкрийте ⚙️ «Налаштування», оберіть гривню, долар або євро. Увімкніть фінансового асистента та задайте місячні бюджети для потрібних категорій.\u003c/small\u003e\n                \u003c/span\u003e\n                \u003cspan class=\"guide-step-arrow\" aria-hidden=\"true\"\u003e→\u003c/span\u003e\n              \u003c/button\u003e\n\n              \u003cbutton\n                class=\"guide-step\"\n                type=\"button\"\n                role=\"tab\"\n                aria-selected=\"false\"\n                data-guide-step=\"2\"\n                data-guide-image=\"assets/transactions.png\"\n                data-guide-title=\"Додавайте витрати зручним способом\"\n              \u003e\n                \u003cspan class=\"guide-step-number\"\u003e02\u003c/span\u003e\n                \u003cspan class=\"guide-step-copy\"\u003e\n                  \u003cstrong\u003eВнесіть першу операцію\u003c/strong\u003e\n                  \u003csmall\u003eНатисніть синю кнопку «+» і вкажіть дані операції. Для регулярних витрат створіть власні шаблони з назвою, сумою, категорією та значком — надалі потрібний запис додається одним натисканням.\u003c/small\u003e\n                \u003c/span\u003e\n                \u003cspan class=\"guide-step-arrow\" aria-hidden=\"true\"\u003e→\u003c/span\u003e\n              \u003c/button\u003e\n\n              \u003cbutton\n                class=\"guide-step\"\n                type=\"button\"\n                role=\"tab\"\n                aria-selected=\"false\"\n                data-guide-step=\"3\"\n                data-guide-image=\"assets/overview.png\"\n                data-guide-title=\"Перевіряйте огляд місяця\"\n              \u003e\n                \u003cspan class=\"guide-step-number\"\u003e03\u003c/span\u003e\n                \u003cspan class=\"guide-step-copy\"\u003e\n                  \u003cstrong\u003eКонтролюйте загальну картину\u003c/strong\u003e\n                  \u003csmall\u003eНа головному екрані видно доходи, витрати, кредити, баланс і рекомендований денний ліміт. Стрілками перемикайте місяці.\u003c/small\u003e\n                \u003c/span\u003e\n                \u003cspan class=\"guide-step-arrow\" aria-hidden=\"true\"\u003e→\u003c/span\u003e\n              \u003c/button\u003e\n\n              \u003cbutton\n                class=\"guide-step\"\n                type=\"button\"\n                role=\"tab\"\n                aria-selected=\"false\"\n                data-guide-step=\"4\"\n                data-guide-image=\"assets/radar.png\"\n                data-guide-title=\"Читайте фінансовий радар\"\n              \u003e\n                \u003cspan class=\"guide-step-number\"\u003e04\u003c/span\u003e\n                \u003cspan class=\"guide-step-copy\"\u003e\n                  \u003cstrong\u003eОцініть ризики та прогноз\u003c/strong\u003e\n                  \u003csmall\u003eПрокрутіть головний екран до «Фінансового радара». Він показує статус бюджету, прогноз до кінця місяця та рекомендований сценарій.\u003c/small\u003e\n                \u003c/span\u003e\n                \u003cspan class=\"guide-step-arrow\" aria-hidden=\"true\"\u003e→\u003c/span\u003e\n              \u003c/button\u003e\n\n              \u003cbutton\n                class=\"guide-step\"\n                type=\"button\"\n                role=\"tab\"\n                aria-selected=\"false\"\n                data-guide-step=\"5\"\n                data-guide-image=\"assets/smart-action.png\"\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("                data-guide-title=\"Застосуйте рекомендовану дію\"\n              \u003e\n                \u003cspan class=\"guide-step-number\"\u003e05\u003c/span\u003e\n                \u003cspan class=\"guide-step-copy\"\u003e\n                  \u003cstrong\u003eСкоригуйте денний ліміт\u003c/strong\u003e\n                  \u003csmall\u003eВідкрийте рекомендований сценарій, порівняйте поточний і новий прогноз. Якщо результат підходить, натисніть «Застосувати ліміт».\u003c/small\u003e\n                \u003c/span\u003e\n                \u003cspan class=\"guide-step-arrow\" aria-hidden=\"true\"\u003e→\u003c/span\u003e\n              \u003c/button\u003e\n\n              \u003cbutton\n                class=\"guide-step\"\n                type=\"button\"\n                role=\"tab\"\n                aria-selected=\"false\"\n                data-guide-step=\"6\"\n                data-guide-image=\"assets/analytics.png\"\n                data-guide-title=\"Аналізуйте структуру витрат\"\n              \u003e\n                \u003cspan class=\"guide-step-number\"\u003e06\u003c/span\u003e\n                \u003cspan class=\"guide-step-copy\"\u003e\n                  \u003cstrong\u003eАналізуйте витрати й бюджети\u003c/strong\u003e\n                  \u003csmall\u003eНатисніть значок діаграми. Переглядайте тренди та категорії, а в блоці «Виконання бюджетів» — скільки вже витрачено, скільки залишилось і де ліміт перевищено.\u003c/small\u003e\n                \u003c/span\u003e\n                \u003cspan class=\"guide-step-arrow\" aria-hidden=\"true\"\u003e→\u003c/span\u003e\n              \u003c/button\u003e\n\n              \u003cbutton\n                class=\"guide-step\"\n                type=\"button\"\n                role=\"tab\"\n                aria-selected=\"false\"\n                data-guide-step=\"7\"\n                data-guide-image=\"assets/calendar.png\"\n                data-guide-title=\"Переглядайте витрати в календарі\"\n              \u003e\n                \u003cspan class=\"guide-step-number\"\u003e07\u003c/span\u003e\n                \u003cspan class=\"guide-step-copy\"\u003e\n                  \u003cstrong\u003eЗнайдіть витрати за потрібний день\u003c/strong\u003e\n                  \u003csmall\u003eНатисніть значок календаря на головному екрані. Перемикайте місяці, стежте за кольоровою інтенсивністю витрат і виберіть день, щоб побачити всі його операції.\u003c/small\u003e\n                \u003c/span\u003e\n                \u003cspan class=\"guide-step-arrow\" aria-hidden=\"true\"\u003e→\u003c/span\u003e\n              \u003c/button\u003e\n\n              \u003cbutton\n                class=\"guide-step\"\n                type=\"button\"\n                role=\"tab\"\n                aria-selected=\"false\"\n                data-guide-step=\"8\"\n                data-guide-image=\"assets/credits.png\"\n                data-guide-title=\"Контролюйте кредити та розстрочки\"\n              \u003e\n                \u003cspan class=\"guide-step-number\"\u003e08\u003c/span\u003e\n                \u003cspan class=\"guide-step-copy\"\u003e\n                  \u003cstrong\u003eНе пропускайте обов’язкові платежі\u003c/strong\u003e\n                  \u003csmall\u003eВідкрийте розділ через значок банку, оберіть «Кредит» або «Розстрочка», перевіряйте суму й дату платежу та позначайте його як сплачений. Для розстрочки DimFin покаже прогрес і кількість платежів.\u003c/small\u003e\n                \u003c/span\u003e\n                \u003cspan class=\"guide-step-arrow\" aria-hidden=\"true\"\u003e→\u003c/span\u003e\n              \u003c/button\u003e\n            \u003c/div\u003e\n\n            \u003cdiv class=\"guide-preview\" aria-live=\"polite\"\u003e\n              \u003cdiv class=\"guide-preview-top\"\u003e\n                \u003cspan data-guide-count\u003eКрок 1 із 8\u003c/span\u003e\n                \u003ci\u003e\u003cspan\u003e\u003c/span\u003e Реальний екран\u003c/i\u003e\n              \u003c/div\u003e\n              \u003cdiv class=\"guide-phone\"\u003e\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("                \u003cspan class=\"guide-phone-speaker\" aria-hidden=\"true\"\u003e\u003c/span\u003e\n                \u003cimg\n                  data-guide-preview-image\n                  src=\"assets/settings.png\"\n                  alt=\"Налаштування DimFin\"\n                  loading=\"lazy\"\n                  decoding=\"async\"\n                /\u003e\n              \u003c/div\u003e\n              \u003cstrong class=\"guide-preview-title\" data-guide-preview-title\u003eНалаштуйте DimFin під себе\u003c/strong\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n      \u003c/section\u003e\n\n      \u003csection class=\"screens-section\" id=\"screens\"\u003e\n        \u003cdiv class=\"container\"\u003e\n          \u003cdiv class=\"screens-heading\"\u003e\n            \u003cdiv\u003e\n              \u003cdiv class=\"eyebrow\"\u003e\u003cspan\u003e\u003c/span\u003e Реальні екрани застосунку\u003c/div\u003e\n              \u003ch2\u003eСправжній DimFin.\u003cbr /\u003e\u003cem\u003eБез макетів.\u003c/em\u003e\u003c/h2\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\"screens-intro\"\u003e\n              \u003cp\u003e\n                Від огляду місяця й календаря витрат до бюджетів, кредитів та розстрочок — подивіться,\n                як DimFin допомагає керувати бюджетом щодня.\n              \u003c/p\u003e\n              \u003cspan\u003e\u003ci\u003e9\u003c/i\u003e екранів\u003c/span\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"screen-rail\" tabindex=\"0\" aria-label=\"Галерея екранів DimFin\"\u003e\n            \u003cbutton class=\"screen-shot-card\" type=\"button\" data-screenshot=\"assets/overview.png\" data-caption=\"Огляд місяця\"\u003e\n              \u003cspan class=\"screen-device\"\u003e\u003cimg src=\"assets/overview.png\" alt=\"Огляд місяця в DimFin\" loading=\"lazy\" decoding=\"async\" /\u003e\u003c/span\u003e\n              \u003cspan class=\"screen-caption\"\u003e\u003ci\u003e01\u003c/i\u003e\u003cspan\u003e\u003cstrong\u003eОгляд місяця\u003c/strong\u003e\u003csmall\u003eБаланс і денний ліміт\u003c/small\u003e\u003c/span\u003e\u003c/span\u003e\n            \u003c/button\u003e\n\n            \u003cbutton class=\"screen-shot-card\" type=\"button\" data-screenshot=\"assets/calendar.png\" data-caption=\"Календар витрат\"\u003e\n              \u003cspan class=\"screen-device screen-device-framed\"\u003e\u003cimg src=\"assets/calendar.png\" alt=\"Календар витрат DimFin із сумами за днями та кольоровою шкалою\" loading=\"lazy\" decoding=\"async\" /\u003e\u003c/span\u003e\n              \u003cspan class=\"screen-caption\"\u003e\u003ci\u003e02\u003c/i\u003e\u003cspan\u003e\u003cstrong\u003eКалендар витрат\u003c/strong\u003e\u003csmall\u003eСуми за днями й операції\u003c/small\u003e\u003c/span\u003e\u003c/span\u003e\n            \u003c/button\u003e\n\n            \u003cbutton class=\"screen-shot-card\" type=\"button\" data-screenshot=\"assets/radar.png\" data-caption=\"Фінансовий радар\"\u003e\n              \u003cspan class=\"screen-device\"\u003e\u003cimg src=\"assets/radar.png\" alt=\"Фінансовий радар DimFin\" loading=\"lazy\" decoding=\"async\" /\u003e\u003c/span\u003e\n              \u003cspan class=\"screen-caption\"\u003e\u003ci\u003e03\u003c/i\u003e\u003cspan\u003e\u003cstrong\u003eФінансовий радар\u003c/strong\u003e\u003csmall\u003eСтатус і прогноз\u003c/small\u003e\u003c/span\u003e\u003c/span\u003e\n            \u003c/button\u003e\n\n            \u003cbutton class=\"screen-shot-card\" type=\"button\" data-screenshot=\"assets/smart-action.png\" data-caption=\"Рекомендована дія\"\u003e\n              \u003cspan class=\"screen-device\"\u003e\u003cimg src=\"assets/smart-action.png\" alt=\"Рекомендована дія та новий денний ліміт\" loading=\"lazy\" decoding=\"async\" /\u003e\u003c/span\u003e\n              \u003cspan class=\"screen-caption\"\u003e\u003ci\u003e04\u003c/i\u003e\u003cspan\u003e\u003cstrong\u003eРозумна дія\u003c/strong\u003e\u003csmall\u003eЛіміт із прогнозом ефекту\u003c/small\u003e\u003c/span\u003e\u003c/span\u003e\n            \u003c/button\u003e\n\n            \u003cbutton class=\"screen-shot-card\" type=\"button\" data-screenshot=\"assets/analytics-overview.png\" data-caption=\"Аналітика витрат\"\u003e\n              \u003cspan class=\"screen-device\"\u003e\u003cimg src=\"assets/analytics-overview.png\" alt=\"Аналітика витрат, розумний аналіз і категорії у DimFin\" loading=\"lazy\" decoding=\"async\" /\u003e\u003c/span\u003e\n              \u003cspan class=\"screen-caption\"\u003e\u003ci\u003e05\u003c/i\u003e\u003cspan\u003e\u003cstrong\u003eАналітика витрат\u003c/strong\u003e\u003csmall\u003eПорівняння й категорії\u003c/small\u003e\u003c/span\u003e\u003c/span\u003e\n            \u003c/button\u003e\n\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("            \u003cbutton class=\"screen-shot-card\" type=\"button\" data-screenshot=\"assets/analytics.png\" data-caption=\"Виконання місячних бюджетів\"\u003e\n              \u003cspan class=\"screen-device\"\u003e\u003cimg src=\"assets/analytics.png\" alt=\"Виконання місячних бюджетів за категоріями в DimFin\" loading=\"lazy\" decoding=\"async\" /\u003e\u003c/span\u003e\n              \u003cspan class=\"screen-caption\"\u003e\u003ci\u003e06\u003c/i\u003e\u003cspan\u003e\u003cstrong\u003eМісячні бюджети\u003c/strong\u003e\u003csmall\u003eПрогрес за категоріями\u003c/small\u003e\u003c/span\u003e\u003c/span\u003e\n            \u003c/button\u003e\n\n            \u003cbutton class=\"screen-shot-card\" type=\"button\" data-screenshot=\"assets/transactions.png\" data-caption=\"Історія транзакцій\"\u003e\n              \u003cspan class=\"screen-device\"\u003e\u003cimg src=\"assets/transactions.png\" alt=\"Список транзакцій у DimFin\" loading=\"lazy\" decoding=\"async\" /\u003e\u003c/span\u003e\n              \u003cspan class=\"screen-caption\"\u003e\u003ci\u003e07\u003c/i\u003e\u003cspan\u003e\u003cstrong\u003eТранзакції\u003c/strong\u003e\u003csmall\u003eПошук, фільтри й категорії\u003c/small\u003e\u003c/span\u003e\u003c/span\u003e\n            \u003c/button\u003e\n\n            \u003cbutton class=\"screen-shot-card\" type=\"button\" data-screenshot=\"assets/credits.png\" data-caption=\"Кредити та розстрочки\"\u003e\n              \u003cspan class=\"screen-device\"\u003e\u003cimg src=\"assets/credits.png\" alt=\"Облік кредитів, розстрочок і щомісячних платежів у DimFin\" loading=\"lazy\" decoding=\"async\" /\u003e\u003c/span\u003e\n              \u003cspan class=\"screen-caption\"\u003e\u003ci\u003e08\u003c/i\u003e\u003cspan\u003e\u003cstrong\u003eКредити й розстрочки\u003c/strong\u003e\u003csmall\u003eПлатежі та реальний прогрес\u003c/small\u003e\u003c/span\u003e\u003c/span\u003e\n            \u003c/button\u003e\n\n            \u003cbutton class=\"screen-shot-card\" type=\"button\" data-screenshot=\"assets/settings.png\" data-caption=\"Налаштування\"\u003e\n              \u003cspan class=\"screen-device\"\u003e\u003cimg src=\"assets/settings.png\" alt=\"Налаштування валюти, асистента й бюджетів\" loading=\"lazy\" decoding=\"async\" /\u003e\u003c/span\u003e\n              \u003cspan class=\"screen-caption\"\u003e\u003ci\u003e09\u003c/i\u003e\u003cspan\u003e\u003cstrong\u003eНалаштування\u003c/strong\u003e\u003csmall\u003eВалюта, асистент і бюджети\u003c/small\u003e\u003c/span\u003e\u003c/span\u003e\n            \u003c/button\u003e\n          \u003c/div\u003e\n\n          \u003cp class=\"screens-hint\"\u003e\u003cspan aria-hidden=\"true\"\u003e←\u003c/span\u003e Гортайте та натискайте, щоб збільшити \u003cspan aria-hidden=\"true\"\u003e→\u003c/span\u003e\u003c/p\u003e\n        \u003c/div\u003e\n      \u003c/section\u003e\n\n      \u003csection class=\"answers-section\" id=\"faq\"\u003e\n        \u003cdiv class=\"container answers-grid\"\u003e\n          \u003cdiv class=\"faq-block\"\u003e\n            \u003cdiv class=\"eyebrow\"\u003e\u003cspan\u003e\u003c/span\u003e Поширені запитання\u003c/div\u003e\n            \u003ch2\u003eКоротко про DimFin\u003c/h2\u003e\n\n            \u003cdiv class=\"faq-list\"\u003e\n              \u003cdetails open\u003e\n                \u003csummary\u003eЩо таке DimFin?\u003cspan aria-hidden=\"true\"\u003e＋\u003c/span\u003e\u003c/summary\u003e\n                \u003cp\u003e\n                  Це застосунок для домашнього бюджету, який допомагає записувати\n                  доходи й витрати, контролювати місячні бюджети, кредити та розстрочки,\n                  аналізувати фінансові звички й планувати залишок до кінця місяця.\n                \u003c/p\u003e\n              \u003c/details\u003e\n              \u003cdetails\u003e\n                \u003csummary\u003eЩо можна вести в застосунку?\u003cspan aria-hidden=\"true\"\u003e＋\u003c/span\u003e\u003c/summary\u003e\n                \u003cp\u003e\n                  Транзакції, власні шаблони швидких витрат, місячні бюджети, кредити,\n                  розстрочки й платежі за ними. Календар показує суми та інтенсивність витрат за днями,\n                  а аналітика — баланс, тренди й найбільші категорії.\n                \u003c/p\u003e\n              \u003c/details\u003e\n              \u003cdetails\u003e\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("                \u003csummary\u003eЯк працюють місячні бюджети?\u003cspan aria-hidden=\"true\"\u003e＋\u003c/span\u003e\u003c/summary\u003e\n                \u003cp\u003e\n                  У налаштуваннях задайте ліміт для потрібних категорій. Після цього\n                  в аналітиці з’явиться виконання бюджетів: витрачена сума, відсоток,\n                  доступний залишок або розмір перевищення для кожної категорії.\n                \u003c/p\u003e\n              \u003c/details\u003e\n              \u003cdetails\u003e\n                \u003csummary\u003eЧим розстрочка відрізняється від кредиту?\u003cspan aria-hidden=\"true\"\u003e＋\u003c/span\u003e\u003c/summary\u003e\n                \u003cp\u003e\n                  Для кредиту DimFin контролює щомісячний платіж, дату та актуальний залишок.\n                  Для розстрочки додатково враховується загальна кількість платежів і показується\n                  реальний прогрес: скільки платежів уже сплачено та скільки залишилося.\n                \u003c/p\u003e\n              \u003c/details\u003e\n              \u003cdetails\u003e\n                \u003csummary\u003eЯк працює календар витрат?\u003cspan aria-hidden=\"true\"\u003e＋\u003c/span\u003e\u003c/summary\u003e\n                \u003cp\u003e\n                  У кожному дні видно суму витрат, а колір показує її рівень відносно\n                  денного ліміту: від доброго темпу до перевищення. Натисніть день,\n                  щоб переглянути його доходи й витрати та відкрити потрібну операцію.\n                \u003c/p\u003e\n              \u003c/details\u003e\n              \u003cdetails\u003e\n                \u003csummary\u003eЯк працює фінансовий асистент?\u003cspan aria-hidden=\"true\"\u003e＋\u003c/span\u003e\u003c/summary\u003e\n                \u003cp\u003e\n                  Він аналізує внесені дані, оцінює темп витрат і формує зрозумілі\n                  підказки: денний ліміт, пріоритетну дію або сценарій економії.\n                \u003c/p\u003e\n              \u003c/details\u003e\n              \u003cdetails\u003e\n                \u003csummary\u003eЯкі сповіщення надсилає DimFin?\u003cspan aria-hidden=\"true\"\u003e＋\u003c/span\u003e\u003c/summary\u003e\n                \u003cp\u003e\n                  Для активних кредитів і розстрочок DimFin локально перевіряє дати платежів\n                  та нагадує за 3 дні, у день сплати й після прострочення. Також на початку\n                  кожного місяця надходить фінансовий підсумок за попередній місяць із доходами,\n                  витратами та балансом. Сповіщення працюють без передавання фінансових даних\n                  на сервер і керуються в налаштуваннях застосунку.\n                \u003c/p\u003e\n              \u003c/details\u003e\n              \u003cdetails\u003e\n                \u003csummary\u003eДе завантажити DimFin?\u003cspan aria-hidden=\"true\"\u003e＋\u003c/span\u003e\u003c/summary\u003e\n                \u003cp\u003e\n                  Сторінка DimFin у Google Play уже доступна за прямим посиланням нижче.\n                  Можливість встановлення може залежати від поточного етапу тестування.\n                \u003c/p\u003e\n              \u003c/details\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"roadmap-block\" id=\"roadmap\"\u003e\n            \u003cdiv class=\"eyebrow\"\u003e\u003cspan\u003e\u003c/span\u003e Плани на майбутнє\u003c/div\u003e\n            \u003ch2\u003eDimFin розвивається разом із вами\u003c/h2\u003e\n            \u003cp class=\"roadmap-intro\"\u003e\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("              Відгуки користувачів уже формують наступні версії застосунку.\n            \u003c/p\u003e\n\n            \u003cdiv class=\"roadmap-list\"\u003e\n              \u003carticle class=\"roadmap-item\"\u003e\n                \u003cspan class=\"roadmap-icon\" aria-hidden=\"true\"\u003e01\u003c/span\u003e\n                \u003cdiv\u003e\n                  \u003cstrong\u003eПерсоналізація\u003c/strong\u003e\n                  \u003cp\u003eЗнайомство під час першого запуску та особисте привітання.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/article\u003e\n              \u003carticle class=\"roadmap-item\"\u003e\n                \u003cspan class=\"roadmap-icon\" aria-hidden=\"true\"\u003e02\u003c/span\u003e\n                \u003cdiv\u003e\n                  \u003cstrong\u003eЛегкий старт\u003c/strong\u003e\n                  \u003cp\u003eКороткий помічник, початковий баланс і зручне налаштування рахунків.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/article\u003e\n              \u003carticle class=\"roadmap-item\"\u003e\n                \u003cspan class=\"roadmap-icon\" aria-hidden=\"true\"\u003e03\u003c/span\u003e\n                \u003cdiv\u003e\n                  \u003cstrong\u003eЩе зручніший облік\u003c/strong\u003e\n                  \u003cp\u003eПокращення введення сум, кредитів і щоденної роботи з бюджетом.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/article\u003e\n              \u003carticle class=\"roadmap-item roadmap-item-later\"\u003e\n                \u003cspan class=\"roadmap-icon\" aria-hidden=\"true\"\u003e04\u003c/span\u003e\n                \u003cdiv\u003e\n                  \u003cstrong\u003eСпільний бюджет\u003c/strong\u003e\n                  \u003cp\u003eМожливість вести один бюджет разом із членами сім’ї та бачити спільну фінансову картину.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/article\u003e\n            \u003c/div\u003e\n\n            \u003cp class=\"roadmap-note\"\u003eПорядок і склад функцій можуть змінюватися за результатами тестування.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"install-card\" id=\"install\"\u003e\n            \u003cdiv class=\"install-glow\" aria-hidden=\"true\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"install-content\"\u003e\n              \u003cspan class=\"install-badge\"\u003eСторінка в Google Play\u003c/span\u003e\n              \u003ch2\u003eПочніть бачити бюджет ясніше.\u003c/h2\u003e\n              \u003cp\u003eDimFin допоможе перетворити щоденні витрати на спокійний і реалістичний план.\u003c/p\u003e\n\n              \u003cdiv class=\"store-links\" aria-label=\"Посилання на DimFin у Google Play\"\u003e\n                \u003ca class=\"store-button\" href=\"https://play.google.com/store/apps/details?id=com.dimfin\" target=\"_blank\" rel=\"noopener noreferrer\"\u003e\n                  \u003csvg viewBox=\"0 0 32 32\" aria-hidden=\"true\"\u003e\n                    \u003cpath d=\"M5.2 4.4 19 16 5.3 27.6a3.3 3.3 0 0 1-.9-2.3V6.7c0-.9.3-1.6.8-2.3Z\" /\u003e\n                    \u003cpath d=\"m20.8 14.4 3.9-2.2c1.3-.7 2.4-.3 2.9.5.6 1 .3 2.1-.8 2.8l-4.1 2.3-1.9-3.4ZM6.8 3.5 21.1 14l-2.7 2.3L6.8 3.5Zm0 25L18.5 16l2.8 2.4L6.8 28.5Z\" /\u003e\n                  \u003c/svg\u003e\n                  \u003cspan\u003e\u003csmall\u003eЗавантажити з\u003c/small\u003e\u003cstrong\u003eGoogle Play\u003c/strong\u003e\u003c/span\u003e\n                  \u003ci\u003eВстановити\u003c/i\u003e\n                \u003c/a\u003e\n              \u003c/div\u003e\n              \u003csmall class=\"install-note\"\u003eDimFin доступний для Android. Можливість встановлення може залежати від поточного етапу тестування.\u003c/small\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n      \u003c/section\u003e\n\n      \u003csection class=\"developer-section\" id=\"contact\"\u003e\n        \u003cdiv class=\"container\"\u003e\n          \u003cdiv class=\"developer-card\"\u003e\n            \u003cdiv class=\"developer-photo-wrap\"\u003e\n              \u003cimg\n                src=\"assets/developer-dmytro.jpg\"\n                alt=\"Дмитро Стукалов — розробник DimFin\"\n                loading=\"lazy\"\n                decoding=\"async\"\n              /\u003e\n              \u003cspan\u003e\u003ci\u003e\u003c/i\u003e На зв’язку\u003c/span\u003e\n            \u003c/div\u003e\n\n            \u003cdiv class=\"developer-content\"\u003e\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("              \u003cdiv class=\"eyebrow eyebrow-light\"\u003e\u003cspan\u003e\u003c/span\u003e Зворотний зв’язок\u003c/div\u003e\n              \u003ch2\u003eДопоможіть зробити\u003cbr /\u003eDimFin \u003cem\u003eкращим.\u003c/em\u003e\u003c/h2\u003e\n              \u003cp\u003e\n                Помітили помилку, маєте ідею або хочете запропонувати нову можливість?\n                Напишіть безпосередньо розробнику.\n              \u003c/p\u003e\n\n              \u003cdiv class=\"developer-person\"\u003e\n                \u003cstrong\u003eДмитро Стукалов\u003c/strong\u003e\n                \u003cspan\u003eРозробник DimFin\u003c/span\u003e\n              \u003c/div\u003e\n\n              \u003cdiv class=\"contact-actions\"\u003e\n                \u003ca class=\"contact-link\" href=\"mailto:aivengo.dst@gmail.com\"\u003e\n                  \u003cspan class=\"contact-icon\" aria-hidden=\"true\"\u003e\n                    \u003csvg viewBox=\"0 0 24 24\"\u003e\u003cpath d=\"M3.5 6.5h17v11h-17z\" /\u003e\u003cpath d=\"m4.5 7.5 7.5 6 7.5-6\" /\u003e\u003c/svg\u003e\n                  \u003c/span\u003e\n                  \u003cspan\u003e\u003csmall\u003eНаписати на пошту\u003c/small\u003e\u003cstrong\u003eaivengo.dst@gmail.com\u003c/strong\u003e\u003c/span\u003e\n                  \u003ci aria-hidden=\"true\"\u003e↗\u003c/i\u003e\n                \u003c/a\u003e\n              \u003c/div\u003e\n\n              \u003csmall class=\"developer-note\"\u003eКожен відгук допомагає визначити, що покращувати в наступних версіях.\u003c/small\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n      \u003c/section\u003e\n    \u003c/main\u003e\n\n    \u003cdialog class=\"screenshot-dialog\" data-screenshot-dialog aria-label=\"Збільшений скріншот DimFin\"\u003e\n      \u003cdiv class=\"dialog-toolbar\"\u003e\n        \u003cstrong data-dialog-caption\u003eDimFin\u003c/strong\u003e\n        \u003cbutton type=\"button\" data-dialog-close aria-label=\"Закрити скріншот\"\u003e×\u003c/button\u003e\n      \u003c/div\u003e\n      \u003cdiv class=\"dialog-image-wrap\"\u003e\u003cimg data-dialog-image src=\"\" alt=\"\" /\u003e\u003c/div\u003e\n    \u003c/dialog\u003e\n\n    \u003cfooter class=\"site-footer\"\u003e\n      \u003cdiv class=\"container footer-inner\"\u003e\n        \u003ca class=\"brand brand-footer\" href=\"#top\"\u003e\n          \u003cspan class=\"brand-mark brand-mark-official\" aria-hidden=\"true\"\u003e\n            \u003cimg class=\"brand-logo-image\" src=\"assets/dimfin-logo-source.png\" alt=\"\" /\u003e\n          \u003c/span\u003e\n          \u003cspan\u003eDimFin\u003c/span\u003e\n        \u003c/a\u003e\n        \u003cp\u003eДомашній бюджет без зайвої складності.\u003c/p\u003e\n        \u003cp\u003e© \u003cspan data-year\u003e\u003c/span\u003e DimFin\u003c/p\u003e\n      \u003c/div\u003e\n    \u003c/footer\u003e\n  1:[\"$\",\"div\",null,{\"className\":\"site-root\",\"dangerouslySetInnerHTML\":{\"__html\":\"$a\"}}]\n")</script><script>Object.assign(((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}),{"initialCacheKind":"static"});((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).done=true</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a33a69c529f8c24a',t:'MTc4ODE2MjI5OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
