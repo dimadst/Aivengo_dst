@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>DimFin 1.0.6 — Дружній посібник користувача</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+    @page {
+      size: A4;
+      margin: 15mm 12mm 15mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #1a2e26;
+      background: #ffffff;
+      line-height: 1.5;
+      font-size: 13.5px;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Exo 2', sans-serif;
+      color: #0c1f17;
+      margin-top: 0;
+      font-weight: 700;
+    }
+
+    .page {
+      page-break-after: always;
+      position: relative;
+      min-height: 255mm;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    /* Cover Page */
+    .cover-page {
+      background: linear-gradient(145deg, #091a13 0%, #102e22 100%);
+      color: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 265mm;
+    }
+
+    .cover-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cover-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+    }
+
+    .cover-brand {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #59e3a4;
+      letter-spacing: 0.5px;
+    }
+
+    .cover-title-box {
+      margin-top: 40px;
+    }
+
+    .cover-tag {
+      display: inline-block;
+      background: rgba(89, 227, 164, 0.2);
+      color: #59e3a4;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      border: 1px solid rgba(89, 227, 164, 0.3);
+    }
+
+    .cover-title {
+      font-size: 38px;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .cover-title em {
+      color: #59e3a4;
+      font-style: normal;
+    }
+
+    .cover-subtitle {
+      font-size: 16px;
+      color: #a3c4b5;
+      line-height: 1.5;
+      max-width: 90%;
+    }
+
+    .cover-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .cover-feat-card {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 14px 16px;
+      border-radius: 14px;
+    }
+
+    .cover-feat-card h4 {
+      color: #59e3a4;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .cover-feat-card p {
+      margin: 0;
+      font-size: 12px;
+      color: #cbdad3;
+      line-height: 1.4;
+    }
+
+    .cover-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #92b0a3;
+    }
+
+    .cover-footer a {
+      color: #59e3a4;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Section Page Layout */
+    .section-header {
+      border-bottom: 2px solid #e1ebe5;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .section-header h2 {
+      font-size: 22px;
+      margin: 0;
+      color: #102e22;
+    }
+
+    .section-tag {
+      font-size: 12px;
+      color: #10a966;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .grid-2-rev {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+    }
+
+    .phone-frame {
+      background: #0f1c16;
+      border-radius: 24px;
+      padding: 6px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      border: 3px solid #1f382d;
+      text-align: center;
+    }
+
+    .phone-img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .card {
+      background: #f7faf8;
+      border: 1px solid #dce8e2;
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+
+    .card-accent {
+      background: #eefbf4;
+      border: 1px solid #a8e8c7;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      color: #102e22;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card p {
+      margin: 0 0 6px 0;
+      color: #334e43;
+      font-size: 13px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #10a966;
+      color: #ffffff;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 13px;
+      margin-right: 6px;
+    }
+
+    .tip-box {
+      background: #fff9e6;
+      border-left: 4px solid #f5b041;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      color: #6e5008;
+      margin-top: 10px;
+    }
+
+    .success-box {
+      background: #edfcf4;
+      border-left: 4px solid #10a966;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      color: #0b5935;
+      margin-top: 10px;
+    }
+
+    ul.friendly-list {
+      margin: 6px 0 10px 0;
+      padding-left: 18px;
+    }
+
+    ul.friendly-list li {
+      margin-bottom: 4px;
+      color: #2b453b;
+      font-size: 13px;
+    }
+
+    .page-footer {
+      margin-top: auto;
+      border-top: 1px solid #e1ebe5;
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #7b998d;
+    }
+
+    .author-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #f0f7f3;
+      border-radius: 14px;
+      padding: 14px;
+      margin-top: 14px;
+    }
+
+    .author-img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #10a966;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid #dce8e2;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+    }
+
+    .faq-q {
+      font-weight: 700;
+      color: #102e22;
+      font-size: 13.5px;
+      margin-bottom: 4px;
+    }
+
+    .faq-a {
+      color: #3b5a4e;
+      font-size: 12.5px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- СТОРІНКА 1: ОБКЛАДИНКА -->
+  <div class="page">
+    <div class="cover-page">
+      <div class="cover-top">
+        <img src="assets/dimfin-logo-source.png" class="cover-logo" alt="DimFin Logo">
+        <div class="cover-brand">DimFin 🇺🇦</div>
+      </div>
+
+      <div class="cover-title-box">
+        <span class="cover-tag">Офіційний дружній гайд • Версія 1.0.6</span>
+        <h1 class="cover-title">Гроші під контролем.<br><em>Життя — без складних таблиць.</em></h1>
+        <p class="cover-subtitle">
+          Твій персональний фінансовий помічник. Як легко рахувати доходи та витрати, тримати під контролем кредити й спокійно завершувати кожен місяць у плюсі.
+        </p>
+      </div>
+
+      <div class="cover-features">
+        <div class="cover-feat-card">
+          <h4>🔒 100% Приватно та офлайн</h4>
+          <p>Ніякого доступу до твоїх банків чи карток. Усі дані живуть лише у твоєму телефоні.</p>
+        </div>
+        <div class="cover-feat-card">
+          <h4>⚡ Додавання за 2 секунди</h4>
+          <p>Швидкі шаблони на улюблену каву чи обід роблять облік звичкою без зусиль.</p>
+        </div>
+        <div class="cover-feat-card">
+          <h4>🎯 Розумний Радар</h4>
+          <p>Розраховує безпечний денний ліміт і підказує, де пригальмувати витрати.</p>
+        </div>
+        <div class="cover-feat-card">
+          <h4>💳 Кредити та розстрочки</h4>
+          <p>Локальні нагадування допоможуть не забути про важливу дату виплати.</p>
+        </div>
+      </div>
+
+      <div class="cover-footer">
+        <div>Розробник: <strong>Дмитро (Aivengo)</strong> • Україна 🇺🇦</div>
+        <div>Сайт: <a href="https://dimadst.github.io/Aivengo_dst/">dimadst.github.io/Aivengo_dst/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- СТОРІНКА 2: ФІЛОСОФІЯ ТА ШВИДКИЙ СТАРТ -->
+  <div class="page">
+    <div class="section-header">
+      <h2>1. Філософія DimFin та Швидкий старт</h2>
+      <span class="section-tag">Основи</span>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="card card-accent">
+          <h3>👋 Привіт! Давай познайомимось</h3>
+          <p>
+            DimFin створений, щоб звільнити тебе від нудних розрахунків. Тобі більше не потрібні громіздкі таблиці Excel чи перевантажені бухгалтерії.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3><span class="step-badge">1</span> Як тебе звати?</h3>
+          <p>
+            При першому вході введи своє ім'я. Застосунок зустрічатиме тебе теплим <em>«Доброго ранку, Дмитро! ☀️»</em> і створить приємну атмосферу щодня.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3><span class="step-badge">2</span> Встанови валюту</h3>
+          <p>
+            У <strong>Налаштуваннях (⚙️)</strong> обери звичну валюту: гривню (₴), долар ($) або євро (€).
+          </p>
+        </div>
+
+        <div class="card">
+          <h3><span class="step-badge">3</span> Задай базові бюджети</h3>
+          <p>
+            Вкажи орієнтовні ліміти на 3-4 основні категорії: Продукти, Комуналка, Пальне, Покупки. Це дасть асистенту орієнтир для аналітики.
+          </p>
+        </div>
+
+        <div class="success-box">
+          💡 <strong>Головне правило:</strong> Не намагайся налаштувати все ідеально в перший же день. Просто записуй щоденні витрати — через 5-7 днів DimFin побудує точну картину твоїх фінансів!
+        </div>
+      </div>
+
+      <div>
+        <div class="phone-frame">
+          <img src="assets/overview.png" class="phone-img" alt="Головний екран DimFin">
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>DimFin 1.0.6 — Зручний посібник</span>
+      <span>Сторінка 2</span>
+    </div>
+  </div>
+
+  <!-- СТОРІНКА 3: ГОЛОВНИЙ ЕКРАН ТА ВНЕСЕННЯ ВИТРАТ -->
+  <div class="page">
+    <div class="section-header">
+      <h2>2. Голосове введення, шаблони та звірка</h2>
+      <span class="section-tag">Щоденна магія</span>
+    </div>
+
+    <div class="grid-2-rev">
+      <div>
+        <div class="phone-frame">
+          <img src="assets/voice-input.png" class="phone-img" alt="Голосове введення DimFin">
+        </div>
+      </div>
+
+      <div>
+        <div class="card card-accent">
+          <h3>🎙️ Голосове введення (новинка v1.0.6)</h3>
+          <p>
+            Натисни круглу кнопку з мікрофоном <strong>[🎙️]</strong> і просто скажи: <em>«Кава 80»</em>, <em>«Таксі 150»</em> чи <em>«Зарплата 25000»</em>.
+          </p>
+          <p style="font-size: 12px; color: #0b5935;">DimFin автоматично розпізнає суму, тип операції та підбере потрібну категорію українською мовою!</p>
+        </div>
+
+        <div class="card">
+          <h3>☕ Швидкі шаблони (в 1 дотик)</h3>
+          <p>
+            У верхній частині екрана розташовані твої шаблони: <em>«Кава 80 грн», «Проїзд 20 грн», «Обід 250 грн»</em>.
+          </p>
+          <ul class="friendly-list">
+            <li><strong>Одне натискання:</strong> витрата миттєво записана!</li>
+            <li><strong>Довге натискання:</strong> редагувати суму, іконку чи назву.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>⚖️ Звірка фактичного балансу</h3>
+          <p>
+            Натисни кнопку <strong>«Звірити»</strong> біля балансу та вкажи реальну суму на картці чи в гаманці. DimFin створить безпечне коригування без спотворення аналітики категорій.
+          </p>
+        </div>
+
+        <div class="tip-box">
+          ⚡ <strong>Лайфхак:</strong> Голосове введення та шаблони роблять ведення бюджету справою кількох секунд на день!
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>DimFin 1.0.6 — Зручний посібник</span>
+      <span>Сторінка 3</span>
+    </div>
+  </div>
+
+  <!-- СТОРІНКА 4: ФІНАНСОВИЙ РАДАР ТА РОЗУМНИЙ ПЛАН -->
+  <div class="page">
+    <div class="section-header">
+      <h2>3. Фінансовий Радар і Розумний план</h2>
+      <span class="section-tag">Твій асистент</span>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="card card-accent">
+          <h3>🎯 Як працює Радар?</h3>
+          <p>
+            Радар постійно аналізує твій залишок грошей, дні до зарплати та швидкість витрат. Він попереджає заздалегідь, якщо якась категорія «з'їдає» забагато.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>⚡ Безпечний денний ліміт</h3>
+          <p>
+            DimFin показує, скільки ти можеш спокійно витрачати щодня (наприклад, <em>«Тримати ліміт 260 грн/день»</em>). Якщо сьогодні витрачено більше — застосунок запропонує комфортно підкоригувати наступні дні.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🧠 Розумний план (3 режими)</h3>
+          <p>Обирай стратегію під свій настрій:</p>
+          <ul class="friendly-list">
+            <li><strong>Легкий:</strong> м'яка корекція, майже непомітна для звичного життя.</li>
+            <li><strong>Нормальний:</strong> оптимальний баланс комфорту й економії.</li>
+            <li><strong>Жорсткий:</strong> коли потрібно швидко накопичити або закрити дірку в бюджеті.</li>
+          </ul>
+        </div>
+
+        <div class="success-box">
+          🛡️ <strong>Пам'ятай:</strong> Денний ліміт — це порадник, а не суворий наглядач. Ти завжди маєш повну свободу дій.
+        </div>
+      </div>
+
+      <div>
+        <div class="phone-frame">
+          <img src="assets/radar.png" class="phone-img" alt="Фінансовий радар">
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>DimFin 1.0.6 — Зручний посібник</span>
+      <span>Сторінка 4</span>
+    </div>
+  </div>
+
+  <!-- СТОРІНКА 5: КАЛЕНДАР, АНАЛІТИКА ТА КРЕДИТИ -->
+  <div class="page">
+    <div class="section-header">
+      <h2>4. Календар, Аналітика та Зобов'язання</h2>
+      <span class="section-tag">Повний огляд</span>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>📅 Календар витрат</h3>
+        <p>Кольорові позначки на кожному дні показують інтенсивність твоїх покупок:</p>
+        <ul class="friendly-list">
+          <li>🟢 <strong>Зелений:</strong> день у межах норми.</li>
+          <li>🟡 <strong>Жовтий:</strong> помірні витрати.</li>
+          <li>🔴 <strong>Червоний:</strong> день великих покупок.</li>
+        </ul>
+        <p style="font-size: 12px; color: #527567;">Натисни на будь-який день, щоб побачити всі чеки за ту дату.</p>
+      </div>
+
+      <div class="card">
+        <h3>📊 Зрозуміла Аналітика</h3>
+        <p>Ніяких заплутаних діаграм:</p>
+        <ul class="friendly-list">
+          <li>Смужки виконання бюджетів по категоріях.</li>
+          <li>Динаміка та порівняння доходів і витрат.</li>
+          <li>Найбільші статті витрат за поточний місяць.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🏦 Кредити й розстрочки</h3>
+        <p>Окремий розділ для спокою:</p>
+        <ul class="friendly-list">
+          <li>Вкажи щомісячний платіж і дату.</li>
+          <li>Отримуй нагадування за 3 дні та в день оплати.</li>
+          <li>Натискай <em>«Позначити як сплачено»</em> і спостерігай за зменшенням боргу.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px;">
+      <div class="phone-frame" style="max-height: 120mm; overflow: hidden;">
+        <img src="assets/calendar.png" class="phone-img" style="transform: scale(0.95); margin-top: -10px;" alt="Календар">
+      </div>
+      <div class="phone-frame" style="max-height: 120mm; overflow: hidden;">
+        <img src="assets/credits.png" class="phone-img" style="transform: scale(0.95); margin-top: -10px;" alt="Кредити">
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>DimFin 1.0.6 — Зручний посібник</span>
+      <span>Сторінка 5</span>
+    </div>
+  </div>
+
+  <!-- СТОРІНКА 6: БЕКАПИ, FAQ ТА КОНТАКТИ -->
+  <div class="page">
+    <div class="section-header">
+      <h2>5. Безпека даних, Резервні копії та FAQ</h2>
+      <span class="section-tag">Підтримка</span>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="card card-accent">
+          <h3>💾 Твої резервні копії (Backup)</h3>
+          <p>
+            Оскільки DimFin не зберігає твої дані на серверах, <strong>зроби звичкою раз на місяць зберігати копію:</strong>
+          </p>
+          <ul class="friendly-list">
+            <li>Зайди в <strong>Налаштування ➔ Зберегти резервну копію</strong>.</li>
+            <li>Файл збережеться в папку <em>Downloads/DimFin</em> і ти зможеш надіслати його собі в Telegram або на пошту.</li>
+            <li>При зміні телефону просто натисни <strong>«Відновити з резервної копії»</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">❓ Чи можна підключити банківську карту?</div>
+          <p class="faq-a">Ні, і це наша головна перевага. Жоден шахрай чи сторонній сервіс не отримає доступ до твоїх рахунків.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">❓ Чи можна експортувати дані в Excel?</div>
+          <p class="faq-a">Так! Натисни «Експорт у Excel (CSV)» у налаштуваннях і відкривай звіт на комп'ютері.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">❓ Що робити, якщо на початку місяця прогноз дивний?</div>
+          <p class="faq-a">Це нормально — коли внесено мало днів, прогноз чутливий до перших витрат. За 3-4 дні він вирівняється.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>👨‍💻 Про автора та підтримку</h3>
+          <p>
+            DimFin створений з турботою українським розробником для комфортного життя кожного з нас.
+          </p>
+          <div class="author-box">
+            <img src="assets/developer-dmytro.jpg" class="author-img" alt="Dmytro">
+            <div>
+              <div style="font-weight: 700; color: #102e22;">Дмитро (Aivengo)</div>
+              <div style="font-size: 11.5px; color: #597d6e;">Автор та розробник DimFin</div>
+              <div style="font-size: 11.5px; margin-top: 4px;"><a href="mailto:aivengo.dst@gmail.com" style="color: #10a966; text-decoration: none;">aivengo.dst@gmail.com</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="text-align: center; margin-top: 10px;">
+          <h3 style="justify-content: center;">📲 Завантажуй та рекомендуй</h3>
+          <p style="font-size: 12.5px; margin-bottom: 8px;">
+            Офіційний реліз у Google Play:
+          </p>
+          <a href="https://play.google.com/store/apps/details?id=com.dimfin" style="display: inline-block; background: #10a966; color: #fff; padding: 8px 18px; border-radius: 20px; font-weight: 700; text-decoration: none; font-size: 13px;">
+            Встановити DimFin на Google Play ➔
+          </a>
+          <div style="margin-top: 10px; font-size: 11.5px; color: #6f8f82;">
+            Сайт проєкту: <a href="https://dimadst.github.io/Aivengo_dst/" style="color: #10a966;">dimadst.github.io/Aivengo_dst/</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>DimFin 1.0.6 — Зручний посібник користувача • 2026</span>
+      <span>Сторінка 6</span>
+    </div>
+  </div>
+
+</body>
+</html>
