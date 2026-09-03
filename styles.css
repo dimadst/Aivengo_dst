@@ -405,7 +405,24 @@ svg {
 }
 
 .phone-shell-real {
-  background: #090b0f;
+  padding: 0;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.phone-shell-real .phone-speaker {
+  display: none;
+}
+
+.phone-shell-real .app-screen-real {
+  border-radius: 0;
+  background: transparent;
+}
+
+.phone-shell-real .app-screen-real img {
+  border-radius: 0;
+  object-fit: contain;
 }
 
 .app-topbar {

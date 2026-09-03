@@ -63,7 +63,11 @@ guideSteps.forEach((step) => {
     if (guidePreviewImage) {
       guidePreviewImage.src = step.dataset.guideImage;
       guidePreviewImage.alt = step.dataset.guideTitle || "Екран DimFin";
-      guidePhone?.classList.toggle("is-framed-screenshot", step.dataset.guideImage?.endsWith("calendar.png"));
+      const isUnframed = step.dataset.guideImage?.endsWith("calendar.png") ||
+                         step.dataset.guideImage?.endsWith("analytics.png") ||
+                         step.dataset.guideImage?.endsWith("analytics-overview.png") ||
+                         step.dataset.guideImage?.endsWith("voice-input.png");
+      guidePhone?.classList.toggle("is-framed-screenshot", !isUnframed);
     }
     if (guidePreviewTitle) guidePreviewTitle.textContent = step.dataset.guideTitle;
     if (guideCount) guideCount.textContent = `Крок ${step.dataset.guideStep} із ${guideSteps.length}`;
