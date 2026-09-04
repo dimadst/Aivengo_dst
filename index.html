@@ -50,6 +50,7 @@
             </div>
             <div class="hero-proof" aria-label="Переваги DimFin">
               <span><i aria-hidden="true">✓</i> Українською</span>
+              <span><i aria-hidden="true">✓</i> Чеки, QR та біометрія</span>
               <span><i aria-hidden="true">✓</i> Без інтернету та банків</span>
               <span><i aria-hidden="true">✓</i> Дані лише на телефоні</span>
             </div>
@@ -125,17 +126,17 @@
 
             <article class="feature-card feature-card-quick">
               <span class="feature-number">02</span>
-              <h3>Швидкі витрати та шаблони</h3>
-              <p>Додавайте звичні покупки («Кава», «Проїзд», «Обід») в один дотик або вводьте суму голосом 🎙️.</p>
+              <h3>Чеки, швидкі витрати та голос</h3>
+              <p>Фотографуйте чеки з камери чи галереї, зчитуйте QR-коди (ДПС, Checkbox), вводьте покупки в один дотик або голосом 🎙️.</p>
               <div class="quick-input" aria-hidden="true">
-                <span>Кава 80 грн</span><i>→</i>
+                <span>АТБ · Чек 12 434 грн</span><i>→</i>
               </div>
               <div class="quick-result" aria-hidden="true">
-                <span>☕</span><div><small>Продукти</small><strong>−80 ₴</strong></div>
+                <span>🧾</span><div><small>Продукти (з чека)</small><strong>−12 434 ₴</strong></div>
               </div>
               <div class="template-row" aria-hidden="true">
+                <span><i>🧾</i><b>Фото чека</b></span>
                 <span><i>☕</i><b>Кава 80 ₴</b></span>
-                <span><i>🚌</i><b>Проїзд 20 ₴</b></span>
                 <span><i>🍽️</i><b>Обід 250 ₴</b></span>
               </div>
             </article>
@@ -180,17 +181,17 @@
             <article class="feature-card feature-card-notifications">
               <div class="feature-copy">
                 <span class="feature-number">06</span>
-                <h3>Повний бекап, нагадування та безпека</h3>
+                <h3>Біометричний захист, бекап і безпека</h3>
                 <p>
-                  100% офлайн. Повне резервне копіювання транзакцій (із точним часом), зобов'язань та бюджетів у безпечний файл JSON або CSV.
-                  Локальні нагадування про платежі за 3 дні та щомісячний звіт без виходу в інтернет.
+                  100% офлайн. Миттєвий вхід за відбитком пальця, Face Unlock або PIN-кодом. Повне резервне копіювання транзакцій (із точним часом і чеками) у безпечний файл JSON або CSV.
+                  Локальні нагадування про платежі за 3 дні без виходу в інтернет.
                 </p>
-                <div class="tag-row"><span>Повний бекап</span><span>Без інтернету</span><span>Звіт у CSV</span></div>
+                <div class="tag-row"><span>Біометрія</span><span>Повний бекап</span><span>Без інтернету</span></div>
               </div>
               <div class="notification-showcase" aria-hidden="true">
                 <div class="notification-item notification-item-credit">
-                  <span>◉</span>
-                  <div><small>DimFin · Зобов'язання</small><strong>Ощадбанк — до 25 числа</strong><p>Залишилось сплатити у цьому місяці 3 450 ₴</p></div>
+                  <span>🔒</span>
+                  <div><small>DimFin · Безпека</small><strong>Біометричний захист активний</strong><p>Відбиток пальця, Face Unlock та системний PIN</p></div>
                 </div>
                 <div class="notification-item notification-item-summary">
                   <span>↗</span>
@@ -224,12 +225,12 @@
                 aria-selected="true"
                 data-guide-step="1"
                 data-guide-image="assets/settings.png"
-                data-guide-title="Профіль, валюта та налаштування"
+                data-guide-title="Профіль, біометрія та налаштування"
               >
                 <span class="guide-step-number">01</span>
                 <span class="guide-step-copy">
                   <strong>Налаштуйте DimFin під себе</strong>
-                  <small>Відкрийте ⚙️ «Налаштування». Вкажіть ім'я у розділі «Профіль та Валюта», виберіть основну валюту (UAH, USD, EUR), увімкніть «Розумний асистент», локальні сповіщення та бюджети.</small>
+                  <small>Відкрийте ⚙️ «Налаштування». Увімкніть біометричний захист (відбиток пальця або Face Unlock), вкажіть ім'я, оберіть валюту (UAH, USD, EUR) та налаштуйте щомісячні бюджети.</small>
                 </span>
                 <span class="guide-step-arrow" aria-hidden="true">→</span>
               </button>
@@ -240,13 +241,13 @@
                 role="tab"
                 aria-selected="false"
                 data-guide-step="2"
-                data-guide-image="assets/overview.png"
-                data-guide-title="Швидкі витрати, шаблони та голос"
+                data-guide-image="assets/receipt-options.png"
+                data-guide-title="Чеки, QR-коди, шаблони та голос"
               >
                 <span class="guide-step-number">02</span>
                 <span class="guide-step-copy">
-                  <strong>Додавайте витрати в один клік</strong>
-                  <small>Натискайте картки швидких витрат на головному екрані («Кава 80», «Проїзд 20», «Обід 250»), диктуйте витрати голосом через кнопку мікрофона 🎙️ або тисніть «+ Додати».</small>
+                  <strong>Додавайте чеки та витрати в один клік</strong>
+                  <small>Тисніть «Додати з чека», щоб сфотографувати паперовий чек чи зчитати QR (ДПС, Checkbox). Або використовуйте картки швидких витрат, диктуйте суму голосом 🎙️ чи вносьте вручну.</small>
                 </span>
                 <span class="guide-step-arrow" aria-hidden="true">→</span>
               </button>
@@ -308,13 +309,13 @@
                 role="tab"
                 aria-selected="false"
                 data-guide-step="6"
-                data-guide-image="assets/transactions.png"
-                data-guide-title="Історія операцій, фільтри та точний час"
+                data-guide-image="assets/transaction-edit.png"
+                data-guide-title="Історія, магазин, локація та зум чеків"
               >
                 <span class="guide-step-number">06</span>
                 <span class="guide-step-copy">
-                  <strong>Аналізуйте історію транзакцій</strong>
-                  <small>Відкрийте «Історію операцій» для перегляду підсумку (доходи, витрати, баланс вибірки). Шукайте операції за назвою, фільтруйте за категоріями та дивіться точний час.</small>
+                  <strong>Керуйте покупками, локацією та чеками</strong>
+                  <small>Обирайте улюблений магазин (АТБ, Сільпо...), фіксуйте точний час і координати покупки. Прикріплюйте фото чеків навіть до старих витрат та масштабуйте їх у зумі до 6x.</small>
                 </span>
                 <span class="guide-step-arrow" aria-hidden="true">→</span>
               </button>
@@ -404,7 +405,7 @@
                 Від огляду місяця й календаря витрат до бюджетів, кредитів та розстрочок — подивіться,
                 як DimFin допомагає керувати бюджетом щодня.
               </p>
-              <span><i>9</i> екранів</span>
+              <span><i>10</i> екранів</span>
             </div>
           </div>
 
@@ -414,19 +415,19 @@
               <span class="screen-caption"><i>01</i><span><strong>Огляд місяця</strong><small>Баланс, ліміт і швидкі витрати</small></span></span>
             </button>
 
-            <button class="screen-shot-card" type="button" data-screenshot="assets/transactions.png" data-caption="Історія операцій">
-              <span class="screen-device screen-device-framed"><img src="assets/transactions.png" alt="Історія операцій, пошук і фільтри у DimFin" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>02</i><span><strong>Історія операцій</strong><small>Підсумок, пошук і точний час</small></span></span>
+            <button class="screen-shot-card" type="button" data-screenshot="assets/receipt-options.png" data-caption="Додати з чека">
+              <span class="screen-device screen-device-framed"><img src="assets/receipt-options.png" alt="Додати з чека: QR-код, фото або галерея" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>02</i><span><strong>Додати з чека</strong><small>QR-код, камера чи галерея</small></span></span>
             </button>
 
-            <button class="screen-shot-card" type="button" data-screenshot="assets/smart-action.png" data-caption="Пульс бюджету та Рекомендована дія">
-              <span class="screen-device screen-device-framed"><img src="assets/smart-action.png" alt="Пульс бюджету та рекомендована дія" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>03</i><span><strong>Пульс і дія</strong><small>Денний ліміт і план на завтра</small></span></span>
+            <button class="screen-shot-card" type="button" data-screenshot="assets/receipt-dialog.png" data-caption="Збереження чека">
+              <span class="screen-device screen-device-framed"><img src="assets/receipt-dialog.png" alt="Збереження чека з фото та вибором магазину" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>03</i><span><strong>Збереження чека</strong><small>Фото, мережа (АТБ) та час</small></span></span>
             </button>
 
-            <button class="screen-shot-card" type="button" data-screenshot="assets/credits.png" data-caption="Зобов'язання та розстрочки">
-              <span class="screen-device screen-device-framed"><img src="assets/credits.png" alt="Облік зобов'язань, кредитів і розстрочок у DimFin" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>04</i><span><strong>Зобов'язання</strong><small>Платежі, залишок і відмітка сплати</small></span></span>
+            <button class="screen-shot-card" type="button" data-screenshot="assets/transaction-edit.png" data-caption="Деталі та локація">
+              <span class="screen-device screen-device-framed"><img src="assets/transaction-edit.png" alt="Редагування операції: магазин, локація та чек" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>04</i><span><strong>Деталі та локація</strong><small>Магазин, адреса та чек</small></span></span>
             </button>
 
             <button class="screen-shot-card" type="button" data-screenshot="assets/calendar.png" data-caption="Календар витрат">
@@ -439,19 +440,24 @@
               <span class="screen-caption"><i>06</i><span><strong>Аналітика витрат</strong><small>Порівняння й категорії</small></span></span>
             </button>
 
-            <button class="screen-shot-card" type="button" data-screenshot="assets/analytics.png" data-caption="Виконання місячних бюджетів">
-              <span class="screen-device"><img src="assets/analytics.png" alt="Виконання місячних бюджетів за категоріями в DimFin" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>07</i><span><strong>Місячні бюджети</strong><small>Прогрес за категоріями</small></span></span>
+            <button class="screen-shot-card" type="button" data-screenshot="assets/credits.png" data-caption="Зобов'язання та розстрочки">
+              <span class="screen-device screen-device-framed"><img src="assets/credits.png" alt="Облік зобов'язань, кредитів і розстрочок у DimFin" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>07</i><span><strong>Зобов'язання</strong><small>Платежі, залишок і відмітка сплати</small></span></span>
             </button>
 
-            <button class="screen-shot-card" type="button" data-screenshot="assets/settings.png" data-caption="Налаштування">
+            <button class="screen-shot-card" type="button" data-screenshot="assets/analytics.png" data-caption="Виконання місячних бюджетів">
+              <span class="screen-device"><img src="assets/analytics.png" alt="Виконання місячних бюджетів за категоріями в DimFin" loading="lazy" decoding="async" /></span>
+              <span class="screen-caption"><i>08</i><span><strong>Місячні бюджети</strong><small>Прогрес за категоріями</small></span></span>
+            </button>
+
+            <button class="screen-shot-card" type="button" data-screenshot="assets/settings.png" data-caption="Налаштування та біометрія">
               <span class="screen-device screen-device-framed"><img src="assets/settings.png" alt="Налаштування валюти, асистента, сповіщень та бекапу" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>08</i><span><strong>Налаштування</strong><small>Профіль, валюта, нагадування й бекап</small></span></span>
+              <span class="screen-caption"><i>09</i><span><strong>Налаштування</strong><small>Біометрія, валюта й бекап</small></span></span>
             </button>
 
             <button class="screen-shot-card" type="button" data-screenshot="assets/voice-input.png" data-caption="Голосове введення">
               <span class="screen-device"><img src="assets/voice-input.png" alt="Голосове введення операцій у DimFin" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>09</i><span><strong>Голосове введення</strong><small>Швидке розпізнавання мови</small></span></span>
+              <span class="screen-caption"><i>10</i><span><strong>Голосове введення</strong><small>Швидке розпізнавання мови</small></span></span>
             </button>
           </div>
 
@@ -521,6 +527,18 @@
                   кожного місяця надходить фінансовий підсумок за попередній місяць із доходами,
                   витратами та балансом. Сповіщення працюють без передавання фінансових даних
                   на сервер і керуються в налаштуваннях застосунку.
+                </p>
+              </details>
+              <details>
+                <summary>Як працює додавання та фотографування чеків?<span aria-hidden="true">＋</span></summary>
+                <p>
+                  Ви можете додавати чеки трьома способами: сканувати фіскальний QR-код (з чеків ДПС або Checkbox), зробити фото чека камерою або обрати зображення з галереї. До операції зручно вибрати мережу магазину (АТБ, Сільпо, Novus тощо), зафіксувати точний час і координати покупки. У перегляді чека доступне масштабування двома пальцями (pinch-to-zoom) до 6x, а фото можна прикріпити навіть до старих операцій.
+                </p>
+              </details>
+              <details>
+                <summary>Чи захищений вхід у застосунок?<span aria-hidden="true">＋</span></summary>
+                <p>
+                  Так, у DimFin доступний надійний біометричний захист: вхід за відбитком пальця, розпізнаванням обличчя (Face Unlock) або PIN-кодом пристрою. Увімкнути біометрію можна в налаштуваннях. Усі ваші фінансові записи, фотографії чеків та локальні бекапи зберігаються виключно на телефоні без передавання на зовнішні сервери.
                 </p>
               </details>
               <details>
