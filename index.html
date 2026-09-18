@@ -1,5 +1,17 @@
-<!DOCTYPE html><html lang="uk"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="modulepreload" fetchPriority="low" href="/_next/static/chunks/index-9JYwN_a3.js"/><script src="/_next/static/chunks/rolldown-runtime-QTnfLwEv.js" type="module" async=""></script><script src="/_next/static/chunks/framework-C_hmB57O.js" type="module" async=""></script><link rel="preload" href="styles.css" as="style"/><link rel="modulepreload" href="/_next/static/chunks/layout-segment-context-C210b0fy.js" crossorigin=""/><title>DimFin — домашній бюджет без зайвої складності</title><meta name="description" content="DimFin — домашній бюджет без доступу до банківських рахунків. Доходи й витрати, місячні бюджети, кредити та розстрочки, календар, аналітика, локальні нагадування й щомісячні підсумки. Усі фінансові дані зберігаються лише на телефоні користувача."/><meta name="theme-color" content="#050b10"/><link rel="stylesheet" href="styles.css"/><script src="script.js" defer=""></script><script>Object.assign(((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}),{params:{},nav:{"pathname":"/","searchParams":[]}})</script><link rel="modulepreload" href="/_next/static/chunks/index-9JYwN_a3.js" />
-</head><body><div class="site-root">
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DimFin — домашній бюджет без зайвої складності</title>
+  <meta name="description" content="DimFin — домашній бюджет без доступу до банківських рахунків. Доходи й витрати, місячні бюджети, кредити, скарбнички, календар, аналітика та 100% приватність." />
+  <meta name="theme-color" content="#050b10" />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="site-root">
     <a class="skip-link" href="#main-content">Перейти до вмісту</a>
 
     <header class="site-header" data-header>
@@ -12,52 +24,61 @@
         </a>
 
         <nav class="desktop-nav" aria-label="Головна навігація">
-          <a href="#features">Можливості</a>
+          <a href="#features" data-i18n="nav.features">Можливості</a>
           <a
+            id="nav-guide-link"
             href="assets/dimfin-guide-for-beginners-ua.pdf"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Відкрити PDF-гайд «Як користуватися DimFin» у новій вкладці"
+            data-i18n="nav.guide"
           >Як користуватися</a>
-          <a href="#screens">Екрани</a>
-          <a href="#faq">FAQ</a>
-          <a href="#roadmap">Плани</a>
+          <a href="#screens" data-i18n="nav.screens">Екрани</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+          <a href="#roadmap" data-i18n="nav.roadmap">Плани</a>
         </nav>
 
-        <a class="button button-small button-dark" href="#install">Встановити</a>
+        <div class="header-actions">
+          <div class="lang-switcher" role="group" aria-label="Language selection">
+            <button type="button" class="lang-btn is-active" data-lang-btn="uk">🇺🇦 UA</button>
+            <button type="button" class="lang-btn" data-lang-btn="en">🇬🇧 EN</button>
+          </div>
+          <a class="button button-small button-dark" href="#install" data-i18n="nav.install">Встановити</a>
+        </div>
       </div>
     </header>
 
     <main id="main-content">
+      <!-- HERO SECTION -->
       <section class="hero" id="top">
         <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
         <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <div class="eyebrow"><span></span> Розумний домашній бюджет</div>
-            <h1>Гроші під контролем. <em>Життя — без таблиць.</em></h1>
-            <p class="hero-lead">
-              DimFin об’єднує доходи, швидкі витрати в один дотик, місячні бюджети, кредити та розстрочки.
+            <div class="eyebrow" data-i18n="hero.eyebrow"><span></span> Розумний домашній бюджет</div>
+            <h1 data-i18n="hero.title">Гроші під контролем. <em>Життя — без таблиць.</em></h1>
+            <p class="hero-lead" data-i18n="hero.lead">
+              DimFin об’єднує доходи, швидкі витрати в один дотик, місячні бюджети, кредити та скарбнички цілей.
               Пульс бюджету розраховує безпечний щоденний ліміт, а календар та аналітика допомагають спокійно завершити місяць.
-              100% приватність: без доступу до банківських рахунків, локальні нагадування й повне резервне копіювання виключно на вашому телефоні.
+              100% приватність: без банківських карт, локальні нагадування й збереження даних виключно на вашому телефоні.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#install">
+              <a class="button button-primary" href="#install" data-i18n="hero.cta">
                 Встановити DimFin
                 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg>
               </a>
-              <a class="text-link" href="#features">Подивитися можливості <span>↓</span></a>
+              <a class="text-link" href="#features" data-i18n="hero.featuresLink">Подивитися можливості <span>↓</span></a>
             </div>
             <div class="hero-proof" aria-label="Переваги DimFin">
-              <span><i aria-hidden="true">✓</i> Українською</span>
-              <span><i aria-hidden="true">✓</i> Чеки, QR та біометрія</span>
-              <span><i aria-hidden="true">✓</i> Без інтернету та банків</span>
-              <span><i aria-hidden="true">✓</i> Дані лише на телефоні</span>
+              <span data-i18n="hero.proof1"><i aria-hidden="true">✓</i> Українською</span>
+              <span data-i18n="hero.proof2"><i aria-hidden="true">✓</i> Чеки, QR та біометрія</span>
+              <span data-i18n="hero.proof3"><i aria-hidden="true">✓</i> Без інтернету та банків</span>
+              <span data-i18n="hero.proof4"><i aria-hidden="true">✓</i> Дані лише на телефоні</span>
             </div>
           </div>
 
           <div class="product-visual" aria-label="Приклад головного екрана DimFin">
-            <div class="visual-note visual-note-top" aria-hidden="true">
+            <div class="visual-note visual-note-top" aria-hidden="true" data-i18n="hero.noteTop">
               <span class="note-icon">↗</span>
               <div><small>Прогноз залишку</small><strong>+22 372 ₴</strong></div>
             </div>
@@ -65,20 +86,21 @@
             <div class="phone-shell phone-shell-real">
               <div class="app-screen app-screen-real">
                 <img
+                  data-hero-image
                   src="assets/overview.png"
-                  alt="Головний екран DimFin із швидкими витратами, оглядом місяця, пульсом бюджету та безпечним щоденним лімітом"
+                  alt="Головний екран DimFin"
                   fetchpriority="high"
                   decoding="async"
                 />
               </div>
             </div>
 
-            <div class="visual-note visual-note-bottom" aria-hidden="true">
+            <div class="visual-note visual-note-bottom" aria-hidden="true" data-i18n="hero.noteBottom">
               <span class="note-icon note-icon-dark">✓</span>
               <div><small>Денний ліміт</small><strong>117 ₴/день</strong></div>
             </div>
 
-            <div class="visual-note visual-note-side" aria-hidden="true">
+            <div class="visual-note visual-note-side" aria-hidden="true" data-i18n="hero.noteSide">
               <span class="note-icon">◫</span>
               <div><small>Поточний баланс</small><strong>25 522 ₴</strong></div>
             </div>
@@ -86,29 +108,35 @@
         </div>
       </section>
 
+      <!-- FEATURES SECTION -->
       <section class="features-section" id="features">
         <div class="container">
           <div class="section-heading">
             <div>
-              <div class="eyebrow eyebrow-light"><span></span> Можливості</div>
-              <h2>Не просто цифри.<br />Зрозумілі наступні дії.</h2>
+              <div class="eyebrow eyebrow-light" data-i18n="features.eyebrow"><span></span> Можливості v1.4</div>
+              <h2 data-i18n="features.title">Не просто цифри.<br />Зрозумілі наступні дії.</h2>
             </div>
-            <p>
+            <p data-i18n="features.desc">
               DimFin перетворює щоденні записи на просту картину бюджету —
               без фінансового жаргону та перевантажених звітів.
             </p>
           </div>
 
           <div class="feature-bento">
+            <!-- Bento 1: Budget Pulse -->
             <article class="feature-card feature-card-wide">
               <div class="feature-copy">
                 <span class="feature-number">01</span>
-                <h3>Пульс бюджету та радар</h3>
-                <p>
+                <h3 data-i18n="features.pulseTitle">Пульс бюджету та радар</h3>
+                <p data-i18n="features.pulseDesc">
                   Оцінює темп витрат, залишок і зобов'язання в реальному часі. Розраховує безпечний
-                  ліміт на день (117 грн/день) та показує індекс спокою (0/10) замість складних таблиць.
+                  ліміт на день та показує індекс ризику (1–10) замість складних формул.
                 </p>
-                <div class="tag-row"><span>Денний ліміт</span><span>Прогноз залишку</span><span>Рівень спокою</span></div>
+                <div class="tag-row">
+                  <span data-i18n="features.pulseTag1">Денний ліміт</span>
+                  <span data-i18n="features.pulseTag2">Прогноз залишку</span>
+                  <span data-i18n="features.pulseTag3">Рівень спокою</span>
+                </div>
               </div>
               <div class="radar-demo" aria-hidden="true">
                 <div class="radar-rings">
@@ -120,82 +148,71 @@
                   <i class="radar-point point-two"></i>
                   <i class="radar-point point-three"></i>
                 </div>
-                <div class="radar-caption"><span></span> 0/10 Спокійно</div>
+                <div class="radar-hud">
+                  <span class="hud-pill" data-i18n="features.radarBadge">Оновлений радар ризику 1–10</span>
+                </div>
               </div>
             </article>
 
-            <article class="feature-card feature-card-quick">
+            <!-- Bento 2: Receipts & QR -->
+            <article class="feature-card">
               <span class="feature-number">02</span>
-              <h3>Чеки, швидкі витрати та голос</h3>
-              <p>Фотографуйте чеки з камери чи галереї, зчитуйте QR-коди (ДПС, Checkbox), вводьте покупки в один дотик або голосом 🎙️.</p>
-              <div class="quick-input" aria-hidden="true">
-                <span>АТБ · Чек 12 434 грн</span><i>→</i>
-              </div>
-              <div class="quick-result" aria-hidden="true">
-                <span>🧾</span><div><small>Продукти (з чека)</small><strong>−12 434 ₴</strong></div>
-              </div>
-              <div class="template-row" aria-hidden="true">
-                <span><i>🧾</i><b>Фото чека</b></span>
-                <span><i>☕</i><b>Кава 80 ₴</b></span>
-                <span><i>🍽️</i><b>Обід 250 ₴</b></span>
+              <h3 data-i18n="features.receiptTitle">Чеки, OCR та QR-коди</h3>
+              <p data-i18n="features.receiptDesc">
+                Додавайте покупки в один дотик: фотографуйте чек камерою, скануйте фіскальний QR або розпізнавайте текст прямо на телефоні.
+              </p>
+              <ul class="feature-bullets">
+                <li data-i18n="features.receiptBullet1">🔍 <strong>Зум чеків до 6x:</strong> детальний перегляд кожної позиції.</li>
+                <li data-i18n="features.receiptBullet2">🏪 <strong>Мережі та геопозиція:</strong> АТБ, Сільпо, Lidl, Biedronka та координати.</li>
+              </ul>
+              <div class="tag-row">
+                <span data-i18n="features.receiptTag1">Офлайн OCR</span>
+                <span data-i18n="features.receiptTag2">QR фіскальний</span>
+                <span data-i18n="features.receiptTag3">Масштаб 6x</span>
               </div>
             </article>
 
-            <article class="feature-card feature-card-plan">
+            <!-- Bento 3: Offline & Privacy -->
+            <article class="feature-card">
               <span class="feature-number">03</span>
-              <h3>Рекомендована дія та план</h3>
-              <p>Розумний асистент пропонує точний ліміт на завтра і дає змогу застосувати його в один клік.</p>
-              <div class="plan-options" aria-hidden="true">
-                <span>План на завтра: 924 ₴</span><span class="selected">Застосувати <i>✓</i></span>
+              <h3 data-i18n="features.offlineTitle">100% приватність і безпека</h3>
+              <p data-i18n="features.offlineDesc">
+                Жодних банківських логінів, паролів і сторонніх серверів. Усі дані живуть виключно у зашифрованій пам'яті смартфона.
+              </p>
+              <p data-i18n="features.offlineP1">🔒 <strong>Біометричний захист:</strong> вхід за відбитком пальця або Face Unlock.</p>
+              <p data-i18n="features.offlineP2">🤫 <strong>Режим Flip-to-Hide:</strong> переверніть телефон екраном донизу, щоб приховати суми.</p>
+              <div class="tag-row">
+                <span data-i18n="features.offlineTag1">Face/Touch ID</span>
+                <span data-i18n="features.offlineTag2">Flip-to-Hide</span>
+                <span data-i18n="features.offlineTag3">Повний JSON-бекап</span>
               </div>
             </article>
 
-            <article class="feature-card feature-card-categories">
-              <div>
+            <!-- Bento 4: Notifications & Local Reminders -->
+            <article class="feature-card feature-card-wide feature-card-stacked">
+              <div class="feature-copy">
                 <span class="feature-number">04</span>
-                <h3>Зобов’язання та бюджети</h3>
-                <p>Окремий розділ для кредитів і розстрочок: графік платежів, залишок боргу та відмітка сплати в один дотик.</p>
-              </div>
-              <div class="category-stack" aria-hidden="true">
-                <div><span class="category-icon cat-one">⌂</span><b>Зобов'язання місяця</b><small>3 450 ₴</small></div>
-                <div><span class="category-icon cat-two">◫</span><b>Ощадбанк (Ноут)</b><small>3 450 ₴</small></div>
-                <div><span class="category-icon cat-three">◆</span><b>Загальний борг</b><small>25 700 ₴</small></div>
-              </div>
-            </article>
-
-            <article class="feature-card feature-card-calendar">
-              <div class="feature-copy">
-                <span class="feature-number">05</span>
-                <h3>Календар витрат</h3>
-                <p>
-                  Переглядайте витрати за кожен день місяця, помічайте дні з
-                  перевищенням ліміту за кольоровою шкалою та відкривайте список операцій дня одним дотиком.
+                <h3 data-i18n="features.notifTitle">Локальні нагадування та підсумки</h3>
+                <p data-i18n="features.notifDesc">
+                  Автономні сповіщення без відправки інформації на зовнішні сервери.
                 </p>
-                <div class="tag-row"><span>Суми за днями</span><span>Кольорова шкала</span><span>Операції дня</span></div>
-              </div>
-              <div class="calendar-showcase" aria-hidden="true">
-                <img src="assets/calendar.png" alt="" loading="lazy" decoding="async" />
-              </div>
-            </article>
-
-            <article class="feature-card feature-card-notifications">
-              <div class="feature-copy">
-                <span class="feature-number">06</span>
-                <h3>Біометричний захист, бекап і безпека</h3>
-                <p>
-                  100% офлайн. Миттєвий вхід за відбитком пальця, Face Unlock або PIN-кодом. Повне резервне копіювання транзакцій (із точним часом і чеками) у безпечний файл JSON або CSV.
-                  Локальні нагадування про платежі за 3 дні без виходу в інтернет.
-                </p>
-                <div class="tag-row"><span>Біометрія</span><span>Повний бекап</span><span>Без інтернету</span></div>
               </div>
               <div class="notification-showcase" aria-hidden="true">
                 <div class="notification-item notification-item-credit">
                   <span>🔒</span>
-                  <div><small>DimFin · Безпека</small><strong>Біометричний захист активний</strong><p>Відбиток пальця, Face Unlock та системний PIN</p></div>
+                  <div>
+                    <small data-i18n="features.notif1Small">DimFin · Безпека</small>
+                    <strong data-i18n="features.notif1Title">Біометричний захист активний</strong>
+                    <p data-i18n="features.notif1Desc">Відбиток пальця, Face Unlock та системний PIN</p>
+                  </div>
                 </div>
                 <div class="notification-item notification-item-summary">
                   <span>↗</span>
-                  <div><small>DimFin · Місячний підсумок</small><strong>Підсумок за вересень</strong><p>Доходи +25 872 ₴ · Баланс +25 522 ₴</p></div>
+                  <div>
+                    <small data-i18n="features.notif2Small">DimFin · Місячний підсумок</small>
+                    <strong data-i18n="features.notif2Title">Підсумок за вересень</strong>
+                    <p data-i18n="features.notif2Desc">Доходи +40 040 € · Баланс +15 812,97 €</p>
+                  </div>
                 </div>
               </div>
             </article>
@@ -203,173 +220,35 @@
         </div>
       </section>
 
+      <!-- GUIDE SECTION -->
       <section class="guide-section" id="guide">
         <div class="container">
           <div class="guide-heading">
             <div>
-              <div class="eyebrow"><span></span> Покрокова інструкція</div>
-              <h2>Почніть користуватися<br />DimFin за <em>9 кроків.</em></h2>
+              <div class="eyebrow" data-i18n="guide.eyebrow"><span></span> Покрокова інструкція</div>
+              <h2 data-i18n="guide.title">Почніть користуватися<br />DimFin за <em>9 кроків.</em></h2>
             </div>
-            <p>
+            <p data-i18n="guide.desc">
               Натискайте на кроки — поруч з’являтиметься відповідний екран
-              застосунку. Усі приклади показані на реальній версії DimFin.
+              застосунку. Усі приклади показані на актуальній версії 1.4.
             </p>
+          </div>
+
+          <!-- Dual PDF Download Row -->
+          <div class="guide-download-row" style="margin-top: 14px; margin-bottom: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a id="guide-download-main" class="button button-small button-primary" href="assets/dimfin-guide-for-beginners-ua.pdf" target="_blank" rel="noopener noreferrer">
+              <span style="font-size: 16px;">📄</span>
+              <span data-i18n="guide.downloadMain">Завантажити гайд (PDF, UA)</span>
+            </a>
+            <a id="guide-download-alt" class="button button-small button-dark" href="assets/dimfin-guide-for-beginners-en.pdf" target="_blank" rel="noopener noreferrer">
+              <span style="font-size: 16px;">🇬🇧</span>
+              <span data-i18n="guide.downloadAlt">Download Guide (PDF, EN)</span>
+            </a>
           </div>
 
           <div class="guide-layout">
             <div class="guide-steps" role="tablist" aria-label="Кроки користування DimFin">
-              <button
-                class="guide-step is-active"
-                type="button"
-                role="tab"
-                aria-selected="true"
-                data-guide-step="1"
-                data-guide-image="assets/settings.png"
-                data-guide-title="Профіль, біометрія та налаштування"
-              >
-                <span class="guide-step-number">01</span>
-                <span class="guide-step-copy">
-                  <strong>Налаштуйте DimFin під себе</strong>
-                  <small>Відкрийте ⚙️ «Налаштування». Увімкніть біометричний захист (відбиток пальця або Face Unlock), вкажіть ім'я, оберіть валюту (UAH, USD, EUR) та налаштуйте щомісячні бюджети.</small>
-                </span>
-                <span class="guide-step-arrow" aria-hidden="true">→</span>
-              </button>
-
-              <button
-                class="guide-step"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-guide-step="2"
-                data-guide-image="assets/receipt-options.png"
-                data-guide-title="Чеки, QR-коди, шаблони та голос"
-              >
-                <span class="guide-step-number">02</span>
-                <span class="guide-step-copy">
-                  <strong>Додавайте чеки та витрати в один клік</strong>
-                  <small>Тисніть «Додати з чека», щоб сфотографувати паперовий чек чи зчитати QR (ДПС, Checkbox). Або використовуйте картки швидких витрат, диктуйте суму голосом 🎙️ чи вносьте вручну.</small>
-                </span>
-                <span class="guide-step-arrow" aria-hidden="true">→</span>
-              </button>
-
-              <button
-                class="guide-step"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-guide-step="3"
-                data-guide-image="assets/overview.png"
-                data-guide-title="Огляд за місяць і поточний баланс"
-              >
-                <span class="guide-step-number">03</span>
-                <span class="guide-step-copy">
-                  <strong>Контролюйте загальну картину</strong>
-                  <small>На головному екрані одразу видно баланс (25 522 ₴), шкалу витраченого бюджету, доходи, витрати, обов'язкові зобов'язання та кнопку «Звірити» для синхронізації коштів.</small>
-                </span>
-                <span class="guide-step-arrow" aria-hidden="true">→</span>
-              </button>
-
-              <button
-                class="guide-step"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-guide-step="4"
-                data-guide-image="assets/smart-action.png"
-                data-guide-title="Пульс бюджету та безпечний ліміт"
-              >
-                <span class="guide-step-number">04</span>
-                <span class="guide-step-copy">
-                  <strong>Слідкуйте за пульсом бюджету</strong>
-                  <small>Віджет «Пульс бюджету» розраховує безпечний денний ліміт (117 грн/день), показує прогноз залишку до кінця місяця (+22 372 ₴) та статус ризику (0/10 Спокійно).</small>
-                </span>
-                <span class="guide-step-arrow" aria-hidden="true">→</span>
-              </button>
-
-              <button
-                class="guide-step"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-guide-step="5"
-                data-guide-image="assets/smart-action.png"
-                data-guide-title="Рекомендована дія та план на завтра"
-              >
-                <span class="guide-step-number">05</span>
-                <span class="guide-step-copy">
-                  <strong>Застосуйте розумний план</strong>
-                  <small>Якщо темп витрат змінюється, асистент пропонує рекомендований план на завтра. Оцініть новий ліміт і натисніть «Застосувати ліміт» для миттєвої оптимізації.</small>
-                </span>
-                <span class="guide-step-arrow" aria-hidden="true">→</span>
-              </button>
-
-              <button
-                class="guide-step"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-guide-step="6"
-                data-guide-image="assets/transaction-edit.png"
-                data-guide-title="Історія, магазин, локація та зум чеків"
-              >
-                <span class="guide-step-number">06</span>
-                <span class="guide-step-copy">
-                  <strong>Керуйте покупками, локацією та чеками</strong>
-                  <small>Обирайте улюблений магазин (АТБ, Сільпо...), фіксуйте точний час і координати покупки. Прикріплюйте фото чеків навіть до старих витрат та масштабуйте їх у зумі до 6x.</small>
-                </span>
-                <span class="guide-step-arrow" aria-hidden="true">→</span>
-              </button>
-
-              <button
-                class="guide-step"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-guide-step="7"
-                data-guide-image="assets/calendar.png"
-                data-guide-title="Календар щоденних витрат"
-              >
-                <span class="guide-step-number">07</span>
-                <span class="guide-step-copy">
-                  <strong>Оцінюйте витрати в календарі</strong>
-                  <small>Вкладка «Календар» у нижній панелі показує колірну інтенсивність витрат по днях, а натискання на день відкриває повний список операцій.</small>
-                </span>
-                <span class="guide-step-arrow" aria-hidden="true">→</span>
-              </button>
-
-              <button
-                class="guide-step"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-guide-step="8"
-                data-guide-image="assets/credits.png"
-                data-guide-title="Зобов'язання, кредити та розстрочки"
-              >
-                <span class="guide-step-number">08</span>
-                <span class="guide-step-copy">
-                  <strong>Керуйте зобов'язаннями без стресу</strong>
-                  <small>Вкладка «Зобов'язання» збирає кредити та розстрочки: суму до сплати у цьому місяці, загальний борг, нагадування до потрібної дати та кнопку «Відмітити як сплачено».</small>
-                </span>
-                <span class="guide-step-arrow" aria-hidden="true">→</span>
-              </button>
-
-              <button
-                class="guide-step"
-                type="button"
-                role="tab"
-                aria-selected="false"
-                data-guide-step="9"
-                data-guide-image="assets/settings.png"
-                data-guide-title="Повний бекап і 100% приватність"
-              >
-                <span class="guide-step-number">09</span>
-                <span class="guide-step-copy">
-                  <strong>Створюйте резервну копію даних</strong>
-                  <small>Дані лише на телефоні. Створюйте повну резервну копію (транзакції з часом, зобов'язання та бюджети) у файл JSON або експортуйте виписку в CSV.</small>
-                </span>
-                <span class="guide-step-arrow" aria-hidden="true">→</span>
-              </button>
+              <!-- Rendered dynamically by script.js -->
             </div>
 
             <div class="guide-preview" aria-live="polite">
@@ -393,246 +272,63 @@
         </div>
       </section>
 
+      <!-- SCREENS GALLERY SECTION -->
       <section class="screens-section" id="screens">
         <div class="container">
           <div class="screens-heading">
             <div>
-              <div class="eyebrow"><span></span> Реальні екрани застосунку</div>
-              <h2>Справжній DimFin.<br /><em>Без макетів.</em></h2>
+              <div class="eyebrow" data-i18n="screens.eyebrow"><span></span> Реальні екрани застосунку</div>
+              <h2 data-i18n="screens.title">Справжній DimFin.<br /><em>Без макетів.</em></h2>
             </div>
             <div class="screens-intro">
-              <p>
-                Від огляду місяця й календаря витрат до бюджетів, кредитів та розстрочок — подивіться,
-                як DimFin допомагає керувати бюджетом щодня.
+              <p data-i18n="screens.desc">
+                Від огляду місяця й календаря до скарбничок, кредитів та аналітики — подивіться,
+                як DimFin допомагає керувати грошима щодня.
               </p>
-              <span><i>10</i> екранів</span>
+              <span data-i18n="screens.badge"><i>12</i> екранів</span>
             </div>
           </div>
 
           <div class="screen-rail" tabindex="0" aria-label="Галерея екранів DimFin">
-            <button class="screen-shot-card" type="button" data-screenshot="assets/overview.png" data-caption="Огляд місяця">
-              <span class="screen-device screen-device-framed"><img src="assets/overview.png" alt="Огляд місяця в DimFin" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>01</i><span><strong>Огляд місяця</strong><small>Баланс, ліміт і швидкі витрати</small></span></span>
-            </button>
-
-            <button class="screen-shot-card" type="button" data-screenshot="assets/receipt-options.png" data-caption="Додати з чека">
-              <span class="screen-device screen-device-framed"><img src="assets/receipt-options.png" alt="Додати з чека: QR-код, фото або галерея" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>02</i><span><strong>Додати з чека</strong><small>QR-код, камера чи галерея</small></span></span>
-            </button>
-
-            <button class="screen-shot-card" type="button" data-screenshot="assets/receipt-dialog.png" data-caption="Збереження чека">
-              <span class="screen-device screen-device-framed"><img src="assets/receipt-dialog.png" alt="Збереження чека з фото та вибором магазину" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>03</i><span><strong>Збереження чека</strong><small>Фото, мережа (АТБ) та час</small></span></span>
-            </button>
-
-            <button class="screen-shot-card" type="button" data-screenshot="assets/transaction-edit.png" data-caption="Деталі та локація">
-              <span class="screen-device screen-device-framed"><img src="assets/transaction-edit.png" alt="Редагування операції: магазин, локація та чек" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>04</i><span><strong>Деталі та локація</strong><small>Магазин, адреса та чек</small></span></span>
-            </button>
-
-            <button class="screen-shot-card" type="button" data-screenshot="assets/calendar.png" data-caption="Календар витрат">
-              <span class="screen-device"><img src="assets/calendar.png" alt="Календар витрат DimFin із сумами за днями та кольоровою шкалою" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>05</i><span><strong>Календар витрат</strong><small>Суми за днями й операції</small></span></span>
-            </button>
-
-            <button class="screen-shot-card" type="button" data-screenshot="assets/analytics-overview.png" data-caption="Аналітика витрат">
-              <span class="screen-device"><img src="assets/analytics-overview.png" alt="Аналітика витрат, розумний аналіз і категорії у DimFin" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>06</i><span><strong>Аналітика витрат</strong><small>Порівняння й категорії</small></span></span>
-            </button>
-
-            <button class="screen-shot-card" type="button" data-screenshot="assets/credits.png" data-caption="Зобов'язання та розстрочки">
-              <span class="screen-device screen-device-framed"><img src="assets/credits.png" alt="Облік зобов'язань, кредитів і розстрочок у DimFin" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>07</i><span><strong>Зобов'язання</strong><small>Платежі, залишок і відмітка сплати</small></span></span>
-            </button>
-
-            <button class="screen-shot-card" type="button" data-screenshot="assets/analytics.png" data-caption="Виконання місячних бюджетів">
-              <span class="screen-device"><img src="assets/analytics.png" alt="Виконання місячних бюджетів за категоріями в DimFin" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>08</i><span><strong>Місячні бюджети</strong><small>Прогрес за категоріями</small></span></span>
-            </button>
-
-            <button class="screen-shot-card" type="button" data-screenshot="assets/settings.png" data-caption="Налаштування та біометрія">
-              <span class="screen-device screen-device-framed"><img src="assets/settings.png" alt="Налаштування валюти, асистента, сповіщень та бекапу" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>09</i><span><strong>Налаштування</strong><small>Біометрія, валюта й бекап</small></span></span>
-            </button>
-
-            <button class="screen-shot-card" type="button" data-screenshot="assets/voice-input.png" data-caption="Голосове введення">
-              <span class="screen-device"><img src="assets/voice-input.png" alt="Голосове введення операцій у DimFin" loading="lazy" decoding="async" /></span>
-              <span class="screen-caption"><i>10</i><span><strong>Голосове введення</strong><small>Швидке розпізнавання мови</small></span></span>
-            </button>
+            <!-- Rendered dynamically by script.js with language-matched screenshots -->
           </div>
 
-          <p class="screens-hint"><span aria-hidden="true">←</span> Гортайте та натискайте, щоб збільшити <span aria-hidden="true">→</span></p>
+          <p class="screens-hint" data-i18n="screens.hint"><span aria-hidden="true">←</span> Гортайте та натискайте, щоб збільшити <span aria-hidden="true">→</span></p>
         </div>
       </section>
 
+      <!-- FAQ & ROADMAP SECTION -->
       <section class="answers-section" id="faq">
         <div class="container answers-grid">
           <div class="faq-block">
-            <div class="eyebrow"><span></span> Поширені запитання</div>
-            <h2>Коротко про DimFin</h2>
+            <div class="eyebrow" data-i18n="faq.eyebrow"><span></span> Поширені запитання</div>
+            <h2 data-i18n="faq.title">Коротко про DimFin</h2>
 
             <div class="faq-list">
-              <details open>
-                <summary>Що таке DimFin?<span aria-hidden="true">＋</span></summary>
-                <p>
-                  Це застосунок для домашнього бюджету, який допомагає записувати
-                  доходи й витрати, контролювати місячні бюджети, кредити та розстрочки,
-                  аналізувати фінансові звички й планувати залишок до кінця місяця.
-                </p>
-              </details>
-              <details>
-                <summary>Що можна вести в застосунку?<span aria-hidden="true">＋</span></summary>
-                <p>
-                  Транзакції, власні шаблони швидких витрат, місячні бюджети, кредити,
-                  розстрочки й платежі за ними. Календар показує суми та інтенсивність витрат за днями,
-                  а аналітика — баланс, тренди й найбільші категорії.
-                </p>
-              </details>
-              <details>
-                <summary>Як працюють місячні бюджети?<span aria-hidden="true">＋</span></summary>
-                <p>
-                  У налаштуваннях задайте ліміт для потрібних категорій. Після цього
-                  в аналітиці з’явиться виконання бюджетів: витрачена сума, відсоток,
-                  доступний залишок або розмір перевищення для кожної категорії.
-                </p>
-              </details>
-              <details>
-                <summary>Чим розстрочка відрізняється від кредиту?<span aria-hidden="true">＋</span></summary>
-                <p>
-                  Для кредиту DimFin контролює щомісячний платіж, дату та актуальний залишок.
-                  Для розстрочки додатково враховується загальна кількість платежів і показується
-                  реальний прогрес: скільки платежів уже сплачено та скільки залишилося.
-                </p>
-              </details>
-              <details>
-                <summary>Як працює календар витрат?<span aria-hidden="true">＋</span></summary>
-                <p>
-                  У кожному дні видно суму витрат, а колір показує її рівень відносно
-                  денного ліміту: від доброго темпу до перевищення. Натисніть день,
-                  щоб переглянути його доходи й витрати та відкрити потрібну операцію.
-                </p>
-              </details>
-              <details>
-                <summary>Як працює фінансовий асистент?<span aria-hidden="true">＋</span></summary>
-                <p>
-                  Він аналізує внесені дані, оцінює темп витрат і формує зрозумілі
-                  підказки: денний ліміт, пріоритетну дію або сценарій економії.
-                </p>
-              </details>
-              <details>
-                <summary>Які сповіщення надсилає DimFin?<span aria-hidden="true">＋</span></summary>
-                <p>
-                  Для активних кредитів і розстрочок DimFin локально перевіряє дати платежів
-                  та нагадує за 3 дні, у день сплати й після прострочення. Також на початку
-                  кожного місяця надходить фінансовий підсумок за попередній місяць із доходами,
-                  витратами та балансом. Сповіщення працюють без передавання фінансових даних
-                  на сервер і керуються в налаштуваннях застосунку.
-                </p>
-              </details>
-              <details>
-                <summary>Як працює додавання та фотографування чеків?<span aria-hidden="true">＋</span></summary>
-                <p>
-                  Ви можете додавати чеки трьома способами: сканувати фіскальний QR-код (з чеків ДПС або Checkbox), зробити фото чека камерою або обрати зображення з галереї. До операції зручно вибрати мережу магазину (АТБ, Сільпо, Novus тощо), зафіксувати точний час і координати покупки. У перегляді чека доступне масштабування двома пальцями (pinch-to-zoom) до 6x, а фото можна прикріпити навіть до старих операцій.
-                </p>
-              </details>
-              <details>
-                <summary>Чи захищений вхід у застосунок?<span aria-hidden="true">＋</span></summary>
-                <p>
-                  Так, у DimFin доступний надійний біометричний захист: вхід за відбитком пальця, розпізнаванням обличчя (Face Unlock) або PIN-кодом пристрою. Увімкнути біометрію можна в налаштуваннях. Усі ваші фінансові записи, фотографії чеків та локальні бекапи зберігаються виключно на телефоні без передавання на зовнішні сервери.
-                </p>
-              </details>
-              <details>
-                <summary>Де завантажити DimFin?<span aria-hidden="true">＋</span></summary>
-                <p>
-                  Сторінка DimFin у Google Play уже доступна за прямим посиланням нижче.
-                  Можливість встановлення може залежати від поточного етапу тестування.
-                </p>
-              </details>
+              <!-- Rendered dynamically by script.js -->
             </div>
           </div>
 
           <div class="roadmap-block" id="roadmap">
-            <div class="eyebrow"><span></span> Плани на майбутнє</div>
-            <h2>DimFin розвивається разом із вами</h2>
-            <p class="roadmap-intro">
-              Відгуки користувачів уже формують наступні версії застосунку.
+            <div class="eyebrow" data-i18n="roadmap.eyebrow"><span></span> Плани та оновлення</div>
+            <h2 data-i18n="roadmap.title">DimFin розвивається разом із вами</h2>
+            <p class="roadmap-intro" data-i18n="roadmap.intro">
+              Відгуки користувачів формують кожну нову версію застосунку.
             </p>
 
             <div class="roadmap-list">
-              <article class="roadmap-item">
-                <span class="roadmap-icon" aria-hidden="true">01</span>
-                <div>
-                  <strong>Вбудований калькулятор</strong>
-                  <p>Швидкі обчислення та додавання кількох сум прямо в полі введення без переходу в сторонні програми.</p>
-                </div>
-              </article>
-              <article class="roadmap-item">
-                <span class="roadmap-icon" aria-hidden="true">02</span>
-                <div>
-                  <strong>Режим приватності</strong>
-                  <p>Миттєве приховання сум балансу й витрат для безпечного перегляду в людних місцях.</p>
-                </div>
-              </article>
-              <article class="roadmap-item">
-                <span class="roadmap-icon" aria-hidden="true">03</span>
-                <div>
-                  <strong>Теги для операцій</strong>
-                  <p>Гнучкий контекст до категорій (#відпустка, #ремонт, #подарунок) для точної аналітики подій.</p>
-                </div>
-              </article>
-              <article class="roadmap-item">
-                <span class="roadmap-icon" aria-hidden="true">04</span>
-                <div>
-                  <strong>Біометричний захист</strong>
-                  <p>Вхід за відбитком пальця або Face Unlock для максимальної конфіденційності ваших фінансів.</p>
-                </div>
-              </article>
-              <article class="roadmap-item">
-                <span class="roadmap-icon" aria-hidden="true">05</span>
-                <div>
-                  <strong>Скарбнички та фінансові цілі</strong>
-                  <p>Наочне накопичення на великі мрії з прогресом досягнення та контролем резервів.</p>
-                </div>
-              </article>
-              <article class="roadmap-item">
-                <span class="roadmap-icon" aria-hidden="true">06</span>
-                <div>
-                  <strong>Підписки та регулярні платежі</strong>
-                  <p>Контроль щомісячних сервісів, комуналки й абонементів із завчасними нагадуваннями.</p>
-                </div>
-              </article>
-              <article class="roadmap-item">
-                <span class="roadmap-icon" aria-hidden="true">07</span>
-                <div>
-                  <strong>Дні без витрат</strong>
-                  <p>Мотиваційні страйки усвідомленого споживання та відмітки дисциплінованих днів у календарі.</p>
-                </div>
-              </article>
-              <article class="roadmap-item">
-                <span class="roadmap-icon" aria-hidden="true">08</span>
-                <div>
-                  <strong>Віджет на робочий стіл</strong>
-                  <p>Швидкий огляд залишку денного ліміту та додавання витрат в один дотик з екрана смартфона.</p>
-                </div>
-              </article>
-              <article class="roadmap-item roadmap-item-later">
-                <span class="roadmap-icon" aria-hidden="true">09</span>
-                <div>
-                  <strong>Спільний сімейний бюджет</strong>
-                  <p>Синхронізація між смартфонами сім’ї: прозорий облік спільних витрат і збереження особистої приватності.</p>
-                </div>
-              </article>
+              <!-- Rendered dynamically by script.js -->
             </div>
 
-            <p class="roadmap-note">Порядок і склад функцій можуть змінюватися за результатами тестування.</p>
+            <p class="roadmap-note" data-i18n="roadmap.note">Порядок і склад функцій можуть адаптуватися за результатами тестування.</p>
           </div>
 
           <div class="install-card" id="install">
             <div class="install-glow" aria-hidden="true"></div>
             <div class="install-content">
-              <span class="install-badge">Сторінка в Google Play</span>
-              <h2>Почніть бачити бюджет ясніше.</h2>
-              <p>DimFin допоможе перетворити щоденні витрати на спокійний і реалістичний план.</p>
+              <span class="install-badge" data-i18n="install.badge">Сторінка в Google Play</span>
+              <h2 data-i18n="install.title">Почніть бачити бюджет ясніше.</h2>
+              <p data-i18n="install.desc">DimFin допоможе перетворити щоденні витрати на спокійний і реалістичний план.</p>
 
               <div class="store-links" aria-label="Посилання на DimFin у Google Play">
                 <a class="store-button" href="https://play.google.com/store/apps/details?id=com.dimfin" target="_blank" rel="noopener noreferrer">
@@ -640,16 +336,17 @@
                     <path d="M5.2 4.4 19 16 5.3 27.6a3.3 3.3 0 0 1-.9-2.3V6.7c0-.9.3-1.6.8-2.3Z" />
                     <path d="m20.8 14.4 3.9-2.2c1.3-.7 2.4-.3 2.9.5.6 1 .3 2.1-.8 2.8l-4.1 2.3-1.9-3.4ZM6.8 3.5 21.1 14l-2.7 2.3L6.8 3.5Zm0 25L18.5 16l2.8 2.4L6.8 28.5Z" />
                   </svg>
-                  <span><small>Завантажити з</small><strong>Google Play</strong></span>
-                  <i>Встановити</i>
+                  <span><small data-i18n="install.btnSub">Завантажити з</small><strong data-i18n="install.btnMain">Google Play</strong></span>
+                  <i data-i18n="install.btnAction">Встановити</i>
                 </a>
               </div>
-              <small class="install-note">DimFin доступний для Android. Можливість встановлення може залежати від поточного етапу тестування.</small>
+              <small class="install-note" data-i18n="install.note">DimFin доступний для Android. Підтримка Android 10+ (до Android 15/16 включно).</small>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- DEVELOPER SECTION -->
       <section class="developer-section" id="contact">
         <div class="container">
           <div class="developer-card">
@@ -660,20 +357,20 @@
                 loading="lazy"
                 decoding="async"
               />
-              <span><i></i> На зв’язку</span>
+              <span data-i18n="dev.status"><i></i> На зв’язку</span>
             </div>
 
             <div class="developer-content">
-              <div class="eyebrow eyebrow-light"><span></span> Зворотний зв’язок</div>
-              <h2>Допоможіть зробити<br />DimFin <em>кращим.</em></h2>
-              <p>
-                Помітили помилку, маєте ідею або хочете запропонувати нову можливість?
+              <div class="eyebrow eyebrow-light" data-i18n="dev.eyebrow"><span></span> Зворотний зв’язок</div>
+              <h2 data-i18n="dev.title">Допоможіть зробити<br />DimFin <em>кращим.</em></h2>
+              <p data-i18n="dev.desc">
+                Помітили неточність, маєте ідею або хочете запропонувати нову можливість?
                 Напишіть безпосередньо розробнику.
               </p>
 
               <div class="developer-person">
-                <strong>Дмитро Стукалов</strong>
-                <span>Розробник DimFin</span>
+                <strong data-i18n="dev.name">Дмитро Стукалов</strong>
+                <span data-i18n="dev.role">Розробник DimFin (Aivengo)</span>
               </div>
 
               <div class="contact-actions">
@@ -681,18 +378,19 @@
                   <span class="contact-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24"><path d="M3.5 6.5h17v11h-17z" /><path d="m4.5 7.5 7.5 6 7.5-6" /></svg>
                   </span>
-                  <span><small>Написати на пошту</small><strong>aivengo.dst@gmail.com</strong></span>
+                  <span><small data-i18n="dev.mailSub">Написати на пошту</small><strong>aivengo.dst@gmail.com</strong></span>
                   <i aria-hidden="true">↗</i>
                 </a>
               </div>
 
-              <small class="developer-note">Кожен відгук допомагає визначити, що покращувати в наступних версіях.</small>
+              <small class="developer-note" data-i18n="dev.note">Кожен відгук допомагає визначити, що покращувати в наступних версіях.</small>
             </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- SCREENSHOT MODAL DIALOG -->
     <dialog class="screenshot-dialog" data-screenshot-dialog aria-label="Збільшений скріншот DimFin">
       <div class="dialog-toolbar">
         <strong data-dialog-caption>DimFin</strong>
@@ -701,6 +399,7 @@
       <div class="dialog-image-wrap"><img data-dialog-image src="" alt="" /></div>
     </dialog>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container footer-inner">
         <a class="brand brand-footer" href="#top">
@@ -709,9 +408,13 @@
           </span>
           <span>DimFin</span>
         </a>
-        <p>Домашній бюджет без зайвої складності.</p>
-        <p>© <span data-year></span> DimFin</p>
+        <p data-i18n="footer.tagline">Домашній бюджет без зайвої складності.</p>
+        <p>
+          <a href="privacy-policy.html" style="color: var(--green); text-decoration: underline; margin-right: 14px;" data-i18n="footer.policy">Політика конфіденційності</a>
+          © <span data-year></span> DimFin
+        </p>
       </div>
     </footer>
-  </body>
+  </div>
+</body>
 </html>

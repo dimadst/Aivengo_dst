@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DimFin 1.4 — Beginner's Friendly Guide</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1a2e26;
+      background: #ffffff;
+      line-height: 1.45;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Exo 2', sans-serif;
+      color: #0c1f17;
+      margin-top: 0;
+      font-weight: 700;
+    }
+
+    .page {
+      page-break-after: always;
+      position: relative;
+      min-height: 255mm;
+      display: flex;
+      flex-direction: column;
+      padding: 16mm 18mm;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    /* Cover Page */
+    .cover-page {
+      background: linear-gradient(145deg, #091a13 0%, #102e22 100%);
+      color: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 265mm;
+    }
+
+    .cover-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cover-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+    }
+
+    .cover-brand {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #59e3a4;
+      letter-spacing: 0.5px;
+    }
+
+    .cover-title-box {
+      margin-top: 30px;
+    }
+
+    .cover-tag {
+      display: inline-block;
+      background: rgba(89, 227, 164, 0.2);
+      color: #59e3a4;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      border: 1px solid rgba(89, 227, 164, 0.3);
+    }
+
+    .cover-title {
+      font-size: 38px;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .cover-title em {
+      color: #59e3a4;
+      font-style: normal;
+    }
+
+    .cover-subtitle {
+      font-size: 16px;
+      color: #a3c4b5;
+      line-height: 1.5;
+      max-width: 90%;
+    }
+
+    .cover-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .cover-feat-card {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 14px 16px;
+      border-radius: 14px;
+    }
+
+    .cover-feat-card h4 {
+      color: #59e3a4;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .cover-feat-card p {
+      margin: 0;
+      font-size: 12px;
+      color: #cbdad3;
+      line-height: 1.4;
+    }
+
+    .cover-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #92b0a3;
+    }
+
+    .cover-footer a {
+      color: #59e3a4;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Section Page Layout */
+    .section-header {
+      border-bottom: 2px solid #e1ebe5;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .section-header h2 {
+      font-size: 22px;
+      margin: 0;
+      color: #102e22;
+    }
+
+    .section-tag {
+      font-size: 12px;
+      color: #10a966;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .grid-2-rev {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+    }
+
+    .phone-frame {
+      background: #0f1c16;
+      border-radius: 24px;
+      padding: 6px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      border: 3px solid #1f382d;
+      text-align: center;
+    }
+
+    .phone-img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .card {
+      background: #f7faf8;
+      border: 1px solid #dce8e2;
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+
+    .card-accent {
+      background: #eefbf4;
+      border: 1px solid #a8e8c7;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      color: #102e22;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card p {
+      margin: 0 0 6px 0;
+      color: #334e43;
+      font-size: 13px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #10a966;
+      color: #ffffff;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 13px;
+      margin-right: 6px;
+    }
+
+    .tip-box {
+      background: #fff9e6;
+      border-left: 4px solid #f5b041;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      color: #6e5008;
+      margin-top: 10px;
+    }
+
+    .success-box {
+      background: #edfcf4;
+      border-left: 4px solid #10a966;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      color: #0b5935;
+      margin-top: 10px;
+    }
+
+    ul.friendly-list {
+      margin: 6px 0 10px 0;
+      padding-left: 18px;
+    }
+
+    ul.friendly-list li {
+      margin-bottom: 4px;
+      color: #2b453b;
+      font-size: 13px;
+    }
+
+    .page-footer {
+      margin-top: auto;
+      border-top: 1px solid #e1ebe5;
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #7b998d;
+    }
+
+    .author-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #f0f7f3;
+      border-radius: 14px;
+      padding: 14px;
+      margin-top: 14px;
+    }
+
+    .author-img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #10a966;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid #dce8e2;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+    }
+
+    .faq-q {
+      font-weight: 700;
+      color: #102e22;
+      font-size: 13.5px;
+      margin-bottom: 4px;
+    }
+
+    .faq-a {
+      color: #3b5a4e;
+      font-size: 12.5px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1: COVER -->
+  <div class="page" style="padding: 0;">
+    <div class="cover-page">
+      <div class="cover-top">
+        <img src="assets/dimfin-logo-source.png" class="cover-logo" alt="DimFin Logo">
+        <div class="cover-brand">DimFin 🇺🇦🇪🇺</div>
+      </div>
+
+      <div class="cover-title-box">
+        <span class="cover-tag">Official Friendly Guide • Version 1.4 (EU Release)</span>
+        <h1 class="cover-title">Money under control.<br><em>Life — without spreadsheets.</em></h1>
+        <p class="cover-subtitle">
+          Your personal financial assistant. Effortlessly track income and expenses, save towards your dreams in "Goals & Jars", keep debts under control, and comfortably end every month in the green.
+        </p>
+      </div>
+
+      <div class="cover-features">
+        <div class="cover-feat-card">
+          <h4>🧾 Receipts, QR Codes & OCR</h4>
+          <p>On-device offline receipt OCR (ML Kit), instant QR scanning, up to 6x zoom, and store tagging.</p>
+        </div>
+        <div class="cover-feat-card">
+          <h4>🔒 Biometrics, Flip-to-Hide & 100% Offline</h4>
+          <p>Unlock with Fingerprint or Face Unlock. Mask all numbers instantly by flipping the phone face down.</p>
+        </div>
+        <div class="cover-feat-card">
+          <h4>🎯 Smart Budget Pulse & Radar</h4>
+          <p>1–10 risk scale, daily safe spending limit, and one-tap actionable plan execution.</p>
+        </div>
+        <div class="cover-feat-card">
+          <h4>🍯 Goals & Jars + Commitments</h4>
+          <p>New financial goals module, loans, recurring subscriptions, and private local reminders.</p>
+        </div>
+      </div>
+
+      <div class="cover-footer">
+        <div>Developer: <strong>Dmytro (Aivengo)</strong> • Ukraine 🇺🇦 & EU 🇪🇺</div>
+        <div>Website: <a href="https://dimadst.github.io/Aivengo_dst/">dimadst.github.io/Aivengo_dst/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: PHILOSOPHY & QUICK START -->
+  <div class="page">
+    <div class="section-header">
+      <h2>1. DimFin Philosophy & Quick Start</h2>
+      <span class="section-tag">Basics v1.4</span>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="card card-accent">
+          <h3>👋 Welcome to DimFin!</h3>
+          <p>
+            DimFin was designed to free you from tedious bookkeeping. You don't need complex Excel sheets or confusing accounting software anymore.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3><span class="step-badge">1</span> What is your name?</h3>
+          <p>
+            On first launch, enter your name. The app will greet you with a friendly <em>"Good morning, John! ☀️"</em> every day.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3><span class="step-badge">2</span> Currency & Language (EUR, USD, UAH, PLN)</h3>
+          <p>
+            In <strong>Settings (⚙️)</strong> choose your preferred currency (Euro €, US Dollar $, Hryvnia ₴, Polish Złoty zł) and language: <strong>English 🇬🇧, Ukrainian 🇺🇦, or Polish 🇵🇱</strong>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3><span class="step-badge">3</span> Set baseline monthly budgets</h3>
+          <p>
+            Set approximate limits for 3–4 key categories: Groceries, Utilities, Fuel, Shopping. This provides the baseline for smart analytics.
+          </p>
+        </div>
+
+        <div class="success-box">
+          💡 <strong>Golden Rule:</strong> Don't try to configure everything on day one. Just log your daily spending — in 5–7 days DimFin will paint an accurate picture of your finances!
+        </div>
+      </div>
+
+      <div>
+        <div class="phone-frame">
+          <img src="assets/en/overview.png" class="phone-img" alt="DimFin Home Screen in English">
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>DimFin 1.4 — Friendly Guide</span>
+      <span>Page 2</span>
+    </div>
+  </div>
+
+  <!-- PAGE 3: RECEIPTS, VOICE & EXPENSES -->
+  <div class="page">
+    <div class="section-header">
+      <h2>2. Receipts, Voice Input & Quick Expenses</h2>
+      <span class="section-tag">Fast Logging</span>
+    </div>
+
+    <div class="grid-2-rev">
+      <div>
+        <div class="phone-frame">
+          <img src="assets/en/transactions.png" class="phone-img" alt="Transaction history in DimFin">
+        </div>
+      </div>
+
+      <div>
+        <div class="card card-accent">
+          <h3>🧾 Receipts, QR Codes & OCR</h3>
+          <p>
+            Tap <strong>"Add from receipt"</strong> ➔ snap a photo, scan a fiscal QR code, or pick a receipt from your gallery. Text is recognized completely on-device without internet!
+          </p>
+          <p style="font-size: 12px; color: #0b5935;">🔍 <strong>Up to 6x Zoom:</strong> view full-screen receipts, pinch-to-zoom or double-tap to inspect every line item.</p>
+        </div>
+
+        <div class="card">
+          <h3>🏪 Store, Timestamp & Geolocation</h3>
+          <p>
+            Tag popular store chains (<em>Lidl, Biedronka, Carrefour, ALDI, Shell, ATB, Silpo...</em>), preserve exact timestamps, and optionally save purchase GPS coordinates.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🎙️ Voice Input & 1-Tap Templates</h3>
+          <p>
+            Just say: <em>"Coffee 4"</em>, <em>"Taxi 15"</em> or <em>"Salary 2500"</em>, or tap pre-configured quick expense templates (Coffee, Transport) for instant 1-tap logging!
+          </p>
+        </div>
+
+        <div class="tip-box">
+          ⚡ <strong>Pro Tip:</strong> You can attach or replace receipt photos at any time later directly from the transaction detail view!
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>DimFin 1.4 — Friendly Guide</span>
+      <span>Page 3</span>
+    </div>
+  </div>
+
+  <!-- PAGE 4: BUDGET PULSE & SMART PLAN -->
+  <div class="page">
+    <div class="section-header">
+      <h2>3. Financial Radar & Smart Action Plan</h2>
+      <span class="section-tag">On-Device Intelligence</span>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="card card-accent">
+          <h3>🎯 How the Radar works in v1.4</h3>
+          <p>
+            The Radar continuously monitors your daily spending speed, remaining days in the month, and available balance. It shows an intuitive <strong>risk level (from "Calm 1/10" to "Risk 9/10")</strong>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>⚡ Safe Daily Spending Limit</h3>
+          <p>
+            DimFin calculates how much you can comfortably spend each day to safely finish the month. Spent less today? Tomorrow's allowance automatically grows!
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🧠 1-Tap "Apply Limit" Action</h3>
+          <p>When an overspending risk is detected, the Radar suggests a clear solution:</p>
+          <ul class="friendly-list">
+            <li><strong>Reduce spending pace:</strong> adjusts daily limit for upcoming days.</li>
+            <li><strong>[Apply Limit] button:</strong> activates the target plan with an instant <em>"[✓ Applied]"</em> confirmation.</li>
+          </ul>
+        </div>
+
+        <div class="success-box">
+          🛡️ <strong>Remember:</strong> The daily limit is a smart advisor, not a rigid warden. You are always in full control.
+        </div>
+      </div>
+
+      <div>
+        <div class="phone-frame">
+          <img src="assets/en/smart-action.png" class="phone-img" alt="Financial radar and recommended action">
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>DimFin 1.4 — Friendly Guide</span>
+      <span>Page 4</span>
+    </div>
+  </div>
+
+  <!-- PAGE 5: CALENDAR, GOALS & COMMITMENTS -->
+  <div class="page">
+    <div class="section-header">
+      <h2>4. Calendar, Goals & Jars, and Commitments</h2>
+      <span class="section-tag">New Feature: Goals & Jars</span>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>📅 Expense Calendar</h3>
+        <p>Color-coded day badges show your spending intensity at a glance:</p>
+        <ul class="friendly-list">
+          <li>🟢 <strong>Green:</strong> within budget.</li>
+          <li>🟡 <strong>Yellow:</strong> moderate spending.</li>
+          <li>🔴 <strong>Red:</strong> high spending day.</li>
+        </ul>
+        <p style="font-size: 12px; color: #527567;">Tap any calendar day to inspect all receipts from that date.</p>
+      </div>
+
+      <div class="card card-accent">
+        <h3>🍯 Goals & Jars (v1.4)</h3>
+        <p>A dedicated place for your savings dreams:</p>
+        <ul class="friendly-list">
+          <li>Create goals: <em>"Vacation", "New Car", "Emergency Fund"</em>.</li>
+          <li>Set targets and watch progress bar in %.</li>
+          <li>Quick "Deposit" and "Withdraw" actions.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🏦 Loans & Subscriptions</h3>
+        <p>Total peace of mind:</p>
+        <ul class="friendly-list">
+          <li>Set monthly payment amounts and due dates.</li>
+          <li>Get local reminders 3 days ahead and on the due date.</li>
+          <li>Tap <em>"Mark as paid"</em> to watch your debt decrease.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px;">
+      <div class="phone-frame" style="max-height: 120mm; overflow: hidden;">
+        <img src="assets/en/goals.png" class="phone-img" style="transform: scale(0.95); margin-top: -10px;" alt="Goals and savings jars">
+      </div>
+      <div class="phone-frame" style="max-height: 120mm; overflow: hidden;">
+        <img src="assets/en/credits.png" class="phone-img" style="transform: scale(0.95); margin-top: -10px;" alt="Payments and subscriptions">
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>DimFin 1.4 — Friendly Guide</span>
+      <span>Page 5</span>
+    </div>
+  </div>
+
+  <!-- PAGE 6: BACKUPS, PRIVACY & FAQ -->
+  <div class="page">
+    <div class="section-header">
+      <h2>5. Biometric Lock, Flip-to-Hide & FAQ</h2>
+      <span class="section-tag">Security & Privacy</span>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="card card-accent">
+          <h3>🔒 Biometrics & "Flip-to-Hide" Mode</h3>
+          <p>
+            • <strong>Biometric Lock:</strong> Face Unlock or Fingerprint protects your financial records every time you open the app.<br>
+            • <strong>Flip-to-Hide:</strong> placing your phone face down instantly masks all monetary figures into secure dots (••••)!
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>💾 Your Backups</h3>
+          <p>
+            Since DimFin does not store your records on any remote server, <strong>make backing up a healthy habit:</strong>
+          </p>
+          <ul class="friendly-list">
+            <li>Go to <strong>Settings ➔ Export Backup</strong>.</li>
+            <li>Backup packages <strong>everything:</strong> transactions with receipt images, loans, savings goals, and budgets into a safe JSON file.</li>
+            <li>When moving to a new phone, simply tap <strong>"Import Backup"</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">❓ Can I link bank accounts?</div>
+          <p class="faq-a">No, and that is our greatest advantage. No third-party or scammer can ever access your banking credentials.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">❓ Does DimFin support tablets & Foldables?</div>
+          <p class="faq-a">Yes! Version 1.4 features full large-screen optimization, multi-window Split-Screen, and free landscape rotation.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>👨‍💻 Developer & Support</h3>
+          <p>
+            DimFin was crafted with care by an independent software engineer from Ukraine for a calm, organized financial life.
+          </p>
+          <div class="author-box">
+            <img src="assets/developer-dmytro.jpg" class="author-img" alt="Dmytro">
+            <div>
+              <div style="font-weight: 700; color: #102e22;">Dmytro (Aivengo)</div>
+              <div style="font-size: 11.5px; color: #597d6e;">Creator & Lead Developer of DimFin</div>
+              <div style="font-size: 11.5px; margin-top: 4px;"><a href="mailto:aivengo.dst@gmail.com" style="color: #10a966; text-decoration: none;">aivengo.dst@gmail.com</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="text-align: center; margin-top: 10px;">
+          <h3 style="justify-content: center;">📲 Install & Recommend</h3>
+          <p style="font-size: 12.5px; margin-bottom: 8px;">
+            Official release on Google Play:
+          </p>
+          <a href="https://play.google.com/store/apps/details?id=com.dimfin" style="display: inline-block; background: #10a966; color: #fff; padding: 8px 18px; border-radius: 20px; font-weight: 700; text-decoration: none; font-size: 13px;">
+            Get DimFin on Google Play ➔
+          </a>
+          <div style="margin-top: 10px; font-size: 11.5px; color: #6f8f82;">
+            Official Website: <a href="https://dimadst.github.io/Aivengo_dst/" style="color: #10a966;">dimadst.github.io/Aivengo_dst/</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>DimFin 1.4 — Friendly User Guide • 2026</span>
+      <span>Page 6</span>
+    </div>
+  </div>
+
+</body>
+</html>
