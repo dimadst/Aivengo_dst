@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — DimFin</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+            line-height: 1.7;
+            padding: 0;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a73e8, #0d47a1);
+            color: white;
+            padding: 48px 24px 36px;
+            text-align: center;
+        }
+        .header .emoji { font-size: 48px; display: block; margin-bottom: 12px; }
+        .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .header .date { opacity: 0.85; font-size: 14px; }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 32px 20px 64px; }
+        .summary-card {
+            background: #e8f5e9;
+            border-left: 4px solid #43a047;
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin-bottom: 32px;
+        }
+        .summary-card strong { color: #2e7d32; font-size: 16px; display: block; margin-bottom: 6px; }
+        .summary-card p { color: #388e3c; font-size: 15px; }
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a73e8;
+            margin: 36px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e3f2fd;
+        }
+        h3 { font-size: 16px; font-weight: 600; color: #333; margin: 20px 0 8px; }
+        p { margin-bottom: 12px; color: #444; }
+        ul { padding-left: 24px; margin-bottom: 12px; }
+        li { margin-bottom: 6px; color: #444; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        th {
+            background: #e3f2fd;
+            color: #1565c0;
+            font-weight: 600;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; }
+        tr:last-child td { border-bottom: none; }
+        .highlight {
+            background: #fff8e1;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin: 12px 0;
+            font-size: 14px;
+            color: #5d4037;
+            border-left: 3px solid #ffa000;
+        }
+        .contact-card {
+            background: #f3e5f5;
+            border-radius: 12px;
+            padding: 22px;
+            margin-top: 16px;
+        }
+        .contact-card a { color: #7b1fa2; text-decoration: none; font-weight: 500; }
+        .contact-card a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            color: #9e9e9e;
+            font-size: 13px;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e0e0e0;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 22px; }
+            .container { padding: 24px 16px 48px; }
+            table { font-size: 12px; }
+            td, th { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <span class="emoji">🔒</span>
+    <h1>Privacy Policy</h1>
+    <p>DimFin — Personal Finance Manager</p>
+    <span class="badge">Last updated: September 18, 2026</span>
+</div>
+
+<div class="container">
+
+    <div class="summary-card">
+        <strong>✅ Your data never leaves your device</strong>
+        <p>DimFin is 100% offline. We do not collect, transmit, or sell any personal or financial data. Everything stays on your phone.</p>
+    </div>
+
+    <h2>1. Data We Collect and How It Is Stored</h2>
+    <h3>1.1 Financial Data — Local Only</h3>
+    <p>All financial records you enter — transactions, budgets, credits, savings goals, categories, and notes — are stored <strong>exclusively on your device</strong> in a local SQLite database (Room). This data is never transmitted to any server, cloud service, or third party.</p>
+
+    <h3>1.2 App Settings — Local Only</h3>
+    <p>Your preferences (currency, language, theme, privacy mode, biometric lock) are stored locally using Android DataStore. They are never shared externally.</p>
+
+    <h3>1.3 No Account Required</h3>
+    <p>DimFin does not require registration, login, or any personal account. We do not collect your name, email address, phone number, or any other identifying information.</p>
+
+    <h2>2. Permissions Used</h2>
+
+    <h3>2.1 Biometric Authentication</h3>
+    <p>DimFin optionally uses your device's biometric sensor (fingerprint, face recognition) for the App Lock feature. Biometric data is processed entirely by the Android operating system and is never accessed or stored by DimFin.</p>
+
+    <h3>2.2 Location <code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code></h3>
+    <p>Location data is used <strong>only</strong> to optionally tag a transaction with the place where it was made. Location data is stored locally on your device as part of the transaction record and is never transmitted externally. Granting this permission is optional.</p>
+
+    <h3>2.3 Microphone <code>RECORD_AUDIO</code></h3>
+    <p>The microphone is used for voice input to add transactions by speaking. Audio is processed locally using Android's built-in speech recognition (SpeechRecognizer). No audio recordings are stored or transmitted by DimFin.</p>
+
+    <h3>2.4 Camera</h3>
+    <p>The camera is used to scan receipts via:</p>
+    <ul>
+        <li><strong>Google ML Kit</strong> (on-device OCR) — text recognition is performed entirely on your device; no images are uploaded.</li>
+        <li><strong>Google Code Scanner</strong> (QR codes) — scanned QR content is processed on-device.</li>
+    </ul>
+    <p>No photos are stored by DimFin.</p>
+
+    <h3>2.5 Notifications <code>POST_NOTIFICATIONS</code></h3>
+    <p>Notifications are used only for reminders about credit/loan payment due dates that you have configured. These are scheduled locally via WorkManager and do not involve any external service.</p>
+
+    <h2>3. Third-Party Services</h2>
+
+    <p>DimFin uses the following on-device libraries. <strong>No data is transmitted to external servers.</strong></p>
+
+    <table>
+        <tr>
+            <th>Library</th>
+            <th>Purpose</th>
+            <th>Data Transmitted</th>
+        </tr>
+        <tr>
+            <td>Google ML Kit (Text Recognition)</td>
+            <td>Receipt OCR scanning</td>
+            <td>None — on-device only</td>
+        </tr>
+        <tr>
+            <td>Google Code Scanner</td>
+            <td>QR code scanning</td>
+            <td>None — on-device only</td>
+        </tr>
+        <tr>
+            <td>Google Fused Location Provider</td>
+            <td>Optional transaction location tagging</td>
+            <td>None — stored locally only</td>
+        </tr>
+    </table>
+
+    <div class="highlight">DimFin does <strong>not</strong> use analytics SDKs, crash reporting services, advertising networks, or any data-collecting third-party service.</div>
+
+    <h2>4. Data Export and Backup</h2>
+    <p>DimFin provides a manual data export feature that creates a <strong>JSON file</strong> containing your financial records. This file is saved to a location of your choice on your device. You control this file completely. DimFin does not perform any automatic backup to external services.</p>
+
+    <h2>5. Data Sharing</h2>
+    <p>We do not share, sell, rent, or trade your data with any third party. Since all data is stored locally, there is no data to share.</p>
+
+    <h2>6. Data Retention and Deletion</h2>
+    <p>All your data is stored locally on your device. You can delete all data at any time by:</p>
+    <ul>
+        <li>Clearing app data: Android Settings → Apps → DimFin → Storage → <strong>Clear Data</strong></li>
+        <li>Uninstalling the App</li>
+    </ul>
+    <p>There is no remote data to delete because no data is ever transmitted to our servers.</p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>DimFin is not directed to children under the age of 13 (or the applicable age in your jurisdiction). We do not knowingly collect personal information from children.</p>
+
+    <h2>8. GDPR — Rights of EU Users</h2>
+    <p>If you are located in the European Economic Area (EEA), you have the following rights under the General Data Protection Regulation (GDPR):</p>
+    <ul>
+        <li><strong>Right to access</strong> — All data is stored on your device; you have full access at all times within the App.</li>
+        <li><strong>Right to erasure</strong> — Delete your data at any time by clearing app data or uninstalling the App.</li>
+        <li><strong>Right to portability</strong> — Export your data at any time using the built-in JSON export feature.</li>
+        <li><strong>Right to object</strong> — Since we process no personal data, there is nothing to object to.</li>
+    </ul>
+    <p>As DimFin does not collect or process personal data on any server, we act solely as a tool on your device and do not function as a Data Controller in the GDPR sense.</p>
+
+    <h2>9. Security</h2>
+    <p>All data is stored within Android's standard app sandbox, protected by the operating system. DimFin additionally supports biometric lock to protect access to the App. We do not transmit any data over the network, so there is no risk of data interception.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last updated" date at the top of this document. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>11. Contact Us</h2>
+    <div class="contact-card">
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <br>
+        <p>📧 <strong>Email:</strong> <a href="mailto:aivengo.dst@gmail.com">aivengo.dst@gmail.com</a></p>
+        <p>🐙 <strong>GitHub:</strong> <a href="https://github.com/dimadst" target="_blank">github.com/dimadst</a></p>
+        <p>📱 <strong>App:</strong> DimFin — Personal Finance Manager</p>
+    </div>
+
+    <footer>
+        <p>© 2026 DimFin. This Privacy Policy applies to the DimFin Android application.</p>
+        <p style="margin-top: 6px;">All financial data stays on your device. Always.</p>
+    </footer>
+
+</div>
+</body>
+</html>
