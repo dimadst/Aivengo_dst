@@ -40,8 +40,8 @@
 
         <div class="header-actions">
           <div class="lang-switcher" role="group" aria-label="Language selection">
-            <button type="button" class="lang-btn is-active" data-lang-btn="uk">🇺🇦 UA</button>
-            <button type="button" class="lang-btn" data-lang-btn="en">🇬🇧 EN</button>
+            <button type="button" class="lang-btn is-active" data-lang-btn="uk">UA</button>
+            <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
           </div>
           <a class="button button-small button-dark" href="#install" data-i18n="nav.install">Встановити</a>
         </div>
@@ -108,7 +108,7 @@
         </div>
       </section>
 
-      <!-- FEATURES SECTION -->
+      <!-- FEATURES BENTO SECTION -->
       <section class="features-section" id="features">
         <div class="container">
           <div class="section-heading">
@@ -123,14 +123,14 @@
           </div>
 
           <div class="feature-bento">
-            <!-- Bento 1: Budget Pulse -->
+            <!-- Bento 1: Budget Pulse & Radar (span 7) -->
             <article class="feature-card feature-card-wide">
               <div class="feature-copy">
                 <span class="feature-number">01</span>
                 <h3 data-i18n="features.pulseTitle">Пульс бюджету та радар</h3>
                 <p data-i18n="features.pulseDesc">
                   Оцінює темп витрат, залишок і зобов'язання в реальному часі. Розраховує безпечний
-                  ліміт на день та показує індекс ризику (1–10) замість складних формул.
+                  ліміт на день та показує індекс спокою (0/10) замість складних таблиць.
                 </p>
                 <div class="tag-row">
                   <span data-i18n="features.pulseTag1">Денний ліміт</span>
@@ -148,54 +148,92 @@
                   <i class="radar-point point-two"></i>
                   <i class="radar-point point-three"></i>
                 </div>
-                <div class="radar-hud">
-                  <span class="hud-pill" data-i18n="features.radarBadge">Оновлений радар ризику 1–10</span>
+                <div class="radar-caption" data-i18n="features.radarCaption"><span></span> 0/10 Спокійно</div>
+              </div>
+            </article>
+
+            <!-- Bento 2: Quick Expenses & Receipts (span 5) -->
+            <article class="feature-card feature-card-quick">
+              <span class="feature-number">02</span>
+              <h3 data-i18n="features.quickTitle">Чеки, швидкі витрати та голос</h3>
+              <p data-i18n="features.quickDesc">
+                Фотографуйте чеки з камери чи галереї, зчитуйте QR-коди (ДПС, Checkbox), вводьте покупки в один дотик або голосом 🎙️.
+              </p>
+              <div class="quick-input" aria-hidden="true">
+                <span data-i18n="features.quickInput">АТБ · Чек 12 434 грн</span><i>→</i>
+              </div>
+              <div class="quick-result" aria-hidden="true">
+                <span>🧾</span><div><small data-i18n="features.quickResCat">Продукти (з чека)</small><strong data-i18n="features.quickResSum">−12 434 ₴</strong></div>
+              </div>
+              <div class="template-row" aria-hidden="true">
+                <span><i>🧾</i><b data-i18n="features.tmpl1">Фото чека</b></span>
+                <span><i>☕</i><b data-i18n="features.tmpl2">Кава 80 ₴</b></span>
+                <span><i>🍽️</i><b data-i18n="features.tmpl3">Обід 250 ₴</b></span>
+              </div>
+            </article>
+
+            <!-- Bento 3: Recommended Action & Smart Plan (span 5) -->
+            <article class="feature-card feature-card-plan">
+              <span class="feature-number">03</span>
+              <h3 data-i18n="features.planTitle">Рекомендована дія та план</h3>
+              <p data-i18n="features.planDesc">
+                Розумний асистент пропонує точний ліміт на завтра і дає змогу застосувати його в один клік.
+              </p>
+              <div class="plan-options" aria-hidden="true">
+                <span data-i18n="features.planText">План на завтра: 924 ₴</span><span class="selected" data-i18n="features.planBtn">Застосувати <i>✓</i></span>
+              </div>
+            </article>
+
+            <!-- Bento 4: Commitments & Budgets (span 7) -->
+            <article class="feature-card feature-card-categories">
+              <div>
+                <span class="feature-number">04</span>
+                <h3 data-i18n="features.catTitle">Скарбнички, кредити та бюджети</h3>
+                <p data-i18n="features.catDesc">
+                  Новий розділ цілей і скарбничок (v1.4), кредити й розстрочки з відміткою сплати та категорії місячних витрат.
+                </p>
+              </div>
+              <div class="category-stack" aria-hidden="true">
+                <div><span class="category-icon cat-one">🍯</span><b data-i18n="features.catItem1">Скарбничка «Мрія»</b><small data-i18n="features.catVal1">10 000 ₴</small></div>
+                <div><span class="category-icon cat-two">◫</span><b data-i18n="features.catItem2">Ощадбанк (Ноут)</b><small data-i18n="features.catVal2">3 450 ₴</small></div>
+                <div><span class="category-icon cat-three">◆</span><b data-i18n="features.catItem3">Загальний борг</b><small data-i18n="features.catVal3">25 700 ₴</small></div>
+              </div>
+            </article>
+
+            <!-- Bento 5: Expense Calendar (span 12) -->
+            <article class="feature-card feature-card-calendar">
+              <div class="feature-copy">
+                <span class="feature-number">05</span>
+                <h3 data-i18n="features.calTitle">Календар витрат</h3>
+                <p data-i18n="features.calDesc">
+                  Переглядайте витрати за кожен день місяця, помічайте дні з
+                  перевищенням ліміту за кольоровою шкалою та відкривайте список операцій дня одним дотиком.
+                </p>
+                <div class="tag-row">
+                  <span data-i18n="features.calTag1">Суми за днями</span>
+                  <span data-i18n="features.calTag2">Кольорова шкала</span>
+                  <span data-i18n="features.calTag3">Операції дня</span>
                 </div>
               </div>
-            </article>
-
-            <!-- Bento 2: Receipts & QR -->
-            <article class="feature-card">
-              <span class="feature-number">02</span>
-              <h3 data-i18n="features.receiptTitle">Чеки, OCR та QR-коди</h3>
-              <p data-i18n="features.receiptDesc">
-                Додавайте покупки в один дотик: фотографуйте чек камерою, скануйте фіскальний QR або розпізнавайте текст прямо на телефоні.
-              </p>
-              <ul class="feature-bullets">
-                <li data-i18n="features.receiptBullet1">🔍 <strong>Зум чеків до 6x:</strong> детальний перегляд кожної позиції.</li>
-                <li data-i18n="features.receiptBullet2">🏪 <strong>Мережі та геопозиція:</strong> АТБ, Сільпо, Lidl, Biedronka та координати.</li>
-              </ul>
-              <div class="tag-row">
-                <span data-i18n="features.receiptTag1">Офлайн OCR</span>
-                <span data-i18n="features.receiptTag2">QR фіскальний</span>
-                <span data-i18n="features.receiptTag3">Масштаб 6x</span>
+              <div class="calendar-showcase" aria-hidden="true">
+                <img data-cal-image src="assets/calendar.png" alt="Календар DimFin" loading="lazy" decoding="async" />
               </div>
             </article>
 
-            <!-- Bento 3: Offline & Privacy -->
-            <article class="feature-card">
-              <span class="feature-number">03</span>
-              <h3 data-i18n="features.offlineTitle">100% приватність і безпека</h3>
-              <p data-i18n="features.offlineDesc">
-                Жодних банківських логінів, паролів і сторонніх серверів. Усі дані живуть виключно у зашифрованій пам'яті смартфона.
-              </p>
-              <p data-i18n="features.offlineP1">🔒 <strong>Біометричний захист:</strong> вхід за відбитком пальця або Face Unlock.</p>
-              <p data-i18n="features.offlineP2">🤫 <strong>Режим Flip-to-Hide:</strong> переверніть телефон екраном донизу, щоб приховати суми.</p>
-              <div class="tag-row">
-                <span data-i18n="features.offlineTag1">Face/Touch ID</span>
-                <span data-i18n="features.offlineTag2">Flip-to-Hide</span>
-                <span data-i18n="features.offlineTag3">Повний JSON-бекап</span>
-              </div>
-            </article>
-
-            <!-- Bento 4: Notifications & Local Reminders -->
-            <article class="feature-card feature-card-wide feature-card-stacked">
+            <!-- Bento 6: Biometric Lock & Flip-to-Hide (span 12) -->
+            <article class="feature-card feature-card-notifications">
               <div class="feature-copy">
-                <span class="feature-number">04</span>
-                <h3 data-i18n="features.notifTitle">Локальні нагадування та підсумки</h3>
-                <p data-i18n="features.notifDesc">
-                  Автономні сповіщення без відправки інформації на зовнішні сервери.
+                <span class="feature-number">06</span>
+                <h3 data-i18n="features.secTitle">Біометричний захист, Flip-to-Hide та бекап</h3>
+                <p data-i18n="features.secDesc">
+                  100% офлайн. Миттєвий вхід за відбитком пальця або Face Unlock. Режим Flip-to-Hide для швидкого приховання сум. Повне резервне копіювання у безпечний файл JSON або CSV.
+                  Локальні нагадування про платежі за 3 дні без виходу в інтернет.
                 </p>
+                <div class="tag-row">
+                  <span data-i18n="features.secTag1">Біометрія</span>
+                  <span data-i18n="features.secTag2">Flip-to-Hide</span>
+                  <span data-i18n="features.secTag3">Без інтернету</span>
+                </div>
               </div>
               <div class="notification-showcase" aria-hidden="true">
                 <div class="notification-item notification-item-credit">
@@ -211,7 +249,7 @@
                   <div>
                     <small data-i18n="features.notif2Small">DimFin · Місячний підсумок</small>
                     <strong data-i18n="features.notif2Title">Підсумок за вересень</strong>
-                    <p data-i18n="features.notif2Desc">Доходи +40 040 € · Баланс +15 812,97 €</p>
+                    <p data-i18n="features.notif2Desc">Доходи +25 872 ₴ · Баланс +25 522 ₴</p>
                   </div>
                 </div>
               </div>
@@ -248,7 +286,7 @@
 
           <div class="guide-layout">
             <div class="guide-steps" role="tablist" aria-label="Кроки користування DimFin">
-              <!-- Rendered dynamically by script.js -->
+              <!-- Rendered and updated dynamically by script.js -->
             </div>
 
             <div class="guide-preview" aria-live="polite">

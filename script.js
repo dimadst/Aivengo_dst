@@ -15,6 +15,7 @@ const guidePreviewTitle = document.querySelector("[data-guide-preview-title]");
 const guideCount = document.querySelector("[data-guide-count]");
 const langBtns = document.querySelectorAll("[data-lang-btn]");
 const heroImage = document.querySelector("[data-hero-image]");
+const calImage = document.querySelector("[data-cal-image]");
 const navGuideLink = document.querySelector("#nav-guide-link");
 const guideDownloadMain = document.querySelector("#guide-download-main");
 const guideDownloadAlt = document.querySelector("#guide-download-alt");
@@ -58,38 +59,6 @@ screenshotDialog?.addEventListener("click", (event) => {
   if (event.target === screenshotDialog) screenshotDialog.close();
 });
 
-const updateGuideStep = (step) => {
-  guideSteps.forEach((item) => {
-    const isCurrent = item === step;
-    item.classList.toggle("is-active", isCurrent);
-    item.setAttribute("aria-selected", String(isCurrent));
-  });
-
-  const currentLang = document.documentElement.lang || "uk";
-  const imageKey = currentLang === "en" ? (step.dataset.guideImageEn || step.dataset.guideImage) : (step.dataset.guideImageUa || step.dataset.guideImage);
-
-  if (guidePreviewImage) {
-    guidePreviewImage.src = imageKey;
-    guidePreviewImage.alt = step.dataset.guideTitle || "DimFin Screen";
-    const isUnframed = imageKey?.endsWith("calendar.png") ||
-                       imageKey?.endsWith("analytics.png") ||
-                       imageKey?.endsWith("analytics-overview.png") ||
-                       imageKey?.endsWith("voice-input.png") ||
-                       imageKey?.endsWith("goals.png");
-    guidePhone?.classList.toggle("is-framed-screenshot", !isUnframed);
-  }
-  if (guidePreviewTitle) guidePreviewTitle.textContent = step.dataset.guideTitle;
-  if (guideCount) {
-    guideCount.textContent = currentLang === "en" 
-      ? `Step ${step.dataset.guideStep} of ${guideSteps.length}` 
-      : `Крок ${step.dataset.guideStep} із ${guideSteps.length}`;
-  }
-};
-
-guideSteps.forEach((step) => {
-  step.addEventListener("click", () => updateGuideStep(step));
-});
-
 /* ==========================================================================
    Bilingual i18n Engine (Ukrainian & English)
    ========================================================================== */
@@ -125,27 +94,41 @@ const i18n = {
       title: "Не просто цифри.<br />Зрозумілі наступні дії.",
       desc: "DimFin перетворює щоденні записи на просту картину бюджету — без фінансового жаргону та перевантажених звітів.",
       pulseTitle: "Пульс бюджету та радар",
-      pulseDesc: "Оцінює темп витрат, залишок і зобов'язання в реальному часі. Розраховує безпечний денний ліміт і показує індекс ризику (1–10) замість складних формул.",
+      pulseDesc: "Оцінює темп витрат, залишок і зобов'язання в реальному часі. Розраховує безпечний ліміт на день та показує індекс спокою (0/10) замість складних таблиць.",
       pulseTag1: "Денний ліміт",
       pulseTag2: "Прогноз залишку",
       pulseTag3: "Рівень спокою",
-      radarBadge: "Оновлений радар ризику 1–10",
-      receiptTitle: "Чеки, OCR та QR-коди",
-      receiptDesc: "Додавайте покупки в один дотик: фотографуйте чек камерою, скануйте фіскальний QR або розпізнавайте текст чека прямо на телефоні без інтернету.",
-      receiptBullet1: "🔍 <strong>Зум чеків до 6x:</strong> детальний перегляд кожної позиції.",
-      receiptBullet2: "🏪 <strong>Мережі та геопозиція:</strong> АТБ, Сільпо, Novus, Biedronka, Lidl та точні координати.",
-      receiptTag1: "Офлайн OCR",
-      receiptTag2: "QR фіскальний",
-      receiptTag3: "Масштаб 6x",
-      offlineTitle: "100% приватність і безпека",
-      offlineDesc: "Жодних банківських логінів, паролів і сторонніх серверів. Усі дані живуть виключно у зашифрованій пам'яті вашого смартфона.",
-      offlineP1: "🔒 <strong>Біометричний захист:</strong> вхід за відбитком пальця або Face Unlock.",
-      offlineP2: "🤫 <strong>Режим Flip-to-Hide:</strong> переверніть телефон екраном донизу, щоб миттєво приховати суми від сторонніх очей.",
-      offlineTag1: "Face/Touch ID",
-      offlineTag2: "Flip-to-Hide",
-      offlineTag3: "Повний JSON-бекап",
-      notifTitle: "Локальні нагадування та підсумки",
-      notifDesc: "Автономні сповіщення без відправки інформації на зовнішні сервери.",
+      radarCaption: "<span></span> 0/10 Спокійно",
+      quickTitle: "Чеки, швидкі витрати та голос",
+      quickDesc: "Фотографуйте чеки з камери чи галереї, зчитуйте QR-коди (ДПС, Checkbox), вводьте покупки в один дотик або голосом 🎙️.",
+      quickInput: "АТБ · Чек 12 434 грн",
+      quickResCat: "Продукти (з чека)",
+      quickResSum: "−12 434 ₴",
+      tmpl1: "Фото чека",
+      tmpl2: "Кава 80 ₴",
+      tmpl3: "Обід 250 ₴",
+      planTitle: "Рекомендована дія та план",
+      planDesc: "Розумний асистент пропонує точний ліміт на завтра і дає змогу застосувати його в один клік.",
+      planText: "План на завтра: 924 ₴",
+      planBtn: "Застосувати <i>✓</i>",
+      catTitle: "Скарбнички, кредити та бюджети",
+      catDesc: "Новий розділ цілей і скарбничок (v1.4), кредити й розстрочки з відміткою сплати та категорії місячних витрат.",
+      catItem1: "Скарбничка «Мрія»",
+      catVal1: "10 000 ₴",
+      catItem2: "Ощадбанк (Ноут)",
+      catVal2: "3 450 ₴",
+      catItem3: "Загальний борг",
+      catVal3: "25 700 ₴",
+      calTitle: "Календар витрат",
+      calDesc: "Переглядайте витрати за кожен день місяця, помічайте дні з перевищенням ліміту за кольоровою шкалою та відкривайте список операцій дня одним дотиком.",
+      calTag1: "Суми за днями",
+      calTag2: "Кольорова шкала",
+      calTag3: "Операції дня",
+      secTitle: "Біометричний захист, Flip-to-Hide та бекап",
+      secDesc: "100% офлайн. Миттєвий вхід за відбитком пальця або Face Unlock. Режим Flip-to-Hide для швидкого приховання сум. Повне резервне копіювання у безпечний файл JSON або CSV. Локальні нагадування про платежі за 3 дні без виходу в інтернет.",
+      secTag1: "Біометрія",
+      secTag2: "Flip-to-Hide",
+      secTag3: "Без інтернету",
       notif1Small: "DimFin · Безпека",
       notif1Title: "Біометричний захист активний",
       notif1Desc: "Відбиток пальця, Face Unlock та системний PIN",
@@ -231,27 +214,41 @@ const i18n = {
       title: "Not just numbers.<br />Clear actionable steps.",
       desc: "DimFin turns daily transactions into a crystal-clear financial overview — without confusing jargon or bloated accounting reports.",
       pulseTitle: "Budget Pulse & Risk Radar",
-      pulseDesc: "Continuously tracks your spending velocity, remaining balance, and obligations. Calculates a safe daily limit and shows an intuitive risk scale (1–10) instead of complex formulas.",
+      pulseDesc: "Continuously tracks spending velocity, remaining balance, and obligations. Calculates a safe daily limit and shows an intuitive peace-of-mind score instead of complex tables.",
       pulseTag1: "Daily Limit",
       pulseTag2: "Forecast Balance",
-      pulseTag3: "Peace of Mind Index",
-      radarBadge: "Updated 1–10 Risk Radar",
-      receiptTitle: "Receipts, On-Device OCR & QR",
-      receiptDesc: "Log expenses instantly: snap paper receipts, scan fiscal QR codes, or extract items with on-device offline OCR without sending data over the internet.",
-      receiptBullet1: "🔍 <strong>Up to 6x Zoom:</strong> inspect receipts full-screen with pinch-to-zoom.",
-      receiptBullet2: "🏪 <strong>Store Chains & Geolocation:</strong> Lidl, Biedronka, Carrefour, ALDI, Shell and precise GPS coordinates.",
-      receiptTag1: "Offline OCR",
-      receiptTag2: "Fiscal QR",
-      receiptTag3: "6x Zoom",
-      offlineTitle: "100% Privacy & Security",
-      offlineDesc: "No bank logins, no passwords, no third-party servers. All financial data lives solely in your device's encrypted sandbox.",
-      offlineP1: "🔒 <strong>Biometric Protection:</strong> unlock with Fingerprint or Face Unlock.",
-      offlineP2: "🤫 <strong>Flip-to-Hide Mode:</strong> flip your phone face down to instantly mask all numbers into secure dots (••••).",
-      offlineTag1: "Face / Fingerprint",
-      offlineTag2: "Flip-to-Hide",
-      offlineTag3: "Full JSON Backup",
-      notifTitle: "Local Reminders & Monthly Recaps",
-      notifDesc: "Autonomous background reminders without transmitting personal data to cloud servers.",
+      pulseTag3: "Peace of Mind",
+      radarCaption: "<span></span> 0/10 Calm pace",
+      quickTitle: "Receipts, Quick Expenses & Voice",
+      quickDesc: "Snap receipts, scan QR codes (fiscal checks), extract items with offline OCR, or log transactions in 1 tap with voice input 🎙️.",
+      quickInput: "Lidl · Receipt 40 €",
+      quickResCat: "Groceries (Receipt)",
+      quickResSum: "−40 €",
+      tmpl1: "Receipt photo",
+      tmpl2: "Coffee 4 €",
+      tmpl3: "Lunch 12 €",
+      planTitle: "Recommended Action & Plan",
+      planDesc: "The smart assistant calculates tomorrow's optimal daily allowance and applies it with a single tap.",
+      planText: "Plan for tomorrow: 1 216 €",
+      planBtn: "Apply <i>✓</i>",
+      catTitle: "Goals, Commitments & Budgets",
+      catDesc: "Dedicated savings module (v1.4), loans and installment tracking with 1-tap paid markers, and category monthly budgets.",
+      catItem1: "Goal 'Vacation'",
+      catVal1: "1 500 €",
+      catItem2: "Loan (Laptop)",
+      catVal2: "350 €",
+      catItem3: "Total Debt",
+      catVal3: "2 600 €",
+      calTitle: "Expense Calendar",
+      calDesc: "Inspect daily expenses across the entire month, track spending intensity with color-coded badges, and tap any day to view all receipts.",
+      calTag1: "Daily Amounts",
+      calTag2: "Color Scale",
+      calTag3: "Day's Operations",
+      secTitle: "Biometric Security, Flip-to-Hide & Backup",
+      secDesc: "100% offline. Instant unlock with Fingerprint or Face Unlock. Flip-to-Hide mode to mask all figures. Full JSON or CSV export without cloud servers.",
+      secTag1: "Face / Fingerprint",
+      secTag2: "Flip-to-Hide",
+      secTag3: "100% Offline",
       notif1Small: "DimFin · Security",
       notif1Title: "Biometric Lock Active",
       notif1Desc: "Protected by Fingerprint, Face Unlock & Device PIN",
@@ -369,7 +366,7 @@ const faqData = {
   uk: [
     { q: "Що таке DimFin?", a: "Це автономний мобільний застосунок для домашнього бюджету, який допомагає записувати доходи й витрати, контролювати місячні бюджети, кредити, скарбнички цілей, аналізувати фінансові звички й спокійно планувати залишок коштів до кінця місяця." },
     { q: "Що можна вести в застосунку?", a: "Транзакції (з фотографіями чеків, магазинами й часом), шаблони швидких витрат, місячні бюджети, скарбнички фінансових цілей, кредити, розстрочки й регулярні підписки. Календар показує щоденну інтенсивність, а аналітика — тренди та найбільші категорії." },
-    { q: "Як працює розрахунок безпечного денного ліміту?", a: "Пульс бюджету співвідносить ваш доступний залишок із кількістю днів до кінця місяця та темпом попередніх витрат. Він підказує суму (наприклад, 958 €/день), яка гарантує успішне завершення місяця без дефіциту." },
+    { q: "Як працює розрахунок безпечного денного ліміту?", a: "Пульс бюджету співвідносить ваш доступний залишок із кількістю днів до кінця місяця та темпом попередніх витрат. Він підказує суму (наприклад, 117 грн/день або 958 €/день), яка гарантує успішне завершення місяця без дефіциту." },
     { q: "Як працюють «Скарбнички та Цілі» (v1.4)?", a: "У новому розділі ви можете створювати цілі накопичень (наприклад, «Відпустка», «Резервний фонд»), задавати цільову суму, поповнювати або знімати кошти в один дотик та наочно бачити відсоток досягнення мети." },
     { q: "Як працює додавання та розпізнавання чеків?", a: "Ви можете сканувати фіскальні QR-коди, фотографувати чек камерою або вибирати зображення з галереї. На пристрої працює офлайн-розпізнавання тексту (Google ML Kit), прив'язка магазину та масштабування чека до 6x." },
     { q: "Чи захищений вхід у застосунок?", a: "Так, DimFin підтримує біометричний вхід: відбиток пальця, Face Unlock або PIN-код пристрою. Також є функція «Flip-to-Hide»: переверніть телефон екраном донизу, і всі суми на екрані миттєво сховаються крапками." },
@@ -428,7 +425,6 @@ function renderScreens(lang) {
     </button>
   `).join("");
 
-  // Re-bind click handlers for modal
   rail.querySelectorAll(".screen-shot-card").forEach((card) => {
     card.addEventListener("click", () => {
       if (!screenshotDialog || !dialogImage || !dialogCaption) return;
@@ -491,7 +487,6 @@ function renderGuideSteps(lang) {
     });
   });
 
-  // Reset preview to step 1
   if (steps.length > 0 && guidePreviewImage && guidePreviewTitle) {
     guidePreviewImage.src = steps[0].image;
     guidePreviewTitle.textContent = steps[0].title;
@@ -513,7 +508,6 @@ function renderFAQ(lang) {
     </details>
   `).join("");
 
-  // Re-bind accordion exclusive toggle
   const newDetails = [...faqList.querySelectorAll("details")];
   newDetails.forEach((item) => {
     item.addEventListener("toggle", () => {
@@ -549,12 +543,12 @@ function setLanguage(lang) {
     btn.classList.toggle("is-active", btn.dataset.langBtn === lang);
   });
 
-  // Update Page Title
+  // Update Page Title & Description
   document.title = t.metaTitle;
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.content = t.metaDesc;
 
-  // Simple text/html replacements via data-i18n
+  // Replace text for all data-i18n elements
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
     const parts = key.split(".");
@@ -570,6 +564,11 @@ function setLanguage(lang) {
   // Hero Image
   if (heroImage) {
     heroImage.src = lang === "en" ? "assets/en/overview.png" : "assets/overview.png";
+  }
+
+  // Calendar Showcase Image in Bento
+  if (calImage) {
+    calImage.src = lang === "en" ? "assets/en/calendar.png" : "assets/calendar.png";
   }
 
   // PDF Guide Links
